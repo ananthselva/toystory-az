@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.69 22.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eb8e49;
+      }
+
+      .cls-2 {
+        fill: #ffcf54;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="low-carb">
+      <rect id="Rectangle_10100" data-name="Rectangle 10100" class="cls-1" x=".45" y="15.4" width=".74" height="1.58" transform="translate(-11.21 5.32) rotate(-45)"/>
+      <rect id="Rectangle_10101" data-name="Rectangle 10101" class="cls-1" x="10.08" y="15.82" width="1.58" height=".74" transform="translate(-8.27 12.43) rotate(-45)"/>
+      <rect id="Rectangle_10102" data-name="Rectangle 10102" class="cls-1" x=".45" y="11.68" width=".74" height="1.58" transform="translate(-8.58 4.23) rotate(-45)"/>
+      <rect id="Rectangle_10103" data-name="Rectangle 10103" class="cls-1" x="10.08" y="12.1" width="1.58" height=".74" transform="translate(-5.63 11.34) rotate(-45)"/>
+      <rect id="Rectangle_10104" data-name="Rectangle 10104" class="cls-1" x=".45" y="7.96" width=".74" height="1.58" transform="translate(-5.95 3.14) rotate(-45)"/>
+      <rect id="Rectangle_10105" data-name="Rectangle 10105" class="cls-1" x="10.08" y="8.38" width="1.58" height=".74" transform="translate(-3 10.25) rotate(-45)"/>
+      <rect id="Rectangle_10106" data-name="Rectangle 10106" class="cls-1" x=".45" y="4.24" width=".74" height="1.58" transform="translate(-3.31 2.05) rotate(-45)"/>
+      <rect id="Rectangle_10107" data-name="Rectangle 10107" class="cls-1" x="10.08" y="4.65" width="1.58" height=".74" transform="translate(-.37 9.16) rotate(-45)"/>
+      <rect id="Rectangle_10108" data-name="Rectangle 10108" class="cls-1" x="5.47" width=".75" height="1.86"/>
+      <rect id="Rectangle_10109" data-name="Rectangle 10109" class="cls-1" x="5.47" y="7.07" width=".75" height="15.26"/>
+      <path id="Path_23658" data-name="Path 23658" class="cls-2" d="m10.69,5.22c-.05,1.27-.54,2.49-1.38,3.45-.96.84-2.18,1.33-3.46,1.38.05-1.28.54-2.5,1.38-3.46.96-.84,2.18-1.32,3.46-1.38Zm0,3.72c-.05,1.27-.54,2.49-1.38,3.45-.96.84-2.18,1.33-3.46,1.38.05-1.28.54-2.5,1.38-3.46.96-.84,2.18-1.33,3.46-1.38h0Zm0,3.72c-.05,1.27-.54,2.49-1.38,3.45-.96.84-2.18,1.33-3.46,1.38.05-1.28.54-2.5,1.38-3.46.96-.84,2.18-1.33,3.46-1.38h0Zm0,3.72c-.05,1.27-.54,2.49-1.38,3.45-.96.84-2.18,1.33-3.46,1.38.05-1.28.54-2.5,1.38-3.46.96-.84,2.18-1.33,3.46-1.38h0ZM5.85,7.82c-.87-.91-1.4-2.09-1.49-3.35.09-1.26.62-2.44,1.49-3.35.87.91,1.4,2.09,1.49,3.35-.09,1.26-.62,2.44-1.49,3.35Zm-1.38-1.22c.84.96,1.33,2.18,1.38,3.46-1.28-.05-2.5-.54-3.46-1.38-.84-.96-1.33-2.18-1.38-3.45,1.28.05,2.5.54,3.46,1.38Zm0,3.72c.84.96,1.33,2.18,1.38,3.46-1.28-.05-2.5-.54-3.46-1.38-.84-.96-1.33-2.18-1.38-3.46,1.28.05,2.5.54,3.46,1.38h0Zm0,3.72c.84.96,1.33,2.18,1.38,3.46-1.28-.05-2.5-.54-3.46-1.38-.84-.96-1.33-2.18-1.38-3.46,1.28.05,2.5.54,3.46,1.38Zm0,3.72c.84.96,1.33,2.18,1.38,3.46-1.28-.05-2.5-.54-3.46-1.38-.84-.96-1.33-2.18-1.38-3.46,1.28.05,2.5.54,3.46,1.38h0Z"/>
+    </g>
+  </g>
+</svg>

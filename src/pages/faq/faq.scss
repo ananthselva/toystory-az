@@ -1,0 +1,283 @@
+@import "../../common/assets/scss/main.scss";
+
+.hero_single {
+  background-color: #ededed;
+  @include themed() {
+    background-color: t("dark1");
+  }
+  @media only screen and (min-width: 320px) and (max-width: 411px) {
+    .bg_grey {
+      background-color: #f4f4f4;
+      margin-top: -2em;
+    }
+  }
+  @media only screen and (min-width: 412px) and (max-width: 415px) {
+    .bg_grey {
+      background-color: #f4f4f4;
+      margin-top: -2em;
+    }
+  }
+  @media only screen and (min-width: 416px) and (max-width: 767px) {
+    .bg_grey {
+      background-color: #f4f4f4;
+      margin-top: -2em;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 912px) {
+    .bg_grey {
+      background-color: #f4f4f4;
+      margin-top: 4em;
+    }
+  }
+  @media only screen and (min-width: 540px) and (max-width: 545px) {
+    .bg_grey {
+      background-color: #f4f4f4;
+      margin-top: 2em;
+    }
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .bg_grey {
+      background-color: #f4f4f4;
+      margin-top: 2em;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 912px) {
+    .faq-img {
+      width: 50%;
+      margin-left: 4em;
+    }
+  }
+
+  .left-content {
+    display: flex;
+    margin-top: 76px;
+
+    h1 {
+      color: #28be21;
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 460px) {
+    .left-content {
+      display: none;
+    }
+  }
+  .left-content-arrows {
+    svg {
+      width: 25px;
+      vertical-align: middle;
+      font-size: 39px;
+      fill: #173303;
+      @include themed() {
+        fill: t("pale-green");
+      }
+    }
+  }
+  .fk-title {
+    color: #173303;
+    font-weight: 600;
+    font-family: "Segoe-UI-Semibold-600";
+    @include themed() {
+      color: t("pale-green");
+    }
+  }
+  .left-content-faq {
+    padding-top: 10px;
+
+    h2 {
+      font-family: "Segoe-UI-Semibold-600";
+      font-weight: 600;
+      color: #173303;
+      @include themed() {
+        color: t("pale-green");
+      }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 460px) {
+    .left-content-faq {
+      padding-top: 30px;
+      padding-left: 10px;
+      h2 {
+        font-size: 36px;
+        font-family: "Segoe-UI-Semibold-600";
+      }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 460px) {
+    .b-bottom {
+      border-bottom: 5px solid #00c070;
+      width: 60px;
+      border-radius: 50px;
+      margin-bottom: 60px;
+      @include themed() {
+        fill: t("pale-green");
+      }
+    }
+  }
+  .faq-img {
+    width: 75%;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 460px) {
+    .faq-img {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 461px) and (max-width: 767px) {
+    .faq-img {
+      width: 50%;
+    }
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .faq-img {
+      width: 75%;
+      margin-left: 5em;
+    }
+  }
+  @media only screen and (min-width: 540px) and (max-width: 545px) {
+    .right-content {
+      text-align: right;
+      margin-top: -11em;
+    }
+  }
+  .bg_grey {
+    background-color: #f4f4f4;
+    @include themed() {
+      background-color: t("dark2");
+    }
+  }
+  @include themed() {
+    background-color: t("dark5");
+  }
+  .accordion {
+    margin-top: -8em;
+    margin-bottom: 1em;
+  }
+  .right-content {
+    padding-bottom: 8em;
+  }
+  .accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .accordion-item:first-of-type {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .theme--dark .accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .accordion-item:last-of-type .accordion-collapse {
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .accordion-collapse collapse show .accordion-button .collapsed {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .accordion-item:last-of-type {
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .accordion-button:focus {
+    z-index: 3;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
+    @include themed() {
+      background-color: t("dark1");
+    }
+  }
+
+  .accordion-header .footer {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .theme--dark .hero_single .accordion-button:not(.collapsed) {
+    background-color: #070f1c;
+    color: #28be21 !important;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    @include themed() {
+      color: t("pale-green") !important;
+    }
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: #070f1c;
+    color: #28be21 !important;
+    @include themed() {
+      color: t("pale-green") !important;
+    }
+  }
+  .accordion-body {
+    color: #222222;
+    @include themed() {
+      background-color: t("dark1");
+      color: t("whitecolor");
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+  }
+  .accordion-item {
+    @include themed() {
+      background-color: t("dark1");
+    }
+  }
+  .accordion-body.last_one {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .accordion-body a {
+    color: $themecolor3;
+    @include themed() {
+      color: t("light-green");
+      text-decoration: none;
+    }
+  }
+  .accordion-button:not(.collapsed) {
+    color: $themecolor3;
+    background-color: transparent;
+    box-shadow: none;
+    @include themed() {
+      background-color: t("dark1");
+      color: t("light-green");
+    }
+  }
+  .accordion-button {
+    background: #ffffff;
+    color: #909497;
+    font-size: 16px;
+    font-family: "Segoe-UI-400";
+    font-family: "Segoe-UI-Semibold-600";
+    @include themed() {
+      background-color: t("dark1");
+    }
+  }
+  .card-body .partner {
+    background: $themecolor3;
+    color: #ffffff;
+    padding: 12px;
+    padding: 6px 6px 6px 6px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+  a {
+    color: #173303 !important;
+    padding: 12px;
+    padding: 6px 6px 6px 6px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #9fe870;
+  }
+}

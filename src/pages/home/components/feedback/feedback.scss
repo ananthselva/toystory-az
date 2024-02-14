@@ -1,0 +1,117 @@
+@import "../../../../common/assets/scss/main.scss";
+.feedback-slider {
+  padding: 30px 0px;
+  @include themed() {
+    background-color: t("dark4");
+  }
+  h3 {
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+  }
+  .feedback-slider-swiper {
+    padding: 10px 15px 30px 15px;
+    .review-box {
+      background-color: #fff;
+
+      margin: 20px 0px;
+      padding: 20px 10px;
+      border-radius: 7px;
+      box-shadow: 0px 10px 20px 0px rgb(157 157 157 / 13%);
+      border: 0.1px solid #bbc6cc5e;
+      @include themed() {
+        background-color: t("dark3");
+        box-shadow: t("none");
+        border-color: t("themelight");
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        list-style-type: none;
+        margin: 0px 0px 10px 0px;
+        gap: 8px;
+        li {
+          color: #ffc400;
+          svg {
+            font-size: 20px;
+          }
+        }
+      }
+      p {
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        margin: 10px 0px;
+        color: $theme-dark1;
+        font-size: 16px;
+        @include themed() {
+          color: t("light-text");
+        }
+      }
+      h5 {
+        font-family: map-get($map: $segoe-fonts, $key: semibold-600);
+        margin-top: 10px;
+        color: $theme-dark1;
+        font-size: 18px;
+        @include themed() {
+          color: t("whitecolor");
+        }
+      }
+      span {
+        font-family: map-get($map: $segoe-fonts, $key: semi);
+        margin: 10px 0px 10px 0px;
+        // display: inline-block;
+        color: $theme-dark1;
+        font-size: 14px;
+        @include themed() {
+          color: t("light-text");
+        }
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet-active-main {
+        background: $theme-green2;
+      }
+      .swiper-pagination-bullet {
+        @include themed() {
+          background-color: t("whitecolor");
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .feedback-slider {
+    .feedback-slider-swiper {
+      .review-box {
+        p {
+          font-size: 15px;
+        }
+        h5 {
+          font-size: 16px;
+        }
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .feedback-slider {
+    .feedback-slider-swiper {
+      .review-box {
+        p {
+          font-size: 16px;
+        }
+        h5 {
+          font-size: 17px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

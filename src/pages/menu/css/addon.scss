@@ -1,0 +1,516 @@
+@import "../../../common/assets/scss/main.scss";
+
+.addon-popup.modal.dark-theme .modal-dialog .modal-content .modal-body {
+  .extra .optional {
+    background-color: #001e3c;
+    p {
+      color: #fff;
+      span.tick-icon {
+        background-color: #276cf6;
+      }
+    }
+  }
+  .extra-btns {
+    background-color: #02111f;
+  }
+  .addon-items {
+    background-color: #001e3c;
+    form .input-grup-div .input-div {
+      label {
+        color: #ffffff;
+      }
+      span {
+        color: #99ccf3;
+      }
+    }
+  }
+  .total-div {
+    background: linear-gradient(
+      90deg,
+      rgb(2 30 60) 39%,
+      rgba(255, 255, 255, 0) 39%,
+      rgba(255, 255, 255, 0) 61%,
+      rgb(2 30 60) 61%
+    );
+    @media only screen and (min-width: 320px) and (max-width: 420px) {
+      background: linear-gradient(
+        90deg,
+        rgb(2 30 60) 36%,
+        rgba(255, 255, 255, 0) 36%,
+        rgba(255, 255, 255, 0) 64%,
+        rgb(2 30 60) 64%
+      );
+    }
+    @media only screen and (min-width: 330px) and (max-width: 349px) {
+      background: linear-gradient(
+        90deg,
+        rgb(2 30 60) 37%,
+        rgba(255, 255, 255, 0) 35%,
+        rgba(255, 255, 255, 0) 64%,
+        rgb(2 30 60) 41%
+      );
+    }
+  }
+}
+.addon-popup.modal {
+  .modal-dialog {
+    @media only screen and (min-width: 768px) {
+      max-width: 400px;
+    }
+    @media only screen and (min-width: 421px) and (max-width: 767px) {
+      max-width: 400px;
+    }
+    .modal-content {
+      border: none;
+      border-radius: 15px;
+      background-color: transparent;
+      .modal-body {
+        padding: 0px;
+        .header-div {
+          background-color: #173303;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 12px 12px;
+          border-radius: 15px 15px 0px 0px;
+          h3 {
+            margin: 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 17px;
+            color: #ffffff;
+          }
+          span.close-btn {
+            display: flex;
+            svg {
+              font-size: 22px;
+              cursor: pointer;
+              fill: #ffffff;
+            }
+          }
+        }
+        .extra {
+          p.title {
+            margin: 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 17px;
+            color: #173303;
+            background-color: #9fe870;
+            padding: 6px 12px;
+          }
+          .optional {
+            padding: 6px 12px;
+            background-color: #f3f3f5;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 5px 20px;
+            height: 62px;
+            align-items: center;
+            align-content: flex-start;
+            overflow-y: scroll;
+            &::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+              background-color: #f5f5f5;
+              border-radius: 20px;
+            }
+
+            &::-webkit-scrollbar {
+              width: 3px;
+              background-color: #f5f5f5;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              border-radius: 20px;
+              background-color: #fff;
+              background-image: -webkit-gradient(
+                linear,
+                40% 0%,
+                75% 84%,
+                from(#173303),
+                to(#173303),
+                color-stop(0.6, #173303)
+              );
+            }
+            p {
+              margin: 0px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15px;
+              color: #000000;
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              span.tick-icon {
+                background-color: #173303;
+                border-radius: 50%;
+                width: 16px;
+                height: 16px;
+                margin-right: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg {
+                  fill: #fff;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        .extra-btns {
+          padding: 10px 12px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 10px 8px;
+          flex-wrap: wrap;
+          background-color: #fff;
+          span {
+            button {
+              border: none;
+              outline: none;
+              box-shadow: none;
+              padding: 5px 10px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 12.5px;
+              line-height: normal;
+              border-radius: 5px;
+              &.no {
+                background-color: #fff0f0;
+                color: #f96a72;
+              }
+              &.less {
+                background-color: #276cf6;
+                color: #fff;
+              }
+              &.half {
+                background-color: #173303;
+                color: #fff;
+              }
+              &.on {
+                color: #173303;
+                background-color: #9fe870;
+              }
+              &.width {
+                background-color: #fff0f0;
+                color: #f96a72;
+              }
+              &.on-burger {
+                background-color: #276cf6;
+                color: #fff;
+              }
+              &.on-chips {
+                color: #173303;
+                background-color: #9fe870;
+              }
+            }
+          }
+        }
+        .addon-items {
+          padding: 10px 0px 0px 0px;
+          position: relative;
+          background-color: #fff;
+
+          form {
+            position: relative;
+            .input-grup-div {
+              padding: 0px 12px 0px 12px;
+              height: 185px;
+              overflow-y: scroll;
+
+              &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                background-color: #f5f5f5;
+                border-radius: 20px;
+              }
+
+              &::-webkit-scrollbar {
+                width: 3px;
+                background-color: #f5f5f5;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                border-radius: 20px;
+                background-color: #fff;
+                background-image: -webkit-gradient(
+                  linear,
+                  40% 0%,
+                  75% 84%,
+                  from(#173303),
+                  to(#173303),
+                  color-stop(0.6, #173303)
+                );
+              }
+
+              .input-div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                gap: 7px;
+                margin-bottom: 15px;
+
+                input {
+                  cursor: pointer;
+                  &[type="radio"],
+                  &[type="checkbox"] {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    border-radius: 50%;
+                    background: #e8e8e8;
+                    border: 3px solid #fff;
+                    height: 12px;
+                    width: 12px;
+                    outline: 1px solid #999;
+                    margin-top: 1px;
+                    &:checked {
+                      background: #ffffff;
+                      border: 3px solid #29b56c;
+                      outline: 2px solid #29b56c;
+                      outline-offset: -1px;
+                    }
+                  }
+                }
+                label {
+                  font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                  font-size: 14.5px;
+                  cursor: pointer;
+                  color: #173303;
+                  line-height: normal;
+                }
+                span {
+                  font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                  font-size: 15px;
+                  color: #173303;
+                  margin-left: auto;
+                }
+              }
+            }
+            .from-btns {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-direction: row;
+              position: absolute;
+              z-index: 1;
+              width: 100%;
+              padding: 0px 12px;
+              button {
+                background-color: #9fe870;
+                color: #173303;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                border-radius: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 3px;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 15px;
+                padding: 8px 20px;
+                svg {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+        .total-div {
+          position: relative;
+          background: rgb(255, 255, 255);
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 1) 39%,
+            rgba(255, 255, 255, 0) 39%,
+            rgba(255, 255, 255, 0) 61%,
+            rgba(255, 255, 255, 1) 61%
+          );
+          height: 47.5px;
+          margin-bottom: 20px;
+          border-radius: 0px 0px 15px 15px;
+          img {
+            width: 95px;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translate(-50%, 0px);
+          }
+          .total-price {
+            width: 70px;
+            height: 70px;
+            background-color: #173303;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 13px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            span {
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 14.5px;
+              color: #9fe870;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .addon-popup.modal {
+    height: auto;
+    top: auto;
+    bottom: 0;
+    &.fade .modal-dialog {
+      transition: -webkit-transform 0.3s ease-out;
+      transition: transform 0.3s ease-out;
+      transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+      -webkit-transform: translate(0, 100px);
+      transform: translate(0, 100px);
+    }
+    &.show .modal-dialog {
+      -webkit-transform: none;
+      transform: none;
+      margin: 0px auto 50px auto;
+      .modal-content {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .addon-popup.modal .modal-dialog .modal-content .modal-body {
+    .header-div {
+      padding: 10px 12px;
+      h3 {
+        font-size: 15px;
+      }
+      span.close-btn svg {
+        font-size: 20px;
+      }
+    }
+    .extra p.title {
+      font-size: 15px;
+    }
+    .extra .optional {
+      height: 58px;
+      p {
+        font-size: 14px;
+        span.tick-icon {
+          width: 15px;
+          height: 15px;
+          svg {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    .extra-btns span button {
+      font-size: 12px;
+      padding: 4px 10px;
+    }
+    .addon-items form .input-grup-div .input-div label {
+      font-size: 14px;
+    }
+    .total-div {
+      background: linear-gradient(
+        90deg,
+        rgb(255, 255, 255) 36%,
+        rgba(255, 255, 255, 0) 36%,
+        rgba(255, 255, 255, 0) 64%,
+        rgb(255, 255, 255) 64%
+      );
+    }
+    .addon-items form .from-btns button {
+      padding: 5px 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .addon-popup.modal .modal-dialog .modal-content .modal-body {
+    .header-div {
+      padding: 12px 12px;
+      h3 {
+        font-size: 17px;
+      }
+    }
+    .extra p.title {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width: 330px) and (max-width: 349px) {
+  .addon-popup.modal .modal-dialog .modal-content .modal-body {
+    .total-div {
+      background: linear-gradient(
+        90deg,
+        rgb(255, 255, 255) 37%,
+        rgba(255, 255, 255, 0) 35%,
+        rgba(255, 255, 255, 0) 64%,
+        rgb(255, 255, 255) 41%
+      );
+    }
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+  .addon-popup.modal .modal-dialog .modal-content .modal-body {
+    .total-div {
+      background: linear-gradient(
+        90deg,
+        rgb(255, 255, 255) 38%,
+        rgba(255, 255, 255, 0) 38%,
+        rgba(255, 255, 255, 0) 62%,
+        rgb(255, 255, 255) 62%
+      );
+    }
+  }
+  .addon-popup.modal.dark-theme .modal-dialog .modal-content .modal-body {
+    .total-div {
+      background: linear-gradient(
+        90deg,
+        rgb(2, 30, 60) 38%,
+        rgba(255, 255, 255, 0) 38%,
+        rgba(255, 255, 255, 0) 62%,
+        rgb(2, 30, 60) 62%
+      );
+    }
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 420px) {
+  .addon-popup.modal .modal-dialog .modal-content .modal-body {
+    .total-div {
+      background: linear-gradient(
+        90deg,
+        rgb(255, 255, 255) 39%,
+        rgba(255, 255, 255, 0) 39%,
+        rgba(255, 255, 255, 0) 61%,
+        rgb(255, 255, 255) 61%
+      );
+    }
+  }
+  .addon-popup.modal.dark-theme .modal-dialog .modal-content .modal-body {
+    .total-div {
+      background: linear-gradient(
+        90deg,
+        rgb(2, 30, 60) 39%,
+        rgba(255, 255, 255, 0) 39%,
+        rgba(255, 255, 255, 0) 61%,
+        rgb(2, 30, 60) 61%
+      );
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+}

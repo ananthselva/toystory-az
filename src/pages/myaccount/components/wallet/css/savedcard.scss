@@ -1,0 +1,281 @@
+@import "../../../../../common/assets/scss/main.scss";
+
+.save-cards {
+  padding: 25px 0px;
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .card-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 1px solid #bbc6cc;
+      border-radius: 5px;
+      padding: 10px 12px;
+      @include themed() {
+        background-color: t("dark4");
+        border-color: t("green3");
+      }
+      .img-number {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+        img {
+          border: 1px solid #bbc6cc;
+          border-radius: 5px;
+          padding: 10px;
+          width: 70px;
+        }
+        p {
+          margin: 0px;
+          color: $theme-dark1;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 18px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        span {
+          color: $theme-dark1;
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 16px;
+          @include themed() {
+            color: t("light-text");
+          }
+        }
+      }
+      .del-prime {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        button {
+          border: none;
+          box-shadow: none;
+          outline: none;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 14px;
+          &.delet-btn {
+            background-color: transparent;
+            padding: 0px;
+          }
+          &.setas-btn {
+            background: #f4f5f5;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: $theme-dark1;
+            max-width: 150px;
+            width: 150px;
+
+            &.active {
+              padding: 8px 15px;
+              background-color: #276cf6;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .add-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+    a {
+      color: #173303;
+      background-color: #9fe870;
+      padding: 12px 40px;
+      text-decoration: none;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+
+      svg {
+        color: #173303;
+        fill: #173303;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .save-cards {
+    background-color: #f5f5f5;
+    padding: 12px 0px;
+    @include themed() {
+      background-color: t("dark4");
+    }
+    .cards {
+      .card-list {
+        flex-direction: column;
+        gap: 20px;
+        border: none;
+        background-color: #ffffff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        @include themed() {
+          box-shadow: t("none");
+          background-color: t("dark3");
+        }
+        .img-number {
+          gap: 12px;
+          img {
+            padding: 10px;
+            width: 75px;
+          }
+          p {
+            font-size: 17px;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+        .del-prime {
+          gap: 25px;
+          justify-content: flex-end;
+          button {
+            font-size: 13.5px;
+            &.setas-btn {
+              max-width: 125px;
+              width: 125px;
+            }
+          }
+        }
+      }
+    }
+    .add-btn {
+      margin: 50px 0px;
+      a {
+        padding: 10px 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+  .save-cards {
+    padding: 12px 0px;
+    background-color: #f5f5f5;
+    @include themed() {
+      background-color: t("dark4");
+    }
+    .cards {
+      .card-list {
+        flex-direction: row;
+        gap: 20px;
+        padding: 15px;
+        border: none;
+        background-color: #ffffff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        @include themed() {
+          box-shadow: t("none");
+          background-color: t("dark3");
+        }
+        .img-number {
+          gap: 12px;
+          img {
+            padding: 10px;
+            width: 65px;
+          }
+          p {
+            font-size: 17px;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+        .del-prime {
+          gap: 25px;
+          justify-content: flex-end;
+          button {
+            font-size: 14px;
+            &.setas-btn {
+              max-width: 125px;
+              width: 125px;
+            }
+          }
+        }
+      }
+    }
+    .add-btn {
+      margin: 50px 0px;
+      a {
+        padding: 10px 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .save-cards {
+    .cards {
+      .card-list {
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+
+        .img-number {
+          gap: 10px;
+          img {
+            padding: 10px;
+            width: 55px;
+          }
+          p {
+            font-size: 15px;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+        .del-prime {
+          gap: 12px;
+          justify-content: flex-end;
+          button {
+            &.setas-btn {
+              width: 100px;
+              font-size: 13px;
+              padding: 5px;
+            }
+            &.delet-btn {
+              img {
+                width: 15px;
+              }
+            }
+            &.active {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+    .add-btn {
+      margin: 50px 0px;
+      a {
+        padding: 10px 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .save-cards {
+    .cards .card-list {
+      .img-number p {
+        font-size: 17px;
+      }
+      .del-prime {
+        gap: 30px;
+      }
+    }
+    .add-btn a {
+      padding: 10px 40px;
+    }
+  }
+}

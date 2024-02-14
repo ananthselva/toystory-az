@@ -1,0 +1,22 @@
+[
+  {
+    "Type": "Home",
+    "FirstName": "Ashok",
+    "LastName": "C",
+    "Phone": "0123456789",
+    "PostCode": "OX11 8AB",
+    "DoorNum": "100",
+    "Street": "Broadway,  Didcot",
+    "City": "Macclesfield"
+  },
+  {
+    "Type": "Office",
+    "FirstName": "Ashok",
+    "LastName": "C",
+    "Phone": "0123456789",
+    "PostCode": "SK11 6TJ1",
+    "DoorNum": "101",
+    "Street": "Park Lane",
+    "City": "Macclesfield"
+  }
+]

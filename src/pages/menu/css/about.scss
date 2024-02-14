@@ -1,0 +1,467 @@
+@import "../../../common/assets/scss/main.scss";
+
+.menu-page {
+  .main-page {
+    .outlet-section {
+      .about-section {
+        h4 {
+          &.abt-title {
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            margin-bottom: 10px;
+            font-size: 20px;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+        }
+        .about-content {
+          padding: 15px;
+          background-color: #ffffff;
+          border: 1px solid #fff;
+          @include themed() {
+            background-color: t("dark5");
+            border-color: t("hoverbg");
+            box-shadow: t("none");
+          }
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          p {
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            margin: 0px;
+            font-size: 16.5px;
+            line-height: 1.8;
+            @include themed() {
+              color: t("light-text");
+            }
+          }
+        }
+        .google-map {
+          margin-top: 26px;
+          padding: 15px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          border: 1px solid #fff;
+          @include themed() {
+            background-color: t("dark5");
+            border-color: t("hoverbg");
+            box-shadow: t("none");
+          }
+          iframe {
+            border-radius: 10px;
+            width: 100%;
+            height: 260px;
+            display: block;
+          }
+        }
+        .opening-hours {
+          padding: 15px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          border: 1px solid #fff;
+          @include themed() {
+            background-color: t("dark5");
+            border-color: t("hoverbg");
+            box-shadow: t("none");
+          }
+          .abt-title {
+            margin-bottom: 15px;
+          }
+          table {
+            &.opening-time-head {
+              margin-bottom: 10px;
+              thead {
+                tr {
+                  background-color: #edeff0;
+                  @include themed() {
+                    background-color: t("hoverbg");
+                    color: t("hovercolor");
+                  }
+                  font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                  border: none;
+                  th {
+                    font-size: 16px;
+                    border: none;
+                    padding: 10px 20px;
+                    &:nth-child(1) {
+                      width: 30%;
+                    }
+                    &:nth-child(2) {
+                      width: 30%;
+                    }
+                    &:nth-child(3) {
+                      width: 30%;
+                    }
+                  }
+                }
+              }
+            }
+            &.opening-time-data {
+              margin: 0px;
+              tbody {
+                tr {
+                  td {
+                    border: none;
+                    font-size: 16px;
+                    font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                    padding: 10px 20px;
+                    vertical-align: middle;
+                    @include themed() {
+                      color: t("light-text");
+                    }
+                    &:nth-child(1) {
+                      width: 30%;
+                      border-radius: 50px 0px 0px 50px;
+                    }
+                    &:nth-child(2) {
+                      width: 30%;
+                      border-radius: 0px 0px 0px 0px;
+                    }
+                    &:nth-child(3) {
+                      width: 30%;
+                      border-radius: 0px 50px 50px 0px;
+                    }
+                  }
+                  &.active {
+                    td {
+                      background-color: #afe680;
+                      color: #283d16;
+                      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .allergen {
+          margin-top: 26px;
+          padding: 15px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          border: 1px solid #fff;
+          @include themed() {
+            background-color: t("dark5");
+            border-color: t("hoverbg");
+            box-shadow: t("none");
+          }
+          .content-img {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            p {
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              margin: 0px;
+              font-size: 16.5px;
+              line-height: 1.8;
+              @include themed() {
+                color: t("light-text");
+              }
+            }
+            img {
+              width: 100px;
+            }
+          }
+          .view-info {
+            text-decoration: underline;
+            background-color: #e4e4e4;
+            color: #212121;
+            padding: 12px 20px;
+            margin: 0px -15px -15px -15px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16.5px;
+            border-radius: 0px 0px 10px 10px;
+            @include themed() {
+              background-color: t("hoverbg");
+              color: t("hovercolor");
+            }
+          }
+        }
+        .food-hygine {
+          padding: 15px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          border: 1px solid #fff;
+          @include themed() {
+            background-color: t("dark5");
+            border-color: t("hoverbg");
+            box-shadow: t("none");
+          }
+          p {
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            margin: 0px 0px 20px 0px;
+            font-size: 16.5px;
+            line-height: 1.8;
+            @include themed() {
+              color: t("light-text");
+            }
+          }
+          img {
+            width: 225px;
+            margin: 0px 0px 20px 0px;
+            border-radius: 7px;
+          }
+          a {
+            display: block;
+            text-decoration: underline;
+            color: #212121;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 17px;
+            margin-bottom: 10px;
+            @include themed() {
+              color: t("hovercolor");
+            }
+          }
+          span {
+            display: block;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            color: #212121;
+            font-size: 16px;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+        }
+      } // about section
+    } // Outlet Section
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .menu-page .main-page .outlet-section {
+    .about-section {
+      h4.abt-title {
+        font-size: 18px;
+      }
+      .about-content {
+        p {
+          font-size: 15px;
+          text-align: justify;
+        }
+        .google-map {
+          margin-top: 20px;
+        }
+      }
+      .opening-hours {
+        margin-top: 20px;
+        table {
+          &.opening-time-head {
+            thead {
+              tr {
+                th {
+                  padding: 10px 5px;
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+          &.opening-time-data {
+            tbody {
+              tr {
+                td {
+                  padding: 8px 5px;
+                  font-size: 13px;
+                }
+                &.active {
+                  td {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .allergen {
+        .content-img {
+          flex-direction: column;
+          p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            br {
+              display: none;
+            }
+          }
+        }
+        .view-info {
+          font-size: 16px;
+        }
+      }
+      .food-hygine {
+        margin-top: 20px;
+        p {
+          font-size: 15px;
+        }
+        img {
+          width: 200px;
+        }
+        a {
+          font-size: 16px;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .menu-page .main-page .outlet-section {
+    .about-section {
+      h4.abt-title {
+        font-size: 19px;
+      }
+      .about-content {
+        p {
+          font-size: 16px;
+          text-align: justify;
+        }
+        .google-map {
+          margin-top: 20px;
+        }
+      }
+      .opening-hours {
+        margin-top: 20px;
+        table {
+          &.opening-time-head {
+            thead {
+              tr {
+                th {
+                  padding: 10px 10px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          &.opening-time-data {
+            tbody {
+              tr {
+                td {
+                  padding: 8px 10px;
+                  font-size: 15px;
+                }
+                &.active {
+                  td {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .allergen {
+        .content-img {
+          p {
+            font-size: 16px;
+            br {
+              display: none;
+            }
+          }
+        }
+        .view-info {
+          font-size: 16px;
+        }
+      }
+      .food-hygine {
+        margin-top: 20px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-page .main-page .outlet-section {
+    .about-section {
+      .opening-hours {
+        table {
+          &.opening-time-head {
+            thead {
+              tr {
+                th {
+                  padding: 10px 10px;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          &.opening-time-data {
+            tbody {
+              tr {
+                td {
+                  padding: 8px 10px;
+                  font-size: 14px;
+                }
+                &.active {
+                  td {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .food-hygine {
+        margin-top: 26px;
+      }
+      .allergen .content-img p {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .menu-page .main-page .outlet-section {
+    .about-section {
+      .opening-hours {
+        table {
+          &.opening-time-head {
+            thead {
+              tr {
+                th {
+                  padding: 10px 10px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          &.opening-time-data {
+            tbody {
+              tr {
+                td {
+                  padding: 10px 10px;
+                  font-size: 15px;
+                }
+                &.active {
+                  td {
+                    padding: 8px 10px;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .allergen .content-img p {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

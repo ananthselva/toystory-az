@@ -1,0 +1,674 @@
+@import "../../../common/assets/scss/main.scss";
+.points {
+  .modal-footer {
+    border-top: none;
+  }
+  .pop-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #384656;
+    color: #fff;
+    padding: 15px;
+    border-radius: 100px 0px;
+    margin-top: 10px;
+  }
+  .heading {
+    display: flex;
+    padding: 0px 30px 0px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    .pts {
+      font-size: 17px;
+      font-weight: 700;
+      color: #000;
+    }
+  }
+  .values-values {
+    .box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: space-around;
+      .anmi-image {
+        width: 25%;
+      }
+      .offer-per {
+        width: 25%;
+        img {
+          width: 100%;
+        }
+      }
+      .offer-red {
+        position: relative;
+        width: 25%;
+        img {
+          width: 100%;
+        }
+        .percentage {
+          position: absolute;
+          font-size: 14px;
+          font-weight: 600;
+          color: #fff;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -55%);
+          text-align: center;
+        }
+      }
+
+      Button:hover {
+        display: flex;
+        background-color: transparent;
+        border: 1px solid #48d895;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+
+        text-wrap: nowrap;
+        height: 0%;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        width: 25%;
+      }
+      Button {
+        display: flex;
+        background-color: transparent;
+        border: 1px solid #48d895;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+        text-wrap: nowrap;
+        height: 0%;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        width: 25%;
+        justify-content: center;
+        img {
+          width: 15px;
+        }
+        .free {
+          color: #384656;
+          font-size: 13px;
+          font-weight: 700;
+        }
+        .need-fifty {
+          color: #e3173c;
+          font-weight: 700;
+          font-size: 13px;
+        }
+      }
+      .cnt {
+        margin-right: auto;
+        width: 50%;
+        .title {
+          h5 {
+            font-size: 16px;
+            font-weight: 500;
+          }
+          p {
+            font-weight: 15px;
+          }
+        }
+      }
+    }
+  }
+  span.close-btn {
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    display: flex;
+    svg {
+      font-size: 22px;
+      cursor: pointer;
+      fill: #ffffff;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  .points .values-values .box .offer-red .percentage {
+    font-size: 11px;
+  }
+  .points .values-values .box .cnt .title h5 {
+    font-size: 14px;
+  }
+  .points .values-values .box .cnt .title p {
+    font-size: 13px;
+  }
+  .points .values-values .box Button img {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+// Offer Popup New Style Start
+.modal.offerpopup-new {
+  .modal-dialog {
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 20px;
+        background-color: #eeeeee;
+        .top-heading {
+          height: 162px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .header-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e5e4e4;
+            gap: 10px;
+            span {
+              cursor: pointer;
+              background-color: #8b8a8a;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 32px;
+              width: 32px;
+              border-radius: 50px;
+              svg {
+                color: #fff;
+                font-size: 20px;
+                margin-right: 2px;
+              }
+            }
+            p {
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 18px;
+              margin: 0px;
+              color: #000000;
+            }
+          }
+          form {
+            margin: 15px 0px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 0px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            input {
+              border: none;
+              outline: none;
+              box-shadow: none;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 17px;
+              background-color: #fff;
+              padding: 10px 0px;
+              text-transform: uppercase;
+              $placeholder-color: #bebebe;
+              $transform: capitalize;
+              &::-webkit-input-placeholder {
+                color: $placeholder-color;
+                text-transform: $transform;
+              }
+              &::-moz-placeholder {
+                color: $placeholder-color;
+                text-transform: $transform;
+              }
+              &:-ms-input-placeholder {
+                color: $placeholder-color;
+                text-transform: $transform;
+              }
+              &:-moz-placeholder {
+                color: $placeholder-color;
+                text-transform: $transform;
+              }
+            }
+            button {
+              border: none;
+              outline: none;
+              box-shadow: none;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 17px;
+              padding: 0px;
+              background-color: transparent;
+              color: #28be21;
+            }
+          }
+          h3.offer-title {
+            text-align: center;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 24px;
+            color: #bebebe;
+            margin-bottom: 10px;
+          }
+        }
+        .offer-content {
+          display: flex;
+          flex-direction: column;
+          // gap: 25px;
+          padding: 0px 10px 0px 10px;
+          max-height: calc(75vh - 162px);
+          height: auto;
+          overflow: scroll;
+          scroll-behavior: smooth;
+          -ms-overflow-style: none; /* Internet Explorer 10+ */
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+          }
+          .accordion {
+            &:first-child {
+              .offer-box {
+                margin-top: 15px;
+              }
+            }
+            &:last-child {
+              .offer-box {
+                &:last-child {
+                  margin-bottom: 25px;
+                }
+              }
+            }
+          }
+          .offer-box {
+            margin-bottom: 25px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            .offer-header {
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              gap: 10px;
+              border-bottom: 1px dashed #000000;
+              padding-bottom: 15px;
+              // margin-bottom: 5px;
+              .icon-div {
+                span {
+                  background-color: $themecolor1;
+                  padding: 0px;
+                  height: 35px;
+                  width: 35px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 50px;
+                  svg {
+                    color: $themecolor2;
+                    font-size: 30px;
+                  }
+                }
+              }
+              .content-div {
+                width: 100%;
+                h2 {
+                  font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+                  font-size: 20px;
+                  margin: 4px 0px 0px 0px;
+                }
+                p {
+                  font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                  font-size: 16px;
+                  color: #b71a2d;
+                  margin-bottom: 15px;
+                  line-height: normal;
+                }
+                .offer-code {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: space-between;
+                  button {
+                    font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                    font-size: 16px;
+                    line-height: normal;
+                    background-color: transparent;
+                    padding: 5px 15px;
+                    &:first-child {
+                      color: #787878;
+                      border: 1px solid #faae2c;
+                    }
+                    &:last-child {
+                      color: #000000;
+                      border: none;
+                      outline: none;
+                      box-shadow: none;
+                      line-height: 1;
+                    }
+                  }
+                }
+              }
+            }
+            .t-and-c {
+              margin: 0px 0px 20px 0px;
+              padding-top: 0px;
+              p {
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 18px;
+                line-height: normal;
+                margin: 0px 0px 10px 0px;
+              }
+              ul {
+                padding-left: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-bottom: 0px;
+                li {
+                  font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                  font-size: 16px;
+                  line-height: normal;
+                  color: #787878;
+                }
+              }
+            }
+            .apply-div {
+              margin: 0px -15px -15px -15px;
+              button.apply-btn {
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 16px;
+                line-height: normal;
+                background-color: #fff;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                padding: 10px 10px;
+                width: 100%;
+                color: $themecolor2;
+                border-radius: 0px 0px 10px 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .modal.offerpopup-new
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .offer-content {
+    max-height: calc(100vh - (162px + 40px));
+  }
+}
+@media only screen and (max-width: 575px) {
+  .modal.couponapply-new {
+    .modal-dialog {
+      max-width: 100%;
+      margin: 0px auto;
+      align-items: flex-end;
+      min-height: calc(100% - var(--bs-modal-margin) * 0);
+      .modal-content {
+        border: none;
+        border-radius: 30px 30px 0px 0px !important;
+        height: 50%;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 576px) {
+  .modal.couponapply-new {
+    .modal-dialog {
+      .modal-content {
+        max-width: 300px;
+        margin: 0px auto;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+.modal.couponapply-new {
+  .modal-dialog {
+    .modal-content {
+      border: none;
+      border-radius: 15px;
+      .modal-body {
+        padding: 20px;
+        .content-div {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 25px 0px;
+          span {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00ba00;
+            border-radius: 50px;
+            margin-bottom: 25px;
+            position: relative;
+            svg {
+              font-size: 40px;
+              color: #fff;
+              z-index: 2;
+            }
+            .pulse {
+              height: 50px;
+              width: 50px;
+              background: linear-gradient(#00ba00, #00ba00);
+              position: absolute;
+              margin: auto;
+              left: 50%;
+              top: auto;
+              right: auto;
+              bottom: 50%;
+              transform: translate(-50%, 50%);
+              border-radius: 50%;
+              display: grid;
+              place-items: center;
+              font-size: 25px;
+              color: #ffffff;
+              opacity: 1;
+              svg {
+                fill: #00ba00;
+              }
+              &:before,
+              &:after {
+                content: "";
+                position: absolute;
+                height: 80%;
+                width: 80%;
+                background-color: #00ba00;
+                border-radius: 50%;
+                z-index: 1;
+                opacity: 0.7;
+              }
+              &:before {
+                animation: pulse 2s ease-out infinite;
+              }
+              &:after {
+                animation: pulse 2s 1s ease-out infinite;
+              }
+
+              @keyframes pulse {
+                100% {
+                  transform: scale(2.5);
+                  opacity: 0;
+                }
+              }
+            }
+          }
+          p {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            color: #000000;
+            line-height: normal;
+            margin-bottom: 10px;
+          }
+          h4 {
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 22px;
+            color: #000000;
+            line-height: normal;
+            margin-bottom: 10px;
+          }
+          h5 {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            color: #000000;
+            line-height: normal;
+            margin-bottom: 10px;
+          }
+          button {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background-color: #faae2c;
+            padding: 8px 25px;
+            border-radius: 50px;
+            line-height: 1;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            color: #fff;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  .modal.offerpopup-new .modal-dialog {
+    .modal-content {
+      .modal-body {
+        padding: 10px;
+        .offer-content {
+          max-height: calc(100vh - 182px);
+          padding: 0px 7px;
+          .offer-box {
+            padding: 10px;
+            .offer-header .content-div .offer-code button {
+              font-size: 14px;
+            }
+            .t-and-c {
+              p {
+                font-size: 17px;
+              }
+              ul li {
+                font-size: 15px;
+              }
+            }
+            .apply-div {
+              margin: 0px -10px -10px -10px;
+            }
+          }
+        }
+        .top-heading {
+          .header-content {
+            p {
+              font-size: 17px;
+            }
+          }
+          form {
+            input {
+              font-size: 16px;
+            }
+            button {
+              font-size: 16px;
+            }
+          }
+          h3.offer-title {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Dark Theme Start
+.modal.offerpopup-new.dark-theme .modal-dialog {
+  .modal-content {
+    .modal-body {
+      background-color: #0a1929;
+      .top-heading {
+        .header-content {
+          border-bottom: 1px solid #064d9369;
+          span {
+            background-color: #d92662;
+          }
+          p {
+            color: #fff;
+          }
+        }
+        form {
+          background-color: #001e3c;
+          input {
+            background-color: #001e3c;
+            color: #fff;
+          }
+        }
+        h3.offer-title {
+          color: #99ccf3;
+        }
+      }
+      .offer-content .offer-box {
+        background-color: #001e3c;
+        .offer-header {
+          border-color: #b2bac2;
+          .content-div {
+            h2 {
+              color: #fff;
+            }
+            p {
+              color: #d92662;
+            }
+            .offer-code button {
+              &:first-child {
+                color: #b2bac2;
+                border-color: #b2bac2;
+              }
+              &:last-child {
+                color: #28be21;
+              }
+            }
+          }
+        }
+        .t-and-c {
+          p {
+            color: #fff;
+          }
+          ul {
+            li {
+              color: #b2bac2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal.couponapply-new.dark-theme .modal-dialog {
+  .modal-content {
+    background-color: #0a1929;
+    .modal-body {
+      .content-div {
+        p {
+          color: #fff;
+        }
+        h4 {
+          color: #9fe870;
+        }
+        h5 {
+          color: #edffe2;
+        }
+      }
+    }
+  }
+}
+// Dark Theme End

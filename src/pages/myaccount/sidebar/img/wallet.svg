@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="Group_20130" data-name="Group 20130" transform="translate(-158 -846)">
+    <circle id="Ellipse_1473" data-name="Ellipse 1473" cx="22" cy="22" r="22" transform="translate(158 846)" fill="#e5f8eb"/>
+    <g id="Group_16926" data-name="Group 16926">
+      <g id="wallet_8_" data-name="wallet (8)" transform="translate(169.504 856.914)">
+        <path id="XMLID_436_" d="M18.994,16.138v1.517a1.519,1.519,0,0,1-1.517,1.517H4.428A2.43,2.43,0,0,1,2,16.745V6.428A2.43,2.43,0,0,1,4.428,4H15.656a.91.91,0,0,1,0,1.821H4.428a.607.607,0,0,0,0,1.214H17.476a1.519,1.519,0,0,1,1.517,1.517v1.517H15.959a3.035,3.035,0,1,0,0,6.069Z" fill="#173303"/>
+        <path id="XMLID_438_" d="M26.855,16v3.641H23.821a1.821,1.821,0,1,1,0-3.641Z" transform="translate(-7.862 -4.717)" fill="#173303"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+@import "../../../../../common/assets/scss/main.scss";
+
+.dark-popup #add-card-popup {
+  .modal-content {
+    background-color: #0a1929;
+    .modal-body {
+      p {
+        color: #ffffff;
+      }
+      button.cancel-btn {
+        color: #ffffff;
+      }
+    }
+  }
+}
+#add-card-popup {
+  @media only screen and (min-width: 350px) {
+    max-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  border: none;
+
+  .modal-content {
+    padding: 0px;
+    border: none;
+    .modal-body {
+      padding: 15px;
+      img {
+        width: 250px;
+        display: flex;
+        margin: 0px auto;
+      }
+      p {
+        color: $theme-dark1;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        text-align: center;
+        font-size: 16px;
+        margin: 0px;
+      }
+      button {
+        border: none;
+        outline: none;
+        font-size: 15px;
+        padding: 0;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        left: auto;
+        bottom: auto;
+        display: flex;
+        &.cancel-btn {
+          background-color: transparent;
+          color: $theme-dark1;
+        }
+      }
+    }
+  }
+}

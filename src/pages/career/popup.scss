@@ -1,0 +1,194 @@
+@import "../../common/assets/scss/main.scss";
+
+.career-popup {
+  //   transform: translateY(150px);
+
+  .Modal-Header {
+    @include themed() {
+      background-color: t("dark1");
+    }
+  }
+  .title {
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #204356;
+    }
+  }
+
+  .form-control:invalid {
+    padding-right: calc(1.5em + 0.75rem);
+
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    box-shadow: none;
+  }
+  .form-control {
+    padding: 10px 0 10px 40px;
+    padding-left: 28px;
+    background-size: 16px; /* Change the size of the input */
+    box-shadow: none;
+  }
+  .form-control1 {
+    box-shadow: none;
+    padding: 10px 0 10px 40px;
+    padding-left: 12px;
+    background-size: 16px; /* Change the size of the input */
+  }
+
+  .button {
+    text-align: center;
+    padding-bottom: 11px;
+    .submit {
+      width: 94%;
+      background-color: #276cf6;
+    }
+  }
+
+  .img1 {
+    position: absolute;
+    top: 13px;
+    // width: 20px;
+    left: 5px;
+    font-size: 20px;
+  }
+  .img2 {
+    position: absolute;
+    top: 13px;
+    // width: 20px;
+    left: 5px;
+    font-size: 20px;
+  }
+  .img3 {
+    position: absolute;
+    top: 13px;
+    // width: 20px;
+    left: 5px;
+    font-size: 20px;
+  }
+  .img4 {
+    position: absolute;
+    cursor: pointer;
+    top: 13px;
+    width: 20px;
+    left: 5px;
+    font-size: 21px;
+  }
+  .img5 {
+    position: absolute;
+    cursor: pointer;
+    top: 12px;
+    width: 20px;
+    right: 10px;
+    font-size: 20px;
+  }
+
+  .img6 {
+    position: absolute;
+    cursor: pointer;
+    top: 12px;
+    width: 20px;
+    left: 5px;
+    font-size: 20px;
+  }
+  .img7 {
+    position: absolute;
+    top: 44px;
+    left: 5px;
+    font-size: 20px;
+  }
+
+  .position-form-group {
+    position: relative;
+  }
+
+  .name-form-group {
+    position: relative;
+  }
+
+  .phone-form-group {
+    position: relative;
+  }
+
+  .email-form-group {
+    position: relative;
+  }
+
+  .Experience-form-group {
+    position: relative;
+  }
+
+  .input-group-text {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #6c757d;
+    padding-left: 30px;
+    height: 46px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .career-popup .form-control {
+    margin-bottom: 15px;
+    &:invalid {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.career-popup.dark-theme {
+  .modal-content {
+    background-color: #0a1929;
+  }
+  h2 {
+    color: #ffffff;
+  }
+  .form-control {
+    background-color: #070f1c;
+    color: #ffffff;
+  }
+  .input-group-text {
+    background-color: #070f1c;
+    color: #ffffff;
+  }
+  input {
+    color: #ffffff;
+  }
+  ::placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder {
+    color: #ffffff;
+  }
+
+  ::-ms-input-placeholder {
+    color: #ffffff;
+  }
+  .img1 {
+    color: #ffffff;
+  }
+  .img2 {
+    color: #ffffff;
+  }
+  .img3 {
+    color: #ffffff;
+  }
+  .img4 {
+    color: #ffffff;
+  }
+  .img5 {
+    color: #ffffff;
+  }
+  //   .modal-dialog {
+  //     transform: translateY(150px);
+  //   }
+}
+// @media only screen and (min-width: 375px) and (max-width: 414px) {
+//   .career-popup.dark-theme {
+//     transform: translateY(215px);
+//   }
+// }

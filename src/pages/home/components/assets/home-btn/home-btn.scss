@@ -1,0 +1,73 @@
+@import "../../../../../common/assets/scss/main.scss";
+a.home-btn {
+  color: #204356;
+  font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+  padding: 13px 16px;
+  font-size: 15px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: fit-content;
+  border-radius: 5px;
+  line-height: 1;
+  text-decoration: none;
+  @include themed() {
+    color: t("themedark");
+    box-shadow: t("none");
+  }
+  &#gray {
+    background-color: $themenewgray;
+    color: $themecolor2;
+    svg {
+      fill: $themecolor2;
+      color: $themecolor2;
+    }
+    @include themed() {
+      background-color: t("themelight");
+    }
+  }
+  &#white {
+    background-color: $themenewgray;
+    color: $themecolor2;
+    svg {
+      fill: $themecolor2;
+      color: $themecolor2;
+    }
+    @include themed() {
+      background-color: t("themelight");
+    }
+  }
+  svg {
+    font-size: 18px;
+    margin-top: 2px;
+    margin-left: 3px;
+    fill: $themecolor3;
+    color: $themecolor3;
+    @include themed() {
+      color: t("themedark");
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  a.home-btn {
+    font-size: 14px;
+    padding: 10px 13px;
+    svg {
+      margin-top: 3px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  a.home-btn {
+    font-size: 14.5px;
+    padding: 9px 9px;
+    svg {
+      margin-top: 3px;
+    }
+  }
+}

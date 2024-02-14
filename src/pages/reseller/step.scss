@@ -1,0 +1,144 @@
+@import "../../common/assets/scss/main.scss";
+
+.multi-step-form {
+  width: 100%;
+
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: 1;
+  }
+  .next-button {
+    text-align: end;
+    padding-top: 15px;
+    button {
+      background-color: #28be21;
+      color: black;
+      font-family: "Segoe-UI-400";
+      border: none;
+      padding: 0.75rem;
+      width: 95px;
+      color: #fff;
+      @include themed() {
+        background-color: t("pale-green");
+        color: t("dark-green");
+      }
+    }
+  }
+  .buttons_two {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    align-items: baseline;
+    /* align-content: center; */
+    justify-content: space-between;
+  }
+  .prev-button {
+    .prevbutton {
+      background-color: #dedddf;
+      font-weight: 600;
+
+      border: none;
+      padding: 0.75rem;
+      width: 95px;
+      color: #28be21;
+    }
+  }
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    height: 50px;
+    border-bottom: 1px solid #dfdfdf;
+    color: #3e464d !important;
+    font-weight: 600 !important;
+    outline: none;
+    margin-bottom: 24px;
+  }
+  label {
+    font-family: "Segoe-UI-400";
+    font-size: 14px;
+    position: absolute;
+    height: 19px;
+    padding: 4px 7px;
+    margin-top: -2em;
+    color: #a2a2a2;
+    font-weight: 600;
+    margin-bottom: 3px;
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+  .progress-step-check::before {
+    position: absolute;
+    content: "\2713";
+    width: 100%;
+    height: 100%;
+    top: 8px;
+    left: 13px;
+    font-size: 12px;
+  }
+  .progress {
+    background-color: rgb(39 108 246);
+    width: 0%;
+    transition: 0.3s;
+  }
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .progress-step-active {
+    background-color: #28be21;
+    color: #f3f3f3;
+  }
+
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+
+  .progress-step-check {
+    position: relative;
+    background-color: #276cf6 !important;
+    transition: all 0.8s;
+  }
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    font-family: "Segoe-UI-400";
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #28be21;
+    min-width: 103px;
+    margin-left: 80px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  @media only screen and (min-width: 360px) and (max-width: 400px) {
+    .progress-step::after {
+      font-size: 11.7px;
+    }
+  }
+}

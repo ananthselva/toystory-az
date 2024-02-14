@@ -1,0 +1,46 @@
+@import '../../common/assets/scss/main.scss';
+
+
+
+ .form_full{
+    padding: 30px 0px;
+   button{
+    display: flex;
+    margin: 0px auto;
+    background-color: #39BF6F ;
+    border: none;
+    padding: 10px 30px;
+   }
+
+   .btn:hover{
+    background-color: #39BF6F;
+   }
+
+   .card_name{
+    text-align: center;
+   }
+
+   .border_area{
+        box-sizing: border-box;
+        box-shadow: 0 0 16px -1px rgba(0, 0, 0, 0.2);
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 10px; 
+   }
+
+   .form-control{
+     box-shadow: none;
+     
+   }
+
+   .form-label{
+    font-weight: 500;
+    font-size: 17px;
+   }
+   
+   .form-control:focus{
+    border-color: #e0e1e3;
+   }
+   
+
+ }

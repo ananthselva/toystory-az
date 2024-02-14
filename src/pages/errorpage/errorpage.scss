@@ -1,0 +1,51 @@
+@import '../../common/assets/scss/main.scss';
+
+.error{
+    background-color: #ffffff;
+    @include themed(){
+        background-color: t("dark1");
+    }
+    .content{
+        margin-bottom: 60px;
+    .img{
+        .errorimg{
+            height: 300px;
+        }
+    }
+    .b-results{
+        background: #d92562;
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+        width: 200px !important;
+        padding: 10px;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        .b-results-1{
+            color: #ffffff;
+    text-decoration: none;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    .backresultimg{
+        width: 10px;
+    margin-right: 15px;
+    }
+        }
+    }
+    h4{
+        @include themed(){
+            color: t("whitecolor");
+        }
+    }
+    p{
+        @include themed(){
+            color: t("whitecolor");
+        }
+    }
+}
+}

@@ -1,0 +1,252 @@
+@import "../../../../common/assets/scss/main.scss";
+
+.account-profile {
+  padding: 25px 0px;
+  .go-back-btn {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: flex;
+    }
+    display: none;
+  }
+  .myaccount-back {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: flex;
+    }
+    display: none;
+  }
+
+  Form {
+    .form-group {
+      margin-bottom: 30px;
+      padding: 0px 0px;
+      label {
+        color: #828585;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 16px;
+        @include themed() {
+          color: t("hovercolor");
+        }
+      }
+      input {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        color: $theme-dark1;
+        font-size: 17px;
+        height: 45px;
+        box-shadow: none;
+        &:focus {
+          border-color: #28be21;
+        }
+        @include themed() {
+          background-color: t("dark4");
+          border-color: t("b-color");
+          color: t("whitecolor");
+        }
+        &::-webkit-input-placeholder {
+          color: #c3c3c3;
+        }
+        &::-moz-placeholder {
+          color: #c3c3c3;
+        }
+        &:-ms-input-placeholder {
+          color: #c3c3c3;
+        }
+        &:-moz-placeholder {
+          color: #c3c3c3;
+        }
+      }
+      .input-group {
+        .input-group-text {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: $theme-dark1;
+          font-size: 17px;
+          background-color: transparent;
+          @include themed() {
+            background-color: t("dark4");
+            border-color: t("b-color");
+            color: t("whitecolor");
+          }
+        }
+      }
+    }
+
+    button {
+      background-color: #9fe870;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      padding: 10px 65px 12px 65px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      margin: 30px 0px 0px 0px;
+      font-size: 17px;
+      line-height: normal;
+      color: #173303;
+
+      &:hover {
+        background-color: #28be21;
+      }
+    }
+  }
+  .coupon-box {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    @include themed() {
+      background-color: t("hoverbg");
+      box-shadow: t("none");
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+    p {
+      margin: 0px;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      font-size: 16px;
+      @include themed() {
+        color: t("light-text");
+      }
+      span {
+        color: #28be21;
+        @include themed() {
+          color: t("themelight");
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .account-profile {
+    padding: 12px 0px;
+    @include themed() {
+      background-color: t("dark4");
+    }
+    Form {
+      .form-group {
+        label {
+          font-size: 15px;
+        }
+        input,
+        .input-group .input-group-text {
+          height: 40px;
+          font-size: 15px;
+          @include themed() {
+            background-color: t("dark3");
+          }
+        }
+      }
+      button {
+        margin: 15px 0px 0px 0px;
+        padding: 8px 55px 10px 55px;
+        font-size: 16px;
+      }
+    }
+    .coupon-box {
+      margin-top: 35px;
+      padding: 15px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .account-profile {
+    padding: 12px 0px;
+    Form {
+      .form-group {
+        margin-bottom: 25px;
+        label {
+          font-size: 15px;
+        }
+        input,
+        .input-group .input-group-text {
+          height: 40px;
+          font-size: 16px;
+        }
+      }
+      button {
+        margin: 15px 0px 0px 0px;
+        padding: 8px 55px 10px 55px;
+        font-size: 16px;
+      }
+    }
+    .coupon-box {
+      margin-top: 35px;
+      padding: 15px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+  .account-profile {
+    Form {
+      .form-group {
+        margin-bottom: 25px;
+        label {
+          font-size: 15.5px;
+        }
+        input,
+        .input-group .input-group-text {
+          height: 42px;
+          font-size: 15.5px;
+        }
+      }
+      button {
+        margin: 15px 0px 0px 0px;
+        padding: 8px 55px 10px 55px;
+        font-size: 17px;
+      }
+    }
+    .coupon-box {
+      margin-top: 35px;
+      padding: 15px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .account-profile {
+    Form {
+      .form-group {
+        input,
+        .input-group .input-group-text {
+          height: 45px;
+          font-size: 16px;
+        }
+      }
+      button {
+        padding: 8px 55px 10px 55px;
+      }
+    }
+    .coupon-box {
+      padding: 18px;
+    }
+  }
+}

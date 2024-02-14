@@ -1,0 +1,3583 @@
+@import '../../../common/assets/scss/main.scss';
+
+.checkout-page {
+  padding: 30px 0px;
+  background-color: #eeeeee;
+  @include themed() {
+    background-color: t('dark4');
+  }
+  .checkout {
+    h3.title {
+      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333333;
+      @include themed() {
+        color: t('whitecolor');
+      }
+    }
+    button.acco-btn-checkout {
+      position: absolute;
+      right: 15px;
+      top: -15px;
+      left: auto;
+      bottom: auto;
+      background-color: #ededed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      padding: 3px;
+      box-shadow:
+        rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      @include themed() {
+        background-color: t('themelight');
+      }
+      svg {
+        fill: #173303;
+        color: #173303;
+        font-size: 25px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        @include themed() {
+          fill: t('themedark');
+          color: t('themedark');
+        }
+      }
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .address-div {
+      position: relative;
+      background-color: #ffffff;
+      @include themed() {
+        background-color: t('dark5');
+        box-shadow: t('menu-shadow');
+      }
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: rgb(149 157 165 / 8%) 0px 8px 24px;
+      .header-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        border-bottom: 1px solid #cdcdcd;
+        @include themed() {
+          border-color: t('hoverbg');
+        }
+        padding-bottom: 15px;
+        .order-data {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 5px;
+          img {
+            width: 65px;
+          }
+          p {
+            color: #384656;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 16px;
+            margin: 0px;
+            @include themed() {
+              color: t('whitecolor');
+            }
+          }
+        }
+        button {
+          color: #28be21;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 17px;
+          margin: 0px;
+          border: none;
+          outline: none;
+          box-shadow: none;
+          line-height: normal;
+          background-color: transparent;
+          @include themed() {
+            color: t('themelight');
+          }
+        }
+      }
+      .address-content {
+        padding: 15px 0px;
+        &.collection {
+          h4.add-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+          }
+        }
+        h4.add-title {
+          color: #333333;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          font-size: 17px;
+          margin: 0px 0px 10px 0px;
+
+          @include themed() {
+            color: t('whitecolor');
+          }
+        }
+        .add-data {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 5px;
+          .name-add {
+            p {
+              color: #333333;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 16px;
+              margin: 0px 0px 0px 0px;
+              @include themed() {
+                color: t('light-text');
+              }
+            }
+            span {
+              color: #333333;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 16px;
+              margin: 0px;
+              @include themed() {
+                color: t('light-text');
+              }
+            }
+          }
+          button {
+            color: #28be21;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            margin: 0px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            line-height: normal;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 3px;
+            padding: 0px;
+            @include themed() {
+              color: t('themelight');
+            }
+            svg {
+              margin-top: 2px;
+            }
+          }
+        }
+        &.collection {
+          h4.add-title {
+            img {
+              width: 25px;
+            }
+          }
+        }
+      }
+
+      .notice {
+        background-color: #eeeeee;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 15px;
+        border-radius: 5px;
+        margin: 0px 0px;
+        width: 70%;
+        border: solid 1px orange;
+        @include themed() {
+          background-color: t('hoverbg');
+        }
+        img {
+          width: 45px;
+        }
+        .lottie-ani {
+          width: 45px;
+          position: relative;
+          .lf-player-container {
+            #lottie {
+              width: 90px;
+              height: 90px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        .data {
+          width: 100%;
+          p {
+            color: #333333;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 17px;
+            margin: 0px;
+            @include themed() {
+              color: t('whitecolor');
+            }
+            img {
+              display: none;
+            }
+            .lottie-ani {
+              display: none;
+            }
+          }
+          span {
+            color: #333333;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 16px;
+            margin: 0px;
+            @include themed() {
+              color: t('light-text');
+            }
+          }
+          h5 {
+            color: #384656;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 18px;
+            margin: 0px 0px 10px 0px;
+            @include themed() {
+              color: t('whitecolor');
+            }
+            img {
+              display: none;
+            }
+          }
+          textarea {
+            outline: none;
+            box-shadow: none;
+            width: 100%;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 15px;
+            height: 25px;
+            resize: none;
+            border: 1px solid #ffffff;
+            @include themed() {
+              color: t('whitecolor');
+              background-color: t('dark4');
+              border-color: t('b-color');
+            }
+          }
+        }
+      }
+      .notices {
+   
+        @include themed() {
+          background-color: t('hoverbg');
+        }
+        img {
+          width: 45px;
+        }
+        .lottie-ani {
+          width: 45px;
+          position: relative;
+          .lf-player-container {
+            #lottie {
+              width: 90px;
+              height: 90px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        .data {
+          width: 100%;
+          p {
+            color: #333333;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 17px;
+            margin: 0px;
+            @include themed() {
+              color: t('whitecolor');
+            }
+            img {
+              display: none;
+            }
+            .lottie-ani {
+              display: none;
+            }
+          }
+          span {
+            color: #333333;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 16px;
+            margin: 0px;
+            @include themed() {
+              color: t('light-text');
+            }
+          }
+          h5 {
+            color: #384656;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 18px;
+            margin: 0px 0px 10px 0px;
+            @include themed() {
+              color: t('whitecolor');
+            }
+            img {
+              display: none;
+            }
+          }
+          textarea {
+            outline: none;
+            box-shadow: none;
+            width: 100%;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 15px;
+            height: 25px;
+            resize: none;
+            border: 1px solid #ffffff;
+            @include themed() {
+              color: t('whitecolor');
+              background-color: t('dark4');
+              border-color: t('b-color');
+            }
+          }
+        }
+      }
+      .instruction-section {
+        margin-top: 15px;
+        h4.title {
+          color: #333333;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          font-size: 17px;
+          margin: 0px 0px 0px 0px;
+          @include themed() {
+            color: t('whitecolor');
+          }
+        }
+        .option-div {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          gap: 15px;
+          .instruct-box {
+            cursor: pointer;
+            width: 185px;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 10px;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            &.selected {
+              border: 1px solid #28be21;
+              @include themed() {
+                color: t('themelight');
+              }
+            }
+            span.checkmark {
+              border: 1px solid #28be21;
+              color: #28be21;
+              font-size: 15px;
+              border-radius: 50px;
+              position: absolute;
+              right: 5px;
+              top: 5px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 18px;
+              width: 18px;
+              padding: 2px;
+              @include themed() {
+                color: t('themelight');
+                border: t('themelight');
+              }
+            }
+            input {
+              display: none;
+            }
+            img {
+              width: 30px;
+              height: 30px;
+              object-fit: contain;
+            }
+            .content {
+              width: calc(100% - 30px);
+              p {
+                color: #333333;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 14.5px;
+                margin: 0px 0px 0px 0px;
+                line-height: normal;
+                @include themed() {
+                  color: t('whitecolor');
+                }
+              }
+              span {
+                color: #333333;
+                font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                font-size: 14px;
+                margin: 0px 0px 0px 0px;
+                line-height: normal;
+                display: block;
+                @include themed() {
+                  color: t('whitecolor');
+                }
+              }
+            }
+            &.other-text {
+              flex-direction: column;
+              gap: 5px;
+              .header-div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                .icons {
+                  font-size: 18px;
+                  @include themed() {
+                    color: t('whitecolor');
+                  }
+                }
+                p {
+                  color: #333333;
+                  font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                  font-size: 14.5px;
+                  margin: 0px 0px 0px 0px;
+                  line-height: normal;
+                  @include themed() {
+                    color: t('whitecolor');
+                  }
+                }
+              }
+              .content {
+                text-align: center;
+                span {
+                  text-align: center;
+                  background-color: #f5f5f5;
+                  padding: 1px 15px 2px 15px;
+                  border-radius: 50px;
+                  color: #999999;
+                }
+              }
+            }
+          }
+        }
+        .input-textarea {
+          margin-top: 15px;
+          form {
+            textarea {
+              height: 25px;
+              border: 1px solid #cdcdcd;
+              // resize: none;
+              box-shadow: none;
+              outline: none;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15px;
+              @include themed() {
+                background-color: t('dark4');
+                color: t('whitecolor');
+                border-color: t('b-color');
+              }
+            }
+          }
+        }
+        &.collection {
+          .option-div {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+    .payment-method {
+      margin-top: 25px;
+      position: relative;
+      background-color: #ffffff;
+      @include themed() {
+        background-color: t('dark5');
+        box-shadow: t('menu-shadow');
+      }
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: rgb(149 157 165 / 8%) 0px 8px 24px;
+         .order-datap {
+          p {
+            color: #333;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 16px;
+            margin: 0px;
+            @include themed() {
+              color: t('whitecolor');
+            }
+          }
+        }
+      .header-content {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: end;
+        gap: 5px;
+        border-bottom: 1px solid #cdcdcd;
+        @include themed() {
+          border-color: t('hoverbg');
+        }
+        padding-bottom: 15px;
+        .order-data {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 5px;
+          img {
+            width: 30px;
+          }
+          p {
+            color: #333333;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 20px;
+            margin: 0px;
+            @include themed() {
+              color: t('whitecolor');
+            }
+          }
+        }
+        button {
+          color: #28be21;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 17px;
+          margin: 0px;
+          border: none;
+          outline: none;
+          box-shadow: none;
+          line-height: normal;
+          background-color: transparent;
+          @include themed() {
+            color: t('themelight');
+          }
+        }
+      }
+      .payment-tab {
+        form.tabs-div {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 20px 0px;
+          gap: 20px;
+          label {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            border: 1px solid #384656;
+            font-size: 16px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            width: 150px;
+            background-color: #f6f7fb;
+            position: relative;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            @include themed() {
+              color: t('hovercolor');
+              background-color: t('hoverbg');
+              border-color: t('b-color');
+            }
+            &.active {
+              justify-content: flex-start;
+            }
+            &.mobileview {
+              display: none;
+            }
+            span {
+              border: 1px solid #000;
+              width: 22px;
+              height: 22px;
+              border-radius: 50px;
+              display: none;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              left: 0px;
+              top: -10px;
+              @include themed() {
+                border-color: t('themelight');
+              }
+              &.active {
+                display: flex;
+                background-color: #000000;
+                @include themed() {
+                  background-color: t('themelight');
+                }
+                svg {
+                  color: #fff;
+                  @include themed() {
+                    color: t('themedark');
+                  }
+                }
+              }
+              svg {
+                color: #000;
+                font-size: 17px;
+                margin-left: -1px;
+                margin-top: 1px;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 55px;
+              object-fit: contain;
+              &.apple-pay {
+                width: 70px;
+              }
+              &.cardimg {
+                width: 48px;
+              }
+            }
+            p {
+              margin: 0px;
+            }
+            input {
+              display: none;
+            }
+          }
+        }
+        .selected-tab {
+          background-color: #f6f6f6;
+          @include themed() {
+            background-color: t('hoverbg');
+          }
+          padding: 15px;
+          border-radius: 5px;
+          .card-tab {
+            .header {
+              display: flex;
+              align-items: center;
+              margin-bottom: 20px;
+              gap: 8px;
+              img {
+                width: 30px;
+              }
+              h5 {
+                color: #333333;
+                font-size: 18px;
+                margin: 0px;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                @include themed() {
+                  color: t('themelight');
+                }
+              }
+            }
+            .selected-tab-accord.accordion {
+              gap: 10px;
+              display: flex;
+              flex-direction: column;
+              .accordion-item {
+                border: none;
+                background-color: transparent;
+                h2.accordion-header {
+                  button {
+                    background-color: #f1fff7;
+                    color: #28be21;
+                    gap: 5px;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                    font-size: 15px;
+                    line-height: normal;
+                    border-radius: 5px;
+                    padding: 10px 10px;
+                    @include themed() {
+                      color: t('themelight');
+                    }
+                    &.collapsed {
+                      background-color: #ffffff;
+                    }
+                    @include themed() {
+                      background-color: t('dark4');
+                      color: t('hovercolor');
+                    }
+                    span {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      border: 1px solid #28be21;
+                      color: #28be21;
+                      @include themed() {
+                        color: t('themelight');
+                        border: t('themelight');
+                      }
+                      svg {
+                        font-size: 13px;
+                      }
+                    }
+                    &::after {
+                      display: none;
+                    }
+                  }
+                }
+                .accordion-body {
+                  padding: 15px 10px;
+                }
+              }
+            }
+            form.add-card-form {
+              label {
+                color: #384656;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 16px;
+                @include themed() {
+                  color: t('whitecolor');
+                }
+              }
+              span .card-error {
+                color: red !important;
+                font-size: 14px;
+              }
+              .StripeElement {
+                color: #000000;
+                font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                font-size: 16px;
+                display: block;
+                margin: 0px 0 0px 0;
+                max-width: 500px;
+                padding: 10px 14px;
+                font-size: 1em;
+                box-shadow: none;
+                border: 1px solid #ffffff;
+                outline: 0;
+                border-radius: 4px;
+                background: white;
+                @include themed() {
+                  background: t('dark5');
+                  border-color: t('b-color');
+                }
+              }
+              input {
+                color: #000000;
+                font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                font-size: 16px;
+                outline: none;
+                border: 1px solid #ffffff;
+                box-shadow: none;
+                height: 45px;
+                @include themed() {
+                  background-color: t('dark5');
+                  color: t('whitecolor');
+                  border-color: t('b-color');
+                }
+              }
+              .form-check {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin: 0px;
+                padding: 0px;
+                margin-top: 15px;
+                label {
+                  line-height: normal;
+                  font-size: 16px;
+                  font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                  color: #5e5959ee;
+                  margin-left: 0px;
+                  padding: 0px;
+                  cursor: pointer;
+                  @include themed() {
+                    color: t('light-text');
+                  }
+                }
+                input[type='checkbox'] {
+                  width: 18px;
+                  height: 18px;
+                  border: 1px solid #000000;
+                  border-radius: 0px;
+                  margin: 0px;
+                  cursor: pointer;
+                  @include themed() {
+                    border-color: t('light-text');
+                  }
+                  &:checked {
+                    background-color: #000;
+                  }
+                }
+              }
+            }
+            .saved-cards {
+              margin-top: 15px;
+              .save-card-form {
+                .StripeElement {
+                  color: #000000;
+                  font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                  font-size: 16px;
+                  display: block;
+                  margin: 0px 0 0px 0;
+                  max-width: 500px;
+                  padding: 10px 14px;
+                  font-size: 1em;
+                  box-shadow: none;
+                  border: 1px solid #ffffff;
+                  outline: 0;
+                  border-radius: 4px;
+                  background: white;
+                  width: 100px;
+                  @include themed() {
+                    background: t('dark5');
+                    border-color: t('b-color');
+                  }
+                }
+                label {
+                  width: 100%;
+                  position: relative;
+                  border: 1px solid #bbc6cc;
+                  cursor: pointer;
+                  margin-bottom: 15px;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  box-shadow:
+                    #001e3c00 0px 1px 3px 0px,
+                    #001e3c00 0px 0px 0px 1px;
+                  @include themed() {
+                    border: t('none');
+                    background-color: t('dark5');
+                    box-shadow: t('div-shadow');
+                  }
+                  &:last-child {
+                    margin-bottom: 0px;
+                  }
+                  .main-data {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+
+                    input {
+                      display: none;
+                    }
+                    span.tick {
+                      border: 1px solid #000;
+                      width: 22px;
+                      height: 22px;
+                      border-radius: 50px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      @include themed() {
+                        border-color: t('light-text');
+                      }
+                      &.active {
+                        background-color: #000000;
+                        svg {
+                          color: #fff;
+                        }
+                      }
+                      svg {
+                        color: #000;
+                        font-size: 17px;
+                      }
+                    }
+                    img {
+                      border: 1px solid #bbc6cc;
+                      border-radius: 5px;
+                      padding: 10px;
+                      width: 70px;
+                    }
+                    .card-data {
+                      p {
+                        margin: 0px;
+                        color: #384656;
+                        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        line-height: normal;
+                        @include themed() {
+                          color: t('hovercolor');
+                        }
+                      }
+                      span {
+                        color: #384656;
+                        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                        font-size: 14px;
+                        line-height: normal;
+                        @include themed() {
+                          color: t('light-text');
+                        }
+                      }
+                    }
+                  }
+                  .cvv-btn {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    margin-left: auto;
+                    input {
+                      color: #000000;
+                      font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                      font-size: 16px;
+                      outline: none;
+                      border: 1px solid #ffffff;
+                      box-shadow: none;
+                      height: 40px;
+
+                      @include themed() {
+                        background-color: t('hoverbg');
+                        color: t('whitecolor');
+                        border-color: t('green3');
+                      }
+                    }
+                    button {
+                      background-color: #000;
+                      padding: 6px 25px 8px 25px;
+                      color: #fff;
+                      line-height: normal;
+                      font-size: 16px;
+                      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                      border: none;
+                      outline: none;
+                      box-shadow: none;
+                      border-radius: 5px;
+                      height: 38px;
+                      width: 100px;
+                      @include themed() {
+                        background-color: t('themelight');
+                        color: t('themedark');
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .apple-pay-tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            button {
+              background-color: #000;
+              padding: 6px 20px 8px 20px;
+              color: #fff;
+              line-height: normal;
+              font-size: 16px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              border: none;
+              outline: none;
+              box-shadow: none;
+              border-radius: 5px;
+              width: 40%;
+            }
+          }
+          .wallet-tab {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 75px;
+            }
+            h4 {
+              line-height: normal;
+              font-size: 25px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              color: #000000;
+              margin-top: 5px;
+              @include themed() {
+                color: t('whitecolor');
+              }
+            }
+            p {
+              line-height: normal;
+              font-size: 16px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              color: #000000;
+              margin: 0px;
+              @include themed() {
+                color: t('light-text');
+              }
+            }
+          }
+        }
+      }
+      .checkoutimgs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          padding: 8px;
+          height: 54px;
+        }
+        svg {
+          font-size: 27px;
+          color: #28be21;
+        }
+        .checkoutimgschild {
+          span {
+            background-color: yellow;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .add-tip {
+      margin-top: 25px;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: rgb(149 157 165 / 8%) 0px 8px 24px;
+      position: relative;
+      @include themed() {
+        background-color: t('dark5');
+        box-shadow: t('menu-shadow');
+      }
+      h3.tip-title {
+        color: #333333;
+        font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        font-size: 20px;
+        margin: 0px;
+        @include themed() {
+          color: t('whitecolor');
+        }
+      }
+      form.tips-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 0px 0px 0px;
+        label {
+          @include themed() {
+            border-color: t('b-color');
+            color: t('whitecolor');
+          }
+          height: 40px;
+          vertical-align: middle;
+          cursor: pointer;
+          border: 1px solid #d4d4d4;
+          padding: 5px 30px;
+          font-size: 16px;
+          color: #244453;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          &:first-child {
+            border-radius: 50px 0px 0px 50px;
+            border-right: none;
+          }
+          &:nth-child(3) {
+            border-left: none;
+            border-right: none;
+          }
+          &:last-child {
+            border-radius: 0px 50px 50px 0px;
+            border-left: none;
+          }
+          &.active {
+            background-color: #9ee86f;
+            color: #173303;
+            border-color: #9ee86f;
+            @include themed() {
+              border-color: t('b-color');
+              background-color: t('hoverbg');
+              color: t('hovercolor');
+            }
+          }
+
+          &.tip-label {
+            padding: 0px;
+            border-right: 1px solid #d4d4d4;
+            @include themed() {
+              border-color: t('b-color');
+            }
+            input[type='text'] {
+              padding: 5px 30px;
+              display: block;
+              color: #000000;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 16px;
+              outline: none;
+              border: none;
+              box-shadow: none;
+              height: 38px;
+              background-color: transparent;
+              border-radius: 50px;
+              @include themed() {
+                background-color: t('dark5');
+                color: t('whitecolor');
+              }
+            }
+          }
+          &.label-btn {
+            color: #244453;
+            background-color: #fff;
+          }
+          input {
+            display: none;
+          }
+          span {
+            vertical-align: middle;
+          }
+        }
+      }
+      .custom-tip {
+        .accordion {
+          margin-top: 15px;
+          &.without-img {
+            margin-top: 10px;
+            margin-bottom: 20px;
+          }
+          .accordion-item {
+            @include themed() {
+              background-color: t('dark5');
+            }
+            border: none;
+            h2.accordion-header {
+              button {
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 15px;
+                padding: 0px;
+                gap: 10px;
+                border: none;
+                box-shadow: none;
+                outline: none;
+                margin-bottom: 0px;
+                color: #333333;
+                @include themed() {
+                  color: t('hovercolor');
+                  background-color: t('dark5');
+                }
+                &:focus {
+                  border: none;
+                  box-shadow: none;
+                  outline: none;
+                  background-color: transparent;
+                }
+                &::after {
+                  display: none;
+                }
+                &:not(.collapsed) {
+                  border: none;
+                  box-shadow: none;
+                  outline: none;
+                  background-color: transparent;
+                }
+                span {
+                  padding: 0px;
+                  border: 1px solid #333333;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  @include themed() {
+                    border-color: t('hovercolor');
+                  }
+                  svg {
+                    fill: #333333;
+                    font-size: 13px;
+                    @include themed() {
+                      fill: t('hovercolor');
+                    }
+                  }
+                }
+              }
+            }
+            .accordion-collapse {
+              .accordion-body {
+                padding: 10px 0px 0px 0px;
+                form.custom-tips-form {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 10px;
+                  margin-left: 0;
+                  input {
+                    color: #000000;
+                    font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                    font-size: 16px;
+                    outline: none;
+                    border: 1px solid #d4d4d4;
+                    box-shadow: none;
+                    height: 40px;
+                    width: auto;
+                    @include themed() {
+                      background-color: t('hoverbg');
+                      border-color: t('b-color');
+                      color: t('whitecolor');
+                    }
+                  }
+                  button {
+                    background-color: #000;
+                    padding: 6px 25px 8px 25px;
+                    color: #fff;
+                    line-height: normal;
+                    font-size: 15px;
+                    font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    border-radius: 5px;
+                    height: 38px;
+                    @include themed() {
+                      background-color: t('themelight');
+                      color: t('themedark');
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .donate-change {
+      margin-top: 25px;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: rgb(149 157 165 / 8%) 0px 8px 24px;
+      position: relative;
+      @include themed() {
+        background-color: t('dark5');
+        box-shadow: t('menu-shadow');
+      }
+      h3.donate-title {
+        color: #333333;
+        font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        font-size: 20px;
+        margin: 0px 0px 0px 0px;
+        @include themed() {
+          color: t('whitecolor');
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0px 15px 0px;
+        .form-check {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 0px;
+          gap: 5px;
+          input[type='checkbox'] {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #28be21;
+            border-radius: 0px;
+            margin: 0px;
+            cursor: pointer;
+            color: #28be21;
+            font-family: 'SegoeUI';
+            font-size: 16px;
+            outline: none;
+            box-shadow: none;
+            @include themed() {
+              color: t('themelight');
+              border: t('themelight');
+            }
+            &:checked {
+              background-color: #28be21;
+              @include themed() {
+                color: t('themelight');
+                background-color: t('themelight');
+              }
+            }
+          }
+          label {
+            color: #333333;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 16px;
+            margin: 0px;
+            line-height: normal;
+            @include themed() {
+              color: t('light-text');
+            }
+          }
+        }
+        span {
+          width: 35px;
+          height: 35px;
+          background-color: #28be21;
+          border-radius: 5px;
+          padding: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include themed() {
+            background-color: t('themelight');
+          }
+          svg {
+            color: #ffffff;
+            font-size: 20px;
+          }
+        }
+      }
+      a {
+        color: #28be21;
+        line-height: normal;
+        font-size: 16px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        text-decoration: none;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        @include themed() {
+          color: t('themelight');
+        }
+      }
+    }
+    .earn-points {
+      background-color: #fdefef;
+      padding: 10px;
+      margin-top: 25px;
+      border-radius: 5px;
+      box-shadow: rgb(149 157 165 / 8%) 0px 8px 24px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include themed() {
+        background-color: t('hoverbg');
+        box-shadow: t('menu-shadow');
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        img {
+          width: 25px;
+        }
+        p {
+          color: #000000;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 14px;
+          margin: 0px;
+          line-height: normal;
+          @include themed() {
+            color: t('whitecolor');
+          }
+        }
+      }
+      a {
+        color: #28be21;
+        line-height: normal;
+        font-size: 14px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        text-decoration: none;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        @include themed() {
+          color: t('themelight');
+        }
+      }
+    }
+
+    .order-div {
+      margin-top: 25px;
+      span {
+        color: #b5b5b5ee;
+        @include themed() {
+          color: t('light-text');
+        }
+        font-size: 16px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+      }
+      hr {
+        margin: 15px 0px;
+        @include themed() {
+          border-color: t('hovercolor');
+        }
+      }
+      button {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        gap: 10px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        margin-bottom: 0px;
+        background-color: #9ee86f;
+        color: #173303;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        margin: 0px auto;
+        justify-content: center;
+      }
+    }
+    .terms-text {
+      margin-top: 15px;
+      p {
+        margin: 0px;
+        text-align: center;
+        color: #b5b5b5ee;
+        @include themed() {
+          color: t('light-text');
+        }
+        font-size: 16px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        a {
+          color: #28be21;
+          line-height: normal;
+          font-size: 14px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          text-decoration: none;
+          @include themed() {
+            color: t('themelight');
+          }
+        }
+      }
+    }
+  }
+  .order-place {
+    margin: 0px -15px -15px -15px;
+    button {
+      background-color: #9ee86f;
+      padding: 16px 15px;
+      border-radius: 0px 0px 5px 5px;
+      width: 100%;
+      color: #173303;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      text-align: center;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      font-size: 18px;
+    }
+    .terms-text {
+      margin-top: 0px;
+      padding: 5px;
+      background-color: #ffffff;
+      display: none;
+      @include themed() {
+        background-color: t("hoverbg");
+        box-shadow: t("div-shadow");
+        color: t("whitecolor");
+        border: solid 1px rgba(6, 77, 147, 0.4117647059);
+      }
+      p {
+        margin: 0px;
+        text-align: center;
+        color: #b5b5b5ee;
+        @include themed() {
+          color: t("light-text");
+        }
+        font-size: 14px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        a {
+          color: #02bc7d;
+          line-height: normal;
+          font-size: 14px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          text-decoration: none;
+        }
+      }
+    }
+    .total-price {
+      margin: 10px 15px 0px 15px;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-size: 19px;
+        font-weight: 600;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      }
+    }
+    .total-pricechild {
+      margin: 0px 15px 0px 15px;
+
+      p {
+        color: #28BE21;
+        text-align: left;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .checkout-page {
+    padding: 15px 0px;
+
+    .order-place {
+      margin: 0px;
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      left: 0px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      border-radius: 25px 25px 0px 0px;
+      button {
+        margin: 15px;
+        width: 92%;
+        border-radius: 0px;
+        padding: 10px 15px;
+        font-size: 17px;
+        border-radius: 25px;
+      }
+      & button:disabled {
+        margin: 15px;
+        width: 92%;
+        border-radius: 0px;
+        padding: 10px 15px;
+        font-size: 17px;
+        border-radius: 25px;
+        background-color: #dfdfdf;
+      }
+      .payment-btn {
+        margin: 11px;
+        .spinner-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* Adjust container properties as needed */
+          /* Example height */
+        }
+      }
+      .terms-text {
+        display: block;
+      }
+    }
+    .checkout {
+      button.acco-btn-checkout {
+        width: 25px;
+        height: 25px;
+        padding: 0px;
+        svg {
+          font-size: 20px;
+        }
+      }
+      h3.title {
+        font-size: 19px;
+        margin-bottom: 25px;
+      }
+      .address-div {
+        padding: 10px;
+        .header-content {
+          padding-bottom: 10px;
+          flex-direction: row;
+          align-items: center;
+          gap: 0px;
+          .order-data {
+            img {
+              width: 45px;
+            }
+            p {
+              font-size: 14px;
+              margin-right: auto;
+            }
+          }
+          button {
+            font-size: 16px;
+            margin-left: auto;
+            padding-right: 0px;
+          }
+        }
+        .address-content {
+          position: relative;
+          padding: 10px 0px;
+          h4.add-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            margin: 0px;
+            button {
+              padding: 0px;
+              color: #28be21;
+              font-size: 16px;
+              margin: 0px;
+              margin-left: auto;
+              border: none;
+              outline: none;
+              box-shadow: none;
+              line-height: normal;
+              background-color: transparent;
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              @include themed() {
+                color: t('themelight');
+              }
+            }
+          }
+
+          .add-data {
+            flex-direction: column;
+            align-items: flex-start;
+            .name-add {
+              p {
+                font-size: 15px;
+              }
+              span {
+                font-size: 14px;
+              }
+            }
+          }
+          &.collection {
+            h4.add-title {
+              margin-bottom: 5px;
+              img {
+                width: 20px;
+              }
+              justify-content: flex-start;
+              gap: 5px;
+            }
+          }
+        }
+        .instruction-section {
+          margin-top: 10px;
+          h4.title {
+            font-size: 16px;
+          }
+          .option-div {
+            flex-wrap: wrap;
+            gap: 10px 5px;
+            .instruct-box {
+              width: 49%;
+              height: 60px;
+              gap: 5px;
+              padding: 5px;
+              &.other-text {
+                gap: 0px;
+                .header-div p {
+                  font-size: 12px;
+                }
+                .content {
+                  span {
+                    font-size: 10px;
+                  }
+                }
+              }
+              img {
+                width: 20px;
+                height: 20px;
+              }
+              .content {
+                p {
+                  font-size: 12px;
+                }
+                span {
+                  font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .payment-method {
+        padding: 10px;
+        .header-content {
+          padding-bottom: 10px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+          .order-data {
+            img {
+              width: 25px;
+            }
+            p {
+              font-size: 17px;
+              margin-right: auto;
+            }
+          }
+          button {
+            font-size: 16px;
+            margin-left: auto;
+          }
+        }
+        .payment-tab {
+          form.tabs-div {
+            gap: 20px 10px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            label {
+              width: 125px;
+              padding: 6px 8px;
+              font-size: 13px;
+              border-radius: 5px;
+              &.active {
+                justify-content: center;
+              }
+              &.mobileview {
+                display: block;
+              }
+              img {
+                width: 90%;
+                height: 40px;
+                &.apple-pay {
+                  width: 60px;
+                }
+                &.cardimg {
+                  width: 40px;
+                }
+              }
+              span {
+                left: -5px;
+                top: -10px;
+                width: 20px;
+                height: 20px;
+                svg {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .selected-tab {
+            padding: 10px;
+            .card-tab {
+              .header {
+                margin-bottom: 10px;
+                img {
+                  width: 27px;
+                }
+                h5 {
+                  font-size: 17px;
+                }
+              }
+              form.add-card-form {
+                .row {
+                  gap: 12px 0px;
+                }
+                label {
+                  font-size: 14px;
+                }
+                span .card-error {
+                  color: red !important;
+                  font-size: 14px;
+                }
+                input {
+                  margin-bottom: 0px;
+                  height: 35px;
+                  font-size: 14px;
+                }
+                .form-check {
+                  margin-top: 0px;
+                  align-items: flex-start;
+                  input[type='checkbox'] {
+                    margin-top: 3px;
+                    width: 15px;
+                    height: 15px;
+                  }
+                  label {
+                    font-size: 15px;
+                  }
+                }
+              }
+              .saved-cards {
+                .save-card-form {
+                  label {
+                    flex-direction: column;
+                    padding: 10px 10px;
+                    align-items: flex-start;
+                    .main-data {
+                      gap: 10px;
+                      span.tick {
+                        width: 16px;
+                        height: 16px;
+                      }
+                      img {
+                        padding: 5px;
+                        width: 50px;
+                      }
+                      .card-data {
+                        p {
+                          font-size: 14px;
+                        }
+                        span {
+                          font-size: 13px;
+                        }
+                      }
+                    }
+                    .cvv-btn {
+                      margin-left: 0px;
+                      input {
+                        height: 30px;
+                        font-size: 14px;
+                      }
+                      button {
+                        height: 30px;
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .apple-pay-tab button {
+              width: 80%;
+              img {
+                width: auto;
+              }
+            }
+            .wallet-tab {
+              img {
+                width: 50px;
+              }
+              h4 {
+                font-size: 22px;
+              }
+              p {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .address-div {
+        .notice,
+        .note {
+          width: 100%;
+          padding: 10px;
+          gap: 10px;
+          margin: 10px 0px;
+          img {
+            width: 30px;
+            display: block;
+          }
+          .data {
+            p {
+              font-size: 15px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: none;
+              }
+            }
+            span {
+              font-size: 14px;
+            }
+            h5 {
+              font-size: 17px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: block;
+              }
+            }
+            textarea {
+              height: 50px;
+            }
+          }
+        }
+        .note {
+          margin-bottom: 0px;
+          img {
+            display: none;
+          }
+        }
+        .notice {
+          margin-top: 0px;
+        }
+      }
+      .add-tip {
+        h3.tip-title {
+          font-size: 17px;
+        }
+        form.tips-form {
+          label {
+            width: 16%;
+            text-align: center;
+            font-size: 13px;
+            padding: 3px 5px;
+            justify-content: center;
+            height: 33px;
+            &.label-btn {
+              width: calc(100% - (16% * 4));
+            }
+            &.tip-label {
+              width: calc(16% * 4);
+              input[type='text'] {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        .custom-tip .accordion .accordion-item {
+          h2.accordion-header button {
+            font-size: 14px;
+          }
+          .accordion-collapse .accordion-body form.custom-tips-form {
+            input {
+              width: 60%;
+              height: 35px;
+              font-size: 15px;
+            }
+            button {
+              height: 35px;
+              padding: 6px 12px 8px 12px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .donate-change {
+        padding: 10px;
+        h3.donate-title {
+          font-size: 17px;
+        }
+        .content {
+          margin: 10px 0px 10px 0px;
+          .form-check {
+            align-items: flex-start;
+            input[type='checkbox'] {
+              width: 20px;
+              height: 20px;
+              margin-top: 5px;
+            }
+            label {
+              width: 85%;
+              font-size: 14.5px;
+            }
+          }
+        }
+        a {
+          font-size: 15px;
+        }
+      }
+      .earn-points {
+        flex-wrap: wrap;
+        .content p {
+          font-size: 13px;
+        }
+        a {
+          white-space: nowrap;
+          font-size: 13px;
+          margin-left: auto;
+        }
+      }
+      .order-div {
+        span {
+          font-size: 15px;
+          text-align: center;
+          display: flex;
+        }
+        hr {
+          margin: 10px auto;
+        }
+        button {
+          display: none;
+        }
+      }
+      .terms-text {
+        display: none;
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .checkout-page {
+    padding: 15px 0px;
+    .checkout {
+      button.acco-btn-checkout {
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+        svg {
+          font-size: 22px;
+        }
+      }
+      h3.title {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+      .address-div {
+        .header-content {
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+          padding-bottom: 10px;
+          .order-data {
+            img {
+              width: 50px;
+            }
+            p {
+              margin-right: auto;
+              font-size: 15px;
+            }
+          }
+          button {
+            font-size: 16px;
+            margin-left: auto;
+            padding-right: 0px;
+          }
+        }
+        .address-content {
+          position: relative;
+          padding: 10px 0px;
+          h4.add-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            button {
+              color: #04be72;
+              font-size: 16px;
+              margin: 0px;
+              margin-left: auto;
+              border: none;
+              outline: none;
+              box-shadow: none;
+              line-height: normal;
+              background-color: transparent;
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              padding: 0px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            }
+          }
+          .add-data {
+            flex-direction: column;
+            align-items: flex-start;
+            .name-add span {
+              font-size: 15px;
+            }
+          }
+          &.collection {
+            h4.add-title {
+              margin-bottom: 5px;
+              img {
+                width: 20px;
+              }
+              justify-content: flex-start;
+              gap: 5px;
+            }
+          }
+        }
+      }
+      .payment-method {
+        .header-content {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0px;
+          .order-data {
+            gap: 10px;
+            img {
+              width: 30px;
+            }
+            p {
+              margin-right: auto;
+              font-size: 18px;
+            }
+          }
+          button {
+            font-size: 16px;
+            margin-left: auto;
+          }
+        }
+        .payment-tab {
+          form.tabs-div {
+            gap: 20px 10px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            label {
+              width: 110px;
+              padding: 6px 8px;
+              font-size: 13px;
+              border-radius: 5px;
+              &.active {
+                justify-content: center;
+              }
+              &.mobileview {
+                display: block;
+              }
+              img {
+                width: 95%;
+                height: 45px;
+                &.apple-pay {
+                  width: 65px;
+                }
+                &.cardimg {
+                  width: 45px;
+                }
+              }
+              span {
+                left: -5px;
+                top: -10px;
+                width: 22px;
+                height: 22px;
+                svg {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          .selected-tab {
+            .card-tab {
+              .header {
+                margin-bottom: 15px;
+                h5 {
+                  font-size: 18px;
+                }
+              }
+              form.add-card-form {
+                .row {
+                  gap: 20px 0px;
+                }
+                label {
+                  font-size: 15.5px;
+                }
+                span .card-error {
+                  color: red !important;
+                  font-size: 14px;
+                }
+                input {
+                  margin-bottom: 0px;
+                  height: 43px;
+                  font-size: 15.5px;
+                }
+                .form-check {
+                  margin-top: 0px;
+                  align-items: flex-start;
+                  input[type='checkbox'] {
+                    margin-top: 3px;
+                    width: 17px;
+                    height: 17px;
+                  }
+                  label {
+                    font-size: 15.5px;
+                  }
+                }
+              }
+              .saved-cards {
+                .save-card-form {
+                  label {
+                    flex-direction: column;
+                    padding: 10px 10px;
+                    align-items: flex-start;
+                    .main-data {
+                      gap: 10px;
+                      img {
+                        width: 65px;
+                      }
+                    }
+                    .cvv-btn {
+                      margin-left: 0px;
+                      input {
+                        font-size: 15.5px;
+                      }
+                      button {
+                        font-size: 15.5px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .apple-pay-tab button {
+              font-size: 14px;
+              width: 60%;
+            }
+            .wallet-tab {
+              img {
+                width: 50px;
+              }
+              h4 {
+                font-size: 22px;
+              }
+              p {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .address-div {
+        .notice,
+        .note {
+          width: 100%;
+          gap: 10px;
+          img {
+            width: 40px;
+            display: block;
+          }
+          .data {
+            p {
+              font-size: 16px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: none;
+              }
+            }
+            h5 {
+              font-size: 17px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: block;
+              }
+            }
+            textarea {
+              height: 50px;
+            }
+          }
+        }
+        .note {
+          margin-bottom: 0px;
+          img {
+            display: none;
+          }
+        }
+        .notice {
+          margin-top: 0px;
+        }
+        .instruction-section {
+          margin-top: 10px;
+          h4.title {
+            font-size: 16px;
+          }
+          .option-div {
+            flex-wrap: wrap;
+            gap: 10px 5px;
+            .instruct-box {
+              width: 23%;
+              height: 80px;
+              gap: 3px;
+              padding: 5px;
+              flex-direction: column;
+              span.checkmark {
+                left: 3px;
+                right: auto;
+                top: 3px;
+              }
+              &.other-text {
+                gap: 5px;
+                .header-div {
+                  p {
+                    font-size: 11px;
+                  }
+                  .icons {
+                    font-size: 12px;
+                  }
+                }
+                .content {
+                  span {
+                    font-size: 11px;
+                  }
+                }
+              }
+              img {
+                width: 20px;
+                height: 20px;
+              }
+              .content {
+                width: 100%;
+                height: auto;
+                p {
+                  font-size: 13px;
+                  text-align: center;
+                }
+                span {
+                  font-size: 11px;
+                  display: block;
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .input-textarea form textarea {
+            font-size: 14px;
+          }
+          &.collection {
+            .option-div {
+              gap: 10px 10px;
+              .instruct-box {
+                span.checkmark {
+                  right: 5px;
+                  left: auto;
+                  top: 5px;
+                }
+                width: 170px;
+                flex-direction: row;
+                gap: 8px;
+                height: 50px;
+                .content p {
+                  text-align: left;
+                }
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .add-tip {
+        h3.tip-title {
+          font-size: 18px;
+        }
+        form.tips-form {
+          label {
+            width: 16%;
+            text-align: center;
+            font-size: 14px;
+            padding: 3px 5px;
+            justify-content: center;
+            &.label-btn {
+              width: calc(100% - (16% * 4));
+            }
+            &.tip-label {
+              width: calc(16% * 4);
+              input[type='text'] {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        .custom-tip .accordion .accordion-item {
+          .accordion-collapse .accordion-body form.custom-tips-form {
+            input {
+              width: 60%;
+              font-size: 15.5px;
+            }
+            button {
+              padding: 6px 12px 8px 12px;
+              font-size: 14.5px;
+            }
+          }
+        }
+      }
+      .donate-change {
+        padding: 10px;
+        h3.donate-title {
+          font-size: 18px;
+        }
+        .content {
+          margin: 10px 0px 10px 0px;
+          .form-check {
+            align-items: flex-start;
+            input[type='checkbox'] {
+              width: 20px;
+              height: 20px;
+              margin-top: 5px;
+            }
+            label {
+              width: 85%;
+              font-size: 15px;
+            }
+          }
+        }
+        a {
+          font-size: 15.5px;
+        }
+      }
+      .earn-points {
+        flex-wrap: wrap;
+        .content p {
+          font-size: 14px;
+        }
+        a {
+          white-space: nowrap;
+          font-size: 14px;
+          margin-left: auto;
+        }
+      }
+      .order-div {
+        span {
+          font-size: 15px;
+          display: block;
+          text-align: center;
+        }
+        button {
+          display: none;
+        }
+      }
+      .terms-text {
+        display: none;
+      }
+    }
+        .order-place {
+        margin: 0px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        left: 0px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 3px rgba(12, 12, 12, 0.1),
+          0 -1px 1px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        border-radius: 25px 25px 0px 0px;
+        z-index: 999;
+        @include themed() {
+          background-color: t("hoverbg");
+          box-shadow: t("div-shadow");
+          color: t("whitecolor");
+          border: solid 1px rgba(6, 77, 147, 0.4117647059);
+        }
+        button {
+          margin: 15px;
+          width: 92%;
+          border-radius: 0px;
+          padding: 10px 15px;
+          font-size: 17px;
+          border-radius: 25px;
+        }
+        & button:disabled {
+          margin: 15px;
+          width: 92%;
+          border-radius: 0px;
+          padding: 10px 15px;
+          font-size: 17px;
+          border-radius: 25px;
+          background-color: #dfdfdf;
+        }
+        .payment-btn {
+          margin: 11px;
+          .spinner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .terms-text {
+          display: block;
+        }
+      }
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .checkout-page {
+    padding: 20px 0px;
+    .checkout {
+      h3.title {
+        font-size: 22px;
+      }
+      .address-div {
+        .header-content {
+          .order-data {
+            img {
+              width: 50px;
+            }
+            p {
+              margin-right: auto;
+            }
+          }
+          button {
+            font-size: 16px;
+            margin-left: auto;
+          }
+        }
+        .address-content {
+          position: relative;
+          h4.add-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 17px;
+            button {
+              color: #28be21;
+              font-size: 16px;
+              margin: 0px;
+              margin-left: auto;
+              border: none;
+              outline: none;
+              box-shadow: none;
+              line-height: normal;
+              background-color: transparent;
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              padding: 0px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              @include themed() {
+                color: t('themelight');
+              }
+            }
+          }
+          .add-data {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          &.collection {
+            h4.add-title {
+              margin-bottom: 5px;
+              img {
+                width: 22px;
+              }
+              justify-content: flex-start;
+              gap: 5px;
+            }
+          }
+        }
+      }
+      .payment-method {
+        .header-content {
+          .order-data {
+            gap: 10px;
+            img {
+              width: 35px;
+            }
+            p {
+              margin-right: auto;
+            }
+          }
+          button {
+            font-size: 16px;
+            margin-left: auto;
+          }
+        }
+        .payment-tab {
+          form.tabs-div {
+            gap: 20px 10px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            label {
+              width: 125px;
+              padding: 6px 8px;
+              font-size: 15px;
+              border-radius: 5px;
+              &.active {
+                justify-content: center;
+              }
+              &.mobileview {
+                display: block;
+              }
+              img {
+                width: 80%;
+                height: 40px;
+                &.apple-pay {
+                  width: 60px;
+                }
+                &.cardimg {
+                  width: 45px;
+                }
+              }
+              span {
+                left: -5px;
+                top: -10px;
+                width: 22px;
+                height: 22px;
+                svg {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          .selected-tab {
+            .card-tab {
+              .header {
+                margin-bottom: 15px;
+                h5 {
+                  font-size: 18px;
+                }
+              }
+              form.add-card-form {
+                .row {
+                  gap: 20px 0px;
+                }
+
+                .form-check {
+                  margin-top: 0px;
+                  align-items: flex-start;
+                  input[type='checkbox'] {
+                    margin-top: 3px;
+                    width: 17px;
+                    height: 17px;
+                  }
+                }
+              }
+              .saved-cards {
+                .save-card-form {
+                  label {
+                    flex-direction: column;
+                    padding: 10px 10px;
+                    align-items: flex-start;
+
+                    .cvv-btn {
+                      margin-left: 0px;
+                      input {
+                        font-size: 15px;
+                        height: 35px;
+                      }
+                      button {
+                        font-size: 15px;
+                        height: 35px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .wallet-tab img {
+              width: 50px;
+            }
+          }
+        }
+      }
+      .address-div {
+        .notice,
+        .note {
+          width: 100%;
+          gap: 10px;
+          img {
+            width: 40px;
+            display: block;
+          }
+          .data {
+            p {
+              font-size: 17px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: none;
+              }
+            }
+            h5 {
+              font-size: 17px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: block;
+              }
+            }
+            textarea {
+              height: 50px;
+            }
+          }
+        }
+        .note {
+          margin-bottom: 0px;
+          img {
+            display: none;
+          }
+        }
+        .notice {
+          margin-top: 0px;
+        }
+        .instruction-section {
+          margin-top: 10px;
+          h4.title {
+            font-size: 17px;
+          }
+          .option-div {
+            flex-wrap: wrap;
+            gap: 10px 5px;
+            .instruct-box {
+              width: 23%;
+              height: 80px;
+              gap: 3px;
+              padding: 5px;
+              flex-direction: column;
+              span.checkmark {
+                left: 3px;
+                right: auto;
+                top: 3px;
+              }
+              &.other-text {
+                gap: 5px;
+                .header-div {
+                  p {
+                    font-size: 11px;
+                  }
+                  .icons {
+                    font-size: 12px;
+                  }
+                }
+                .content {
+                  span {
+                    font-size: 11px;
+                  }
+                }
+              }
+              img {
+                width: 25px;
+                height: 25px;
+              }
+              .content {
+                width: 100%;
+                height: auto;
+                p {
+                  font-size: 12px;
+                  text-align: center;
+                }
+                span {
+                  font-size: 11px;
+                  display: block;
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .input-textarea form textarea {
+            font-size: 14px;
+          }
+          &.collection {
+            .option-div {
+              gap: 10px 10px;
+              .instruct-box {
+                span.checkmark {
+                  right: 5px;
+                  left: auto;
+                  top: 5px;
+                }
+                width: 170px;
+                flex-direction: row;
+                gap: 8px;
+                height: 50px;
+                .content p {
+                  text-align: left;
+                }
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .add-tip {
+        h3.tip-title {
+          font-size: 19px;
+        }
+        form.tips-form {
+          label {
+            width: 16%;
+            text-align: center;
+            font-size: 15px;
+            padding: 5px 10px;
+            justify-content: center;
+            &.label-btn {
+              width: calc(100% - (16% * 4));
+            }
+            &.tip-label {
+              width: calc(16% * 4);
+              input[type='text'] {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .donate-change {
+        padding: 10px;
+        h3.donate-title {
+          font-size: 19px;
+        }
+        .content {
+          margin: 10px 0px 10px 0px;
+          .form-check {
+            align-items: center;
+            gap: 15px;
+            input[type='checkbox'] {
+              width: 25px;
+              height: 25px;
+              margin-top: 5px;
+            }
+            label {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .terms-text {
+        display: none;
+      }
+      .order-div {
+        button {
+          display: none;
+        }
+        span {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .checkout-page {
+    padding: 15px 0px;
+    .checkout {
+      button.acco-btn-checkout {
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+        svg {
+          font-size: 22px;
+        }
+      }
+      h3.title {
+        font-size: 19px;
+        margin-bottom: 25px;
+      }
+      .address-div {
+        .header-content {
+          flex-direction: row;
+          align-items: center;
+          gap: 5px;
+          .order-data {
+            img {
+              width: 55px;
+            }
+            p {
+              margin-right: auto;
+              font-size: 14px;
+            }
+          }
+          button {
+            font-size: 15px;
+            margin-left: auto;
+          }
+        }
+        .address-content {
+          position: relative;
+          h4.add-title {
+            font-size: 16.5px;
+          }
+          .add-data {
+            flex-direction: row;
+            align-items: flex-start;
+            .name-add {
+              p {
+                font-size: 15px;
+              }
+              span {
+                font-size: 14px;
+              }
+            }
+            button {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .payment-method {
+        .header-content {
+          flex-direction: column;
+          // align-items: center;
+          gap: 5px;
+          .order-data {
+            gap: 10px;
+            img {
+              width: 30px;
+            }
+            p {
+              margin-right: auto;
+              font-size: 17px;
+            }
+          }
+          button {
+            font-size: 15px;
+            margin-left: auto;
+          }
+        }
+        .payment-tab {
+          form.tabs-div {
+            gap: 20px 10px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            label {
+              width: 110px;
+              padding: 6px 8px;
+              font-size: 13px;
+              border-radius: 5px;
+              &.active {
+                justify-content: center;
+              }
+              &.mobileview {
+                display: none;
+              }
+              img {
+                width: 90%;
+                height: 35px;
+                &.apple-pay {
+                  width: 60px;
+                }
+                &.cardimg {
+                  width: 40px;
+                }
+              }
+              span {
+                left: -5px;
+                top: -10px;
+                width: 22px;
+                height: 22px;
+                svg {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          .selected-tab {
+            .card-tab {
+              .header {
+                margin-bottom: 15px;
+                h5 {
+                  font-size: 17px;
+                }
+              }
+              form.add-card-form {
+                .row {
+                  gap: 15px 0px;
+                }
+                label {
+                  font-size: 15px;
+                }
+                input {
+                  margin-bottom: 0px;
+                  height: 40px;
+                  font-size: 15px;
+                }
+                span .card-error {
+                  color: red !important;
+                  font-size: 14px;
+                }
+                .form-check {
+                  margin-top: 0px;
+                  align-items: flex-start;
+                  input[type='checkbox'] {
+                    margin-top: 3px;
+                    width: 17px;
+                    height: 17px;
+                  }
+                  label {
+                    font-size: 15px;
+                  }
+                }
+              }
+              .saved-cards {
+                .save-card-form {
+                  label {
+                    flex-direction: column;
+                    padding: 10px 10px;
+                    align-items: flex-start;
+                    .main-data {
+                      gap: 10px;
+                      img {
+                        width: 65px;
+                      }
+                    }
+                    .cvv-btn {
+                      margin-left: 0px;
+                      input {
+                        font-size: 15px;
+                        height: 35px;
+                      }
+                      button {
+                        font-size: 15px;
+                        height: 35px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .apple-pay-tab button {
+              font-size: 15px;
+            }
+            .wallet-tab {
+              img {
+                width: 40px;
+              }
+              h4 {
+                font-size: 22px;
+              }
+              p {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .address-div {
+        .notice,
+        .note {
+          width: 100%;
+          gap: 10px;
+          img {
+            width: 40px;
+            display: block;
+          }
+          .data {
+            p {
+              font-size: 16.5px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: none;
+              }
+            }
+            span {
+              font-size: 15px;
+            }
+            h5 {
+              font-size: 17px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              img {
+                display: block;
+              }
+            }
+            textarea {
+              height: 50px;
+            }
+          }
+        }
+        .note {
+          margin-bottom: 0px;
+          img {
+            display: none;
+          }
+        }
+        .notice {
+          margin-top: 0px;
+        }
+        .instruction-section {
+          margin-top: 10px;
+          h4.title {
+            font-size: 16.5px;
+          }
+          .option-div {
+            flex-wrap: wrap;
+            gap: 10px 5px;
+            .instruct-box {
+              width: 23%;
+              height: 80px;
+              gap: 3px;
+              padding: 5px;
+              flex-direction: column;
+              span.checkmark {
+                left: 3px;
+                right: auto;
+                top: 3px;
+              }
+              &.other-text {
+                gap: 5px;
+                .header-div {
+                  p {
+                    font-size: 11px;
+                  }
+                  .icons {
+                    font-size: 12px;
+                  }
+                }
+                .content {
+                  span {
+                    font-size: 11px;
+                  }
+                }
+              }
+              img {
+                width: 20px;
+                height: 20px;
+              }
+              .content {
+                width: 100%;
+                height: auto;
+                p {
+                  font-size: 13px;
+                  text-align: center;
+                }
+                span {
+                  font-size: 11px;
+                  display: block;
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .input-textarea form textarea {
+            font-size: 14px;
+          }
+          &.collection {
+            .option-div {
+              gap: 10px 10px;
+              .instruct-box {
+                span.checkmark {
+                  right: 5px;
+                  left: auto;
+                  top: 5px;
+                }
+                width: 170px;
+                flex-direction: row;
+                gap: 8px;
+                height: 50px;
+                .content p {
+                  text-align: left;
+                }
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .add-tip {
+        h3.tip-title {
+          font-size: 19px;
+        }
+        form.tips-form {
+          label {
+            width: 16%;
+            text-align: center;
+            font-size: 15px;
+            padding: 5px 10px;
+            justify-content: center;
+            &.label-btn {
+              width: calc(100% - (16% * 4));
+            }
+            &.tip-label {
+              width: calc(16% * 4);
+              input[type='text'] {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        .custom-tip .accordion .accordion-item {
+          .accordion-collapse .accordion-body form.custom-tips-form {
+            input {
+              width: 60%;
+              font-size: 15px;
+            }
+            button {
+              padding: 6px 12px 8px 12px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .donate-change {
+        padding: 10px;
+        h3.donate-title {
+          font-size: 19px;
+        }
+        .content {
+          margin: 10px 0px 10px 0px;
+          .form-check {
+            align-items: flex-start;
+            gap: 10px;
+            input[type='checkbox'] {
+              width: 20px;
+              height: 20px;
+              margin-top: 5px;
+            }
+            label {
+              width: 100%;
+              font-size: 15px;
+            }
+          }
+        }
+        a {
+          font-size: 15px;
+        }
+      }
+      .order-div {
+        span {
+          font-size: 15px;
+        }
+        button {
+          font-size: 17px;
+          padding: 8px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .checkout-page {
+    .checkout {
+      h3.title {
+        font-size: 23px;
+      }
+      .address-div {
+        .header-content .order-data img {
+          width: 75px;
+        }
+      }
+      .address-div {
+        .header-content {
+          .order-data p {
+            font-size: 15px;
+          }
+          button {
+            font-size: 17px;
+          }
+        }
+        .instruction-section .option-div .instruct-box {
+          span.checkmark {
+            right: 1px;
+            top: 1px;
+          }
+          img {
+            width: 25px;
+            height: 25px;
+          }
+          .content {
+            p {
+              font-size: 14px;
+            }
+            span {
+              display: block;
+              font-size: 13px;
+            }
+          }
+          &.other-text {
+            gap: 0px;
+            .header-div p {
+              font-size: 13px;
+            }
+          }
+        }
+        .address-content {
+          h4.add-title {
+            font-size: 17px;
+          }
+        }
+        .notice,
+        .note {
+          width: 60%;
+          img {
+            width: 45px;
+            display: block;
+          }
+          .data {
+            p {
+              font-size: 17px;
+              img {
+                display: none;
+              }
+            }
+            h5 {
+              font-size: 17px;
+              img {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .payment-method {
+        .header-content .order-data {
+          gap: 10px;
+          img {
+            width: 30px;
+          }
+        }
+        .header-content {
+          .order-data {
+            p {
+              font-size: 18px;
+            }
+            img {
+            }
+          }
+        }
+        .payment-tab {
+          form.tabs-div {
+            label {
+              font-size: 15px;
+              img {
+                width: 100%;
+                height: 35px;
+                &.apple-pay {
+                  width: 50px;
+                }
+                &.cardimg {
+                  width: 35px;
+                }
+                &.mobileview {
+                  display: none;
+                }
+              }
+            }
+          }
+          .selected-tab {
+            .wallet-tab {
+              img {
+                width: 40px;
+              }
+            }
+            .card-tab {
+              .header {
+                h5 {
+                  font-size: 19px;
+                }
+              }
+              form.add-card-form {
+                .row {
+                  gap: 15px 0px;
+                }
+                label {
+                }
+              }
+              .saved-cards .save-card-form label .cvv-btn input {
+                width: 125px;
+              }
+            }
+          }
+        }
+      }
+      .add-tip h3.tip-title {
+        font-size: 19px;
+      }
+      .donate-change h3.donate-title {
+        font-size: 19px;
+      }
+      .order-div button {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .checkout-page .checkout .payment-method .payment-tab .selected-tab .card-tab {
+    .selected-tab-accord.accordion .accordion-item h2.accordion-header button {
+      font-size: 14px;
+      span {
+        svg {
+          font-size: 11px;
+        }
+      }
+    }
+    form.add-card-form .StripeElement {
+      padding: 7px 14px;
+    }
+    .saved-cards .save-card-form {
+      label .cvv-btn {
+        width: 100%;
+      }
+      .StripeElement {
+        padding: 5px 14px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .checkout-page .checkout .payment-method .payment-tab .selected-tab .card-tab {
+    .selected-tab-accord.accordion .accordion-item h2.accordion-header button {
+      font-size: 14.5px;
+      span {
+        svg {
+          font-size: 11px;
+        }
+      }
+    }
+    form.add-card-form .StripeElement {
+      padding: 8px 14px;
+    }
+    .saved-cards .save-card-form {
+      label .cvv-btn {
+        width: 100%;
+      }
+      .StripeElement {
+        padding: 8px 14px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .checkout-page .checkout .payment-method .payment-tab .selected-tab .card-tab {
+    .selected-tab-accord.accordion .accordion-item h2.accordion-header button {
+      font-size: 14px;
+      span {
+        svg {
+          font-size: 11px;
+        }
+      }
+    }
+    form.add-card-form .StripeElement {
+      padding: 8px 14px;
+    }
+    .saved-cards .save-card-form {
+      label .cvv-btn {
+        width: 100%;
+      }
+      .StripeElement {
+        padding: 8px 14px;
+        width: 100%;
+      }
+    }
+  }
+}
+.loading-overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9998;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-overlay.is-active {
+  display: flex;
+}
+
+.code {
+  text-align: center;
+  padding: 12px;
+  font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+  font-weight: 500;
+  color: #fff;
+
+.spinner{
+  font-size: 20px;
+  height: 60px;
+  width: 60px;
+  border-color: #9FE870;
+  border-right-color: transparent;
+  margin-bottom: 20px;
+}  
+} 
+.checkout-page {
+  .scroll-header {
+    position: fixed;
+    top: 0px;
+    z-index: 1021;
+    width: 60%;
+    background: #fff;
+    padding: 17px 0px;
+    height: 5%;
+    // transform: translate(0px, -75px);
+    // -webkit-transition: all 0.3s ease;
+    // -moz-transition: all 0.3s ease;
+    // -o-transition: all 0.3s ease;
+    // -ms-transition: all 0.3s ease;
+    // transition: all 0.3s ease;
+    // opacity: 0.1;
+    &.scroll-header-visible {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+    @include themed() {
+      background-color: t('header-bg');
+    }
+    .scroll-header-content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-radius: 50px;
+        height: 25px;
+        width: 25px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #9ee86f;
+
+        svg {
+          font-size: 18px;
+          fill: #173303;
+          margin-right: 2px;
+        }
+      }
+      h3.resta-name {
+        margin: 0px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        line-height: normal;
+        font-size: 17px;
+        color: #173303;
+        margin-bottom: 1px;
+        text-transform: capitalize;
+        @include themed() {
+          color: t('whitecolor');
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .checkout-page .scroll-header {
+    width: 100%;
+  }
+}

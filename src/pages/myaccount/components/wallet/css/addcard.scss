@@ -1,0 +1,204 @@
+@import "../../../../../common/assets/scss/main.scss";
+
+.add-card {
+  padding: 25px 0px;
+  h3.heading {
+    border-bottom: 1px solid #20435636;
+    font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+    color: $theme-dark1;
+    padding-bottom: 10px;
+    font-size: 25px;
+    margin-bottom: 30px;
+    @include themed() {
+      color: t("whitecolor");
+      border-color: t("light-text");
+    }
+  }
+  form {
+    width: 50%;
+    label {
+      color: #828585;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      font-size: 15px;
+      @include themed() {
+        color: t("hovercolor");
+      }
+    }
+    input {
+      font-size: 16px;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      box-shadow: none;
+      color: $theme-dark1;
+      height: 45px;
+      border-radius: 5px;
+      @include themed() {
+        background-color: t("dark4");
+        border-color: t("green3");
+        color: t("whitecolor");
+      }
+      &:focus {
+        box-shadow: none;
+        border-color: #ced4da;
+        color: $theme-dark1;
+        @include themed() {
+          border-color: t("green2");
+          color: t("whitecolor");
+        }
+      }
+      &::-webkit-input-placeholder {
+        color: #ced4da;
+      }
+      &::-moz-placeholder {
+        color: #ced4da;
+      }
+      &:-ms-input-placeholder {
+        color: #ced4da;
+      }
+      &:-moz-placeholder {
+        color: #ced4da;
+      }
+    }
+    .submit-btn {
+      margin-top: 50px;
+      button {
+        color: #173303;
+        background-color: #9fe870;
+        //   background-color: #0e8450;
+        padding: 10px 35px;
+        text-decoration: none;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+
+        &:hover {
+          color: #173303;
+          background-color: #28be21;
+        }
+        svg {
+          color: #173303;
+          fill: #173303;
+        }
+      }
+    }
+  }
+  .card-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  .add-card {
+    padding: 12px 0px;
+    @include themed() {
+      background-color: t("dark4");
+    }
+    h3.heading {
+      font-size: 20px;
+    }
+    form {
+      width: 100%;
+      label {
+        font-size: 14px;
+      }
+      input {
+        height: 40px;
+        font-size: 15px;
+      }
+      .submit-btn button {
+        font-size: 15px;
+      }
+    }
+    .card-img {
+      position: inherit;
+      display: flex;
+      margin: 0px auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .add-card {
+    @include themed() {
+      background-color: t("dark4");
+    }
+    padding: 12px 0px;
+    h3.heading {
+      font-size: 20px;
+    }
+    form {
+      width: 100%;
+      label {
+        font-size: 14.5px;
+      }
+      input {
+        height: 40px;
+        font-size: 15.5px;
+      }
+      .submit-btn button {
+        font-size: 15.5px;
+      }
+    }
+    .card-img {
+      position: inherit;
+      display: flex;
+      margin: 0px auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .add-card {
+    h3.heading {
+      font-size: 20px;
+    }
+    form {
+      width: 100%;
+
+      input {
+        height: 40px;
+      }
+    }
+    .card-img {
+      width: 75%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .add-card {
+    h3.heading {
+      font-size: 20px;
+    }
+    form {
+      width: 75%;
+
+      input {
+        height: 40px;
+      }
+    }
+    .card-img {
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .add-card {
+    h3.heading {
+      font-size: 20px;
+    }
+    form {
+      width: 50%;
+    }
+  }
+}

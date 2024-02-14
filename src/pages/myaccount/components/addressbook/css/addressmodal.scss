@@ -1,0 +1,338 @@
+@import "../css/addressbook.scss";
+
+.dark-popup {
+  #addr-book-modal .modal-content {
+    background-color: #0a1929;
+    .modal-header {
+      .modal-title {
+        color: white;
+      }
+      .close-btn {
+        color: #ffffff;
+      }
+    }
+    .modal-body form {
+      .form-group {
+        label {
+          color: #99ccf3;
+        }
+        input {
+          background-color: #001e3c;
+          border-color: #064d9369;
+          color: #ffffff;
+          &:focus {
+            color: #ffffff;
+          }
+        }
+      }
+      .form-check-group .form-check label {
+        color: #ffffff;
+      }
+    }
+  }
+}
+#addr-book-modal {
+  border: none;
+  @media (min-width: 576px) {
+    max-width: 525px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+    .modal-header {
+      padding: 15px;
+      .modal-title {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        color: $theme-dark1;
+        font-size: 22px;
+      }
+      .close-btn {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        display: flex;
+        color: $theme-dark1;
+        padding: 0px;
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+    // Header
+    .modal-body {
+      padding: 15px;
+      form {
+        .form-group {
+          margin-bottom: 20px;
+          label {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 14.5px;
+            color: #939393;
+          }
+          input {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            box-shadow: none;
+            outline: none;
+            color: $theme-dark1;
+            border-radius: 5px;
+            &:focus {
+              box-shadow: none;
+              color: $theme-dark1;
+            }
+            &::-webkit-input-placeholder {
+              /* Chrome/Opera/Safari */
+              color: #939393;
+              opacity: 0.5;
+              font-size: 14.5px;
+            }
+            &::-moz-placeholder {
+              /* Firefox 19+ */
+              color: #939393;
+              opacity: 0.5;
+              font-size: 14.5px;
+            }
+            &:-ms-input-placeholder {
+              /* IE 10+ */
+              color: #939393;
+              opacity: 0.5;
+              font-size: 14.5px;
+            }
+            &:-moz-placeholder {
+              /* Firefox 18- */
+              color: #939393;
+              opacity: 0.5;
+              font-size: 14.5px;
+            }
+          }
+        }
+        .form-check-group {
+          margin-bottom: 25px;
+          display: flex;
+          justify-content: space-between;
+          .form-check {
+            margin: 0px;
+            cursor: pointer;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            padding: 0px;
+            label {
+              cursor: pointer;
+              color: $theme-dark1;
+            }
+            .form-check-input {
+              width: 17px;
+              height: 17px;
+              margin: 0px 0px 0px 0px;
+              &[type="radio"] {
+                border-radius: 50%;
+                cursor: pointer;
+              }
+              &:checked {
+                background-color: $theme-green2;
+                border-color: $theme-green2;
+              }
+            }
+          }
+        }
+        .primary-btn {
+          margin-bottom: 20px;
+          background-color: #939393;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 15px;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          max-width: 125px;
+          width: 100%;
+          padding: 8px 10px;
+          &.active {
+            background-color: #28be21;
+          }
+        }
+      }
+    }
+    // modal Body
+    .modal-footer {
+      display: flex;
+      justify-content: center;
+      button {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 15px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        max-width: 125px;
+        width: 100%;
+        &.delet-btn {
+          background-color: #d92662;
+        }
+        &.update-btn {
+          background-color: #28be21;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  #addr-book-modal .modal-content {
+    .modal-header {
+      padding: 10px;
+      .modal-title {
+        font-size: 20px;
+      }
+    }
+    .modal-body form {
+      .form-group {
+        margin-bottom: 15px;
+        label {
+          font-size: 13px;
+        }
+        input {
+          font-size: 13px;
+        }
+      }
+      .primary-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .form-check-group {
+        justify-content: center;
+        gap: 25px;
+      }
+    }
+    .modal-footer {
+      padding: 20px 0px;
+      gap: 25px;
+      button {
+        font-size: 14px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  #addr-book-modal .modal-content {
+    .modal-header {
+      padding: 10px;
+      .modal-title {
+        font-size: 22px;
+      }
+    }
+    .modal-body form {
+      .form-group {
+        margin-bottom: 15px;
+        label {
+          font-size: 14px;
+        }
+        input {
+          font-size: 14px;
+        }
+      }
+      .primary-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .form-check-group {
+        justify-content: center;
+        gap: 25px;
+      }
+    }
+    .modal-footer {
+      gap: 20px;
+      padding: 20px 0px;
+      button {
+        font-size: 14px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #addr-book-modal .modal-content {
+    .modal-header {
+      padding: 10px;
+      .modal-title {
+        font-size: 22px;
+      }
+    }
+    .modal-body form {
+      .form-group {
+        margin-bottom: 15px;
+        label {
+          font-size: 14.5px;
+        }
+        input {
+          font-size: 14.5px;
+        }
+      }
+      .primary-btn {
+        padding: 8px 10px;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    }
+    .modal-footer {
+      padding: 20px 0px;
+      button {
+        font-size: 15px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #addr-book-modal .modal-content {
+    .modal-header {
+      padding: 15px;
+      .modal-title {
+        font-size: 22px;
+      }
+      button {
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+    .modal-body {
+      padding: 15px;
+      form {
+        .form-group {
+          margin-bottom: 15px;
+          label {
+            font-size: 15px;
+          }
+          input {
+            font-size: 15px;
+          }
+        }
+        .primary-btn {
+          padding: 8px 10px;
+          font-size: 15px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .modal-footer {
+      padding: 20px 0px;
+      button {
+        font-size: 15px;
+        max-width: 100px;
+      }
+    }
+  }
+}

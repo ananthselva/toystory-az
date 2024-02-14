@@ -1,0 +1,315 @@
+@import "../../../../../../common/assets/scss/main.scss";
+
+.my-account {
+  .stuart-tracking {
+    height: 100%;
+    position: relative;
+    .map-img {
+      height: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: none;
+        border-radius: 5px 5px 5px 5px;
+      }
+    }
+    .driver-details {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      background-color: #204356;
+      padding: 15px 20px;
+      border-radius: 0px 0px 5px 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include themed() {
+        background-color: t("dark3");
+      }
+      .address {
+        h4 {
+          margin: 0px;
+          color: #ffffff;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+        p {
+          margin: 0px;
+          color: #ffffff;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 16px;
+        }
+      }
+      .driver-info {
+        margin-top: -80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          border: 2px solid #ffffff;
+          box-shadow: rgb(0 0 0 / 77%) 0px 0px 9px 0px;
+        }
+        h4 {
+          margin: 0px;
+          color: #ffffff;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          margin: 10px 0px;
+          font-size: 20px;
+        }
+        a {
+          margin: 0px;
+          color: #ffffff;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          background-color: #1dc070;
+          text-decoration: none;
+          padding: 8px 20px;
+          border-radius: 5px;
+          font-size: 16px;
+          @include themed() {
+            background-color: t("green3");
+          }
+        }
+      }
+    }
+    .estimate-div-main-stuart {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      border: none;
+      border-radius: 10px;
+      position: absolute;
+      bottom: auto;
+      top: 8px;
+      max-width: 100%;
+      width: 98%;
+      left: 0px;
+      right: 0px;
+      margin: 0px auto;
+      background-color: #ffffff;
+      @include themed() {
+        background-color: t("dark3");
+      }
+      .estimate-div-stuart {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        .time {
+          p {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            color: $theme-dark1;
+            margin: 0px;
+            font-size: 15px;
+            @include themed() {
+              color: t("hovercolor");
+            }
+          }
+          span {
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            color: $theme-dark1;
+            font-size: 16px;
+            @include themed() {
+              color: t("whitecolor");
+            }
+            br {
+              display: none;
+            }
+          }
+        }
+        .help {
+          button {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            padding: 10px 20px;
+            margin: 0px;
+            border: 1px solid #d92662;
+            border-radius: 5px;
+            color: #d92662;
+            cursor: pointer;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 5px;
+            outline: none;
+            box-shadow: none;
+            background-color: transparent;
+            svg {
+              font-size: 18px;
+            }
+          }
+        }
+        .total {
+          p {
+            color: $theme-dark1;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            margin: 0px;
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 3px;
+            @include themed() {
+              color: t("light-green");
+            }
+          }
+          a {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            svg {
+              font-size: 13px;
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+      .mob-help {
+        display: none;
+        .help {
+          button {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            padding: 10px 20px;
+            margin: 0px;
+            border: 1px solid #d92662;
+            border-radius: 5px;
+            color: #d92662;
+            cursor: pointer;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 5px;
+            background-color: transparent;
+            outline: none;
+            box-shadow: none;
+            svg {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .my-account .stuart-tracking {
+    .driver-details {
+      .address {
+        h4 {
+          font-size: 19px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .driver-info {
+        margin-top: -60px;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        h4 {
+          font-size: 17px;
+        }
+        a {
+          font-size: 15px;
+          padding: 7px 20px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .my-account .stuart-tracking {
+    .estimate-div-main-stuart {
+      width: 98%;
+      padding: 10px 10px;
+      flex-direction: column;
+      gap: 20px;
+      .estimate-div-stuart {
+        .time {
+          p {
+            font-size: 14px;
+          }
+          span {
+            font-size: 12px;
+            br {
+              display: block;
+            }
+          }
+        }
+        .help {
+          display: block;
+          button {
+            padding: 8px 10px;
+            font-size: 13px;
+            svg {
+              font-size: 17px;
+            }
+          }
+        }
+        .total {
+          p {
+            font-size: 15px;
+          }
+          a {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .my-account .stuart-tracking {
+    .estimate-div-main-stuart {
+      width: 98%;
+      padding: 10px 10px;
+      flex-direction: column;
+      gap: 20px;
+      .estimate-div-stuart {
+        .time {
+          p {
+            font-size: 16px;
+          }
+          span {
+            font-size: 13px;
+          }
+        }
+        .help {
+          display: block;
+          button {
+            padding: 8px 10px;
+            font-size: 14px;
+            svg {
+              font-size: 17px;
+            }
+          }
+        }
+        .total {
+          p {
+            font-size: 16px;
+          }
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+      .mob-help {
+        display: none;
+      }
+    }
+  }
+}

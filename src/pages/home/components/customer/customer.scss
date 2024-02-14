@@ -1,0 +1,295 @@
+@import "../../../../common/assets/scss/main.scss";
+.customer-track {
+  padding: 50px 0px;
+  @include themed() {
+    background-color: t("dark4");
+  }
+
+  p.sub-content {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+    color: $theme-dark1;
+    font-size: 16.5px;
+    @include themed() {
+      color: t("light-text");
+    }
+  }
+  Button.scroll-to-top-fk-order {
+    background-color: #eaeaea;
+    color: #173303;
+    font-family: "SegoeUI-SemiBold";
+    padding: 13px 16px;
+    font-size: 15px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    line-height: 1;
+    text-decoration: none;
+    border: none;
+    margin-top: 20px;
+    &:active {
+      background-color: #eaeaea;
+      color: #173303;
+    }
+    @include themed() {
+      background-color: t("themelight");
+    }
+  }
+  .delivery-track {
+    position: relative;
+    .icon-box {
+      position: absolute;
+      left: auto;
+      right: 20px;
+      top: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: $white;
+      padding: 0px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 7px 7px;
+      border-radius: 10px;
+      gap: 15px;
+      @include themed() {
+        background-color: t("dark3");
+      }
+
+      .icon-div {
+        width: 70px;
+        height: 70px;
+      }
+      .content-div {
+        h5 {
+          margin: 0px;
+          padding: 0px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          color: #4d4d4d;
+          font-size: 17px;
+          margin-bottom: 5px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        p {
+          margin: 0px;
+          padding: 0px;
+          font-family: map-get($map: $segoe-fonts, $key: semibold-600);
+          color: #808695;
+          font-size: 15px;
+          line-height: normal;
+          @include themed() {
+            color: t("light-text");
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .customer-track p.sub-content {
+    margin: 0px 0px 25px 0px;
+    font-size: 16px;
+    line-height: inherit;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .customer-track {
+    .delivery-track .icon-box {
+      right: 15px;
+      top: 15px;
+      .icon-div {
+        width: 55px;
+        height: 55px;
+      }
+      .content-div {
+        h5 {
+          font-size: 15px;
+          margin-bottom: 2px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .customer-track {
+    .delivery-track .icon-box {
+      right: 20px;
+      top: 20px;
+      .icon-div {
+        width: 60px;
+        height: 60px;
+      }
+      .content-div {
+        h5 {
+          font-size: 16px;
+          margin-bottom: 3px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .customer-track {
+    Button.scroll-to-top-fk-order {
+      font-size: 14px;
+      padding: 10px 13px;
+    }
+    .delivery-track {
+      margin-top: 100px;
+      background-color: $white;
+      padding: 50px 10px 10px 10px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 25px;
+      @include themed() {
+        background-color: t("dark3");
+        box-shadow: t("none");
+      }
+      .icon-box {
+        position: absolute;
+        top: -35px;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        box-shadow: none;
+        background-color: transparent;
+        @include themed() {
+          background-color: t("transparentbg");
+        }
+        gap: 10px;
+        .icon-div {
+          width: 70px;
+          height: 70px;
+          border: 2px solid #007d8d;
+          border-radius: 9px;
+          padding: 10px;
+          background: #fff;
+        }
+        .content-div {
+          margin-bottom: -35px;
+          h5 {
+            margin-bottom: 0px;
+            color: #007d8d;
+          }
+          p {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .customer-track {
+    .delivery-track {
+      .icon-box {
+        .icon-div {
+          padding: 7px;
+          width: 65px;
+          height: 65px;
+        }
+        .content-div {
+          h5 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .customer-track {
+    .delivery-track {
+      .icon-box {
+        top: -32px;
+        .icon-div {
+          padding: 7px;
+          width: 65px;
+          height: 65px;
+        }
+        .content-div {
+          margin-bottom: -32px;
+          h5 {
+            font-size: 15px;
+            margin-bottom: 3px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .customer-track {
+    .delivery-track {
+      .icon-box {
+        top: -29px;
+        .icon-div {
+          padding: 3px;
+          width: 60px;
+          height: 60px;
+        }
+        .content-div {
+          margin-bottom: -33px;
+          h5 {
+            font-size: 14px;
+            margin-bottom: 3px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .customer-track {
+    .delivery-track {
+      .icon-box {
+        right: 10px;
+        top: 10px;
+        gap: 8px;
+        .icon-div {
+          padding: 3px;
+          width: 55px;
+          height: 55px;
+        }
+        .content-div {
+          h5 {
+            font-size: 14px;
+            margin-bottom: 3px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

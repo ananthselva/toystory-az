@@ -1,0 +1,47 @@
+@import "../../../../common/assets/scss/main.scss";
+
+.client-logo {
+  background-color: $gray-bg;
+  @include themed() {
+    background: t("dark1");
+  }
+  .client-logo-slider {
+    .swiper-wrapper {
+      -webkit-transition-timing-function: linear !important;
+      -o-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+      //   transition-duration: 0ms !important;
+      .logo-box {
+        background-color: transparent;
+        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+        margin: 35px 20px;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .client-logo .client-logo-slider .swiper-wrapper .logo-box {
+    margin: 20px 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .client-logo .client-logo-slider .swiper-wrapper .logo-box {
+    margin: 25px 12px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .client-logo .client-logo-slider .swiper-wrapper .logo-box {
+    margin: 30px 15px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .client-logo .client-logo-slider .swiper-wrapper .logo-box {
+    margin: 30px 15px;
+  }
+}

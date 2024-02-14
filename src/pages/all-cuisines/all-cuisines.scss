@@ -1,0 +1,78 @@
+@import "../../common/assets/scss/main.scss";
+
+.location_full {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+  @include themed() {
+    background-color: t("dark5");
+  }
+  .location_img {
+    img {
+      width: 50%;
+    }
+  }
+  p {
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+}
+
+.area_maping {
+  @include themed() {
+    background-color: t("dark5");
+  }
+  margin-bottom: 20px;
+
+  .nav-link {
+    color: #173303;
+    outline: none !important;
+    transition: none;
+  }
+  .mb-3 {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .mb-3 :hover {
+    color: #444;
+    border: none !important;
+    @include themed() {
+      color: t("newDarkGreen");
+    }
+  }
+  .remove_dot {
+    li {
+      list-style-type: none;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      color: #7c7777;
+      font-size: 14px;
+      font-weight: 500;
+      @include themed() {
+        color: t("whitecolor");
+      }
+    }
+  }
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-link.active {
+    background-color: transparent;
+    border: none;
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+}
+
+.all_area_full {
+  @include themed() {
+    background-color: t("dark4");
+  }
+  .area_heading {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #28be21;
+  }
+}

@@ -1,0 +1,216 @@
+@import "../../../common/assets/scss/main.scss";
+.ponts {
+  font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+  .container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .pop-title {
+    text-align: center;
+    font-size: 18px;
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    border-radius: 5px 5px 0px 0px;
+    margin-top: -20px;
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+  }
+  .title-points {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+  }
+  .title {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+    background-color: #f6f6f6;
+    .pts {
+      font-size: 17px;
+      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+      margin-right: 40px;
+      margin-left: 20px;
+    }
+  }
+  .flex-flex {
+    .full {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 25px;
+      margin-top: 2px;
+      align-items: center;
+      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+      .burger-img {
+        width: 20%;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      .image {
+        display: flex;
+        gap: 5px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        .gif {
+          width: 30%;
+          display: none;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .red-coupon {
+        width: 22%;
+        position: relative;
+        img {
+          width: 100%;
+          object-fit: contain;
+          margin-top: -21px;
+        }
+        .values-values {
+          top: -4px;
+          right: 17px;
+          font-size: 15px;
+          font-weight: 600;
+          position: absolute;
+          color: #000;
+        }
+      }
+    }
+    .pts {
+      width: 70%;
+
+      .item-name {
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .earned {
+        font-size: 13px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      }
+    }
+    Button {
+      background-color: transparent;
+      border: 1px solid #28be21;
+      border-radius: 10px 10px 10px 10px;
+      padding: 0px;
+      height: 40px;
+      width: 100%;
+
+      .add-more {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        svg {
+          width: 15px;
+          height: 15px;
+          fill: #28be21;
+        }
+        .free {
+          color: #384656;
+          font-weight: 700;
+          font-size: 11px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        }
+        .need-fifty {
+          color: #e3173c;
+          font-weight: 700;
+          font-size: 11px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        }
+      }
+    }
+    Button:hover {
+      background-color: transparent;
+      border: 1px solid #28be21;
+      border-radius: 10px 10px 10px 10px;
+      padding: 0px;
+      height: 40px;
+      width: 100%;
+    }
+  }
+  .increments {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    .click {
+      cursor: pointer;
+    }
+  }
+}
+.loyalty-popup {
+  .modal-header {
+    border-bottom: none;
+    padding: 10px;
+  }
+  .modal-footer {
+    border-top: none;
+    padding: 0px;
+  }
+  span.close-btn {
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    display: flex;
+    svg {
+      font-size: 22px;
+      cursor: pointer;
+      fill: #ffffff;
+    }
+  }
+  .modal-body {
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 440px) {
+  .ponts .pop-title {
+    font-size: 15px;
+    margin-right: 19px;
+  }
+  .ponts .title .pts {
+    font-size: 14px;
+  }
+  .ponts .flex-flex .pts .item-name {
+    font-size: 11px;
+  }
+  .ponts .flex-flex .pts .earned {
+    font-size: 10px;
+  }
+  .ponts .flex-flex Button .add-more .free {
+    font-size: 10px;
+  }
+  .ponts .flex-flex Button .add-more img {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 500px) {
+  .ponts .flex-flex .full .red-coupon .values-values {
+    top: -6px;
+    right: 11px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .ponts .flex-flex .full .red-coupon .values-values {
+    top: -4px;
+    right: 8px;
+    font-size: 9px;
+  }
+}

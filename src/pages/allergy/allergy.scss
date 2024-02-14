@@ -1,0 +1,203 @@
+@import "../../common/assets/scss/main.scss";
+
+.total.allergy-page {
+  padding: 30px 0px;
+  @include themed() {
+    background-color: t("dark5");
+    #allergy_head {
+      color: t("pale-green");
+    }
+  }
+
+  .active-scroll {
+    text-decoration: none;
+  }
+  .active-scroll a {
+    color: #28be21;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    @include themed() {
+      color: t("pale-green");
+    }
+  }
+
+  .listitem {
+    position: sticky;
+    top: 100px;
+  }
+  .heading {
+    font-size: 20px;
+    color: #173303;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    line-height: 1.2;
+    margin-top: 0;
+    text-align: left;
+    display: block;
+    font-family: "Segoe-UI-Semibold-600";
+    @include themed() {
+      color: t("lightwhitegray");
+    }
+  }
+  p {
+    font-family: "Segoe-UI-Semibold-600";
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: justify;
+    font-size: 0.875rem;
+    color: #8b8a8a;
+
+    @include themed() {
+      color: t("lightgraycolor");
+    }
+  }
+
+  .actmenu {
+    color: #8b909d;
+    background-color: #8b909d;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    text-decoration: none;
+    background-color: transparent;
+    list-style: none;
+    font-family: "Segoe-UI-Semibold-600";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .active {
+    color: #173303;
+    @include themed() {
+      color: t("pale-green");
+    }
+  }
+  .active span {
+    background-color: #173303;
+    font-weight: 700;
+    @include themed() {
+      color: t("pale-green");
+    }
+  }
+  a:hover {
+    color: #173303;
+    @include themed() {
+      color: t("pale-green");
+    }
+
+    span {
+      background-color: #173303;
+      @include themed() {
+        color: t("pale-green");
+      }
+    }
+  }
+
+  .info {
+    color: #a4a3a8 !important;
+  }
+
+  .round {
+    border-radius: 50%;
+    color: #fff;
+    background-color: #8b8a8a;
+    height: 30px;
+    width: 30px;
+    padding: 4px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 9px;
+    vertical-align: middle;
+    border-style: none;
+    font-family: "Segoe-UI-Semibold-600";
+  }
+
+  #allergy_head {
+    font-weight: 200;
+    font-family: "Segoe-UI-Semibold-600";
+    color: #173303;
+    @include themed() {
+      color: t(" themelight");
+    }
+  }
+
+  #empty {
+    width: 80%;
+    border-top: 1px solid #e0e0e0;
+    line-height: 0.1em;
+  }
+  .main-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .total.allergy-page .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .total.allergy-page .mobile_area {
+    display: none;
+  }
+}
+
+.total.allergy-page .mobile_area {
+  .accordion-button {
+    color: #9fe870;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+    background-color: transparent;
+
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #00c070 !important;
+  }
+
+  .accordion-button {
+    color: #9fe870;
+    font-weight: 600;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+    background-color: transparent;
+
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion-button {
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion-body {
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion {
+    --bs-accordion-bg: none !important;
+    --bs-accordion-border-color: none !important ;
+  }
+  .accordion-body {
+    color: #a4a3a8;
+    font-family: "Segoe-UI-Semibold-600";
+    font-size: 15px;
+  }
+}

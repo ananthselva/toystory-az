@@ -1,0 +1,233 @@
+@import "../../../../../common/assets/scss/main.scss";
+
+.wallet-page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .img-pound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 75px;
+    .wallet-img {
+      width: auto;
+      margin-bottom: 25px;
+    }
+    h4 {
+      color: #28be21;
+      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+      font-size: 32px;
+      margin-bottom: 5px;
+      @include themed() {
+        color: t("themelight");
+      }
+    }
+    p {
+      color: $theme-dark1;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      font-size: 16px;
+      margin: 0px;
+      @include themed() {
+        color: t("whitecolor");
+      }
+    }
+  }
+  .card-view-box {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fff;
+    padding: 25px;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    @include themed() {
+      background-color: t("dark4");
+      box-shadow: t("none");
+    }
+    .assets {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      img {
+        width: 85px;
+      }
+      .content {
+        h4 {
+          margin: 0px 0px 10px 0px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          color: #204356;
+          font-size: 20px;
+          @include themed() {
+            color: t("themelight");
+          }
+        }
+        p {
+          margin: 0px 0px 0px 0px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #828585;
+          font-size: 16px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+      }
+    }
+    a {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      color: #204356;
+      align-items: center;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      font-size: 16px;
+      text-decoration: none;
+      svg {
+        margin-top: 5px;
+      }
+      @include themed() {
+        color: t("themelight");
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .wallet-page {
+    background-color: #f5f5f5;
+    padding: 12px 0px;
+    display: block;
+    @include themed() {
+      background-color: t("dark4");
+    }
+    .img-pound {
+      margin-bottom: 50px;
+      h4 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .card-view-box {
+      margin-bottom: 35px;
+      padding: 15px;
+      // margin-left: 15px;
+      // margin-right: 15px;
+      @include themed() {
+        background-color: t("dark3");
+      }
+      .assets {
+        img {
+          width: 80px;
+        }
+        .content {
+          h4 {
+            margin: 0px 0px 7px 0px;
+            font-size: 17px;
+          }
+          p {
+            font-size: 14.5px;
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+      a {
+        font-size: 14px;
+        svg {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .wallet-page {
+    background-color: #f5f5f5;
+    padding: 12px 0px;
+    display: block;
+    @include themed() {
+      background-color: t("dark4");
+    }
+    .img-pound {
+      margin-bottom: 50px;
+      h4 {
+        font-size: 27px;
+      }
+    }
+    .card-view-box {
+      margin-bottom: 35px;
+      padding: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      @include themed() {
+        background-color: t("dark3");
+      }
+      .assets {
+        img {
+          width: 85px;
+        }
+        .content {
+          h4 {
+            margin: 0px 0px 7px 0px;
+            font-size: 19px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+      a {
+        font-size: 14px;
+        svg {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wallet-page {
+    padding: 0px 0px;
+    .img-pound {
+      margin-bottom: 45px;
+      .wallet-img {
+        width: 200px;
+      }
+      h4 {
+        font-size: 27px;
+      }
+    }
+    .wallet-row {
+      gap: 30px;
+    }
+    .card-view-box {
+      padding: 15px;
+      .assets {
+        img {
+          width: 85px;
+        }
+        .content {
+          h4 {
+            margin: 0px 0px 7px 0px;
+            font-size: 19px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+      a {
+        font-size: 14px;
+        svg {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}

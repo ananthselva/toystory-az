@@ -1,0 +1,31 @@
+import React, { useEffect } from 'react';
+import { Provider, connect } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
+import authReducer from './reducers/authReducer';
+import { checkUserSession } from './utils/sessionUtils';
+import Login from './components/Login';
+import Register from './components/Register';
+
+const rootReducer = combineReducers({
+  auth: authReducer,
+});
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+const App = ({ checkUserSession }) => {
+  useEffect(() => {
+    checkUserSession();
+  }, [checkUserSession]);
+
+  return (
+    <Provider store={store}>
+      <div className="App">
+        <Login />
+        <Register />
+      </div>
+    </Provider>
+  );
+};
+
+export default connect(null, { checkUserSession })(App);

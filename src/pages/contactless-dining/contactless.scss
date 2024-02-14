@@ -1,0 +1,338 @@
+@import "../../common/assets/scss/main.scss";
+
+.contactless_dining {
+  @include themed() {
+    background-color: t("dark5");
+  }
+
+  .signup_submit {
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+    background: url("./img/blog-4.jpg") top center no-repeat;
+    background-size: cover;
+  }
+  .dining_bg_color {
+    background: #8b8a8a;
+    opacity: 0.95;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .form_full {
+    padding: 50px 5px;
+    background-color: white;
+    margin-top: 80px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .form_name {
+      margin-bottom: 5px;
+      font-size: 22px;
+      font-weight: 500;
+      text-align: center;
+      color: #071e55;
+    }
+    .form_sub {
+      margin-bottom: 25px;
+      font-size: 14px;
+      color: #7c8595;
+    }
+  }
+
+  .over_cnt {
+    padding-top: 150px;
+    .contactless_heading {
+      margin-bottom: 30px;
+      color: #fff;
+    }
+  }
+
+  .contactless_cnt {
+    margin-bottom: 70px;
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+  }
+
+  .need_bold {
+    font-weight: bold;
+  }
+
+  .box {
+    font-size: 26px;
+    color: #28be21;
+    background: #fff;
+    padding: 10px 7px 10px 10px;
+    border-radius: 35px;
+    text-align: center;
+  }
+
+  .how_works {
+    padding: 30px 0px;
+    text-align: center;
+  }
+  .works_heading {
+    margin-top: 10px;
+    color: #28be21;
+    font-size: 36px;
+    font-weight: 600;
+
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+
+  .works_sub {
+    line-height: 28px;
+    font-weight: 400;
+    color: #7c8595;
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+
+  .contactless_menu {
+    margin-top: 25px;
+    position: relative;
+    margin: 45px 5px 5px 5px;
+    padding: 40px 15px 32px 15px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #28be21;
+    background-color: #fefefe;
+    border-radius: 8px 8px;
+    transition: all 1s;
+
+    img {
+      width: 100%;
+    }
+
+    .cnt_less_head {
+      margin-top: 25px;
+    }
+
+    .cnt_less_sub {
+      font-size: 15px;
+      line-height: 28px;
+      font-weight: 400;
+      color: #7c8595;
+      margin-top: 30px;
+    }
+  }
+
+  .contactless_menu:hover {
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border: 1px solid #28be21;
+  }
+
+  .features_bebefits {
+    padding: 30px 0px;
+
+    .features_image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .feature_benifits_name {
+      margin-bottom: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #28be21;
+      margin-top: 25px;
+
+      @include themed() {
+        color: t("whitecolor");
+      }
+    }
+
+    .features_content {
+      .benefits_name {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 15px;
+        margin-bottom: 10px;
+        color: #858585;
+        margin-top: 20px;
+      }
+    }
+    span {
+      svg {
+        font-size: 20px;
+        color: #28be21;
+      }
+    }
+  }
+
+  .social {
+    background: url("./img/blog-4.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    .green {
+      background: #8b8a8a;
+      opacity: 0.95;
+      padding: 75px 1px;
+    }
+
+    .social_name {
+      color: white;
+      font-weight: 30px;
+    }
+
+    .social_btn {
+      color: #173303;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+      background-color: #9fe870;
+      border: 1px solid #9fe870;
+      box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.37);
+      border-radius: 5px 5px;
+      letter-spacing: 1px;
+      margin: 10px 10px 0 10px 0;
+      padding: 16px 26px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .social_btn:hover {
+      box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
+      color: #173303 !important;
+      background: #9fe870;
+      transform: scale(0.9);
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    .socl_full {
+      text-align: center;
+      margin-top: 35px;
+    }
+  }
+
+  .full_form {
+    background-color: white;
+    padding: 40px;
+    margin-top: 115px !important;
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    .form_heading {
+      margin-bottom: 5px;
+      font-size: 22px;
+      font-weight: 500;
+      text-align: center;
+      color: #28be21;
+    }
+
+    .form_sub {
+      margin-bottom: 25px;
+      font-size: 14px;
+      color: #7c8595;
+    }
+    .lable_inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .name {
+        width: 100%;
+        height: 52px;
+        padding: 20px;
+        border: 1px solid lightgray;
+      }
+      .restaurant_name {
+        width: 100%;
+        height: 52px;
+        padding: 20px;
+        border: 1px solid lightgray;
+      }
+
+      .code {
+        width: 100%;
+        height: 52px;
+        padding: 20px;
+        border: 1px solid lightgray;
+      }
+      .email {
+        width: 100%;
+        height: 52px;
+        padding: 20px;
+        border: 1px solid lightgray;
+      }
+
+      .number {
+        width: 100%;
+        height: 52px;
+        padding: 20px;
+        border: 1px solid lightgray;
+      }
+      .submit {
+        width: 100%;
+        height: 52px;
+        border: none;
+        background-color: #9fe870;
+        color: #173303;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .contactless_dining .over_cnt .contactless_heading {
+    text-align: center;
+  }
+
+  .contactless_dining .contactless_cnt {
+    br {
+      display: none;
+      text-align: center;
+    }
+  }
+
+  .contactless_dining .box {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .contactless_dining .contactless_cnt {
+    br {
+      display: none;
+    }
+  }
+
+  .contactless_dining .box {
+    font-size: 17px;
+  }
+
+  .contactless_dining .over_cnt .contactless_heading {
+    text-align: center;
+  }
+}

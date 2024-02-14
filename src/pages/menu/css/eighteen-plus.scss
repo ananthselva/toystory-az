@@ -1,0 +1,309 @@
+@import "../../../common/assets/scss/main.scss";
+
+.eighteen-plus.modal {
+  .modal-dialog {
+    @media only screen and (min-width: 421px) and (max-width: 575px) {
+      max-width: 400px;
+      margin: 0px auto;
+    }
+    @media only screen and (min-width: 576px) {
+      max-width: 475px;
+      margin: 0px auto;
+    }
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 20px;
+        .content {
+          position: relative;
+          h3 {
+            margin: 0px 0px 15px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 22px;
+            color: #212121;
+            text-align: center;
+            @media only screen and (max-width: 575px) {
+              font-size: 20px;
+            }
+          }
+          p {
+            color: #5c5c74;
+            margin: 0px 0px 15px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 15px;
+            text-align: center;
+          }
+          .button-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            button {
+              border: none;
+              outline: none;
+              padding: 0px;
+              box-shadow: none;
+              padding: 6px 25px;
+              background-color: transparent;
+              border-radius: 50px;
+              color: #b3b9c4;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 14px;
+              &.agree-btn {
+                background-color: #28be21;
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.eighteen-plus.modal.dark-theme {
+  .modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .content {
+          h3 {
+            color: #fff;
+          }
+          p {
+            color: #b2bac2;
+          }
+        }
+      }
+    }
+  }
+}
+// ! DOB Popup
+
+.dob-popup.modal {
+  .modal-dialog {
+    @media only screen and (min-width: 421px) and (max-width: 575px) {
+      max-width: 400px;
+      margin: 0px auto;
+    }
+    @media only screen and (min-width: 576px) {
+      max-width: 475px;
+      margin: 0px auto;
+    }
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 20px;
+        span.close-btn {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          display: flex;
+          svg {
+            font-size: 22px;
+            cursor: pointer;
+            fill: #d92662;
+          }
+        }
+        .content {
+          position: relative;
+          h3 {
+            margin: 0px 0px 15px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 22px;
+            color: #212121;
+            text-align: center;
+            @media only screen and (max-width: 575px) {
+              font-size: 20px;
+            }
+          }
+          p {
+            color: #5c5c74;
+            margin: 0px 0px 15px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 15px;
+            text-align: center;
+            &.valid,
+            &.invalid {
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            }
+            &.invalid {
+              color: #d92662;
+              @media only screen and (max-width: 575px) {
+                br {
+                  display: none;
+                  font-size: 14.5px;
+                }
+              }
+            }
+          }
+          .button-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            button {
+              border: none;
+              outline: none;
+              padding: 0px;
+              box-shadow: none;
+              padding: 6px 25px;
+              background-color: transparent;
+              border-radius: 50px;
+              color: #b3b9c4;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 14.5px;
+              &.agree-btn {
+                background-color: #108060;
+                color: #ffffff;
+              }
+            }
+          }
+          form {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 15px;
+            input {
+              text-align: center;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 16px;
+              border: 1px solid #abadad;
+              outline: none;
+              box-shadow: none;
+              border-radius: 50px;
+              height: 35px;
+            }
+            .react-datepicker {
+              .react-datepicker__navigation {
+                top: 8px;
+              }
+              .react-datepicker__month-container {
+                .react-datepicker__header {
+                  .react-datepicker__current-month {
+                    font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                  }
+                  .react-datepicker__header__dropdown {
+                    .react-datepicker__year-read-view {
+                      font-family: map-get(
+                        $map: $segoe-fonts,
+                        $key: ui-semibold
+                      );
+                      font-size: 14px;
+                      .react-datepicker__year-read-view--down-arrow {
+                        top: 4px;
+                      }
+                    }
+                  }
+                  .react-datepicker__day-names {
+                    margin-top: 5px;
+                    .react-datepicker__day-name {
+                      font-family: map-get(
+                        $map: $segoe-fonts,
+                        $key: ui-semibold
+                      );
+                      font-size: 13.5px;
+                    }
+                  }
+                }
+                .react-datepicker__month {
+                  .react-datepicker__week {
+                    .react-datepicker__day {
+                      font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                      font-size: 13.5px;
+                      &.react-datepicker__day--today,
+                      &.react-datepicker__day--keyboard-selected,
+                      &.react-datepicker__day--selected,
+                      &:hover {
+                        background-color: #276cf6;
+                        color: #ffffff;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dob-popup.modal.dark-theme {
+  .modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .content {
+          h3 {
+            color: #fff;
+          }
+          p {
+            color: #b2bac2;
+            &.invalid {
+              color: #d92662;
+            }
+          }
+          form {
+            input {
+              background-color: #02111f;
+              color: #fff;
+              border-color: rgba(6, 77, 147, 0.4117647059);
+            }
+            .react-datepicker {
+              background-color: #02111f;
+              border: 1px solid #064d9369;
+              .react-datepicker__navigation {
+              }
+              .react-datepicker__month-container {
+                border-color: #064d9369;
+                .react-datepicker__header {
+                  background-color: #02111f;
+                  border-bottom: 1px solid #064d9369;
+                  .react-datepicker__current-month {
+                    color: #99ccf3;
+                  }
+                  .react-datepicker__header__dropdown {
+                    .react-datepicker__year-read-view {
+                      color: #99ccf3;
+                      .react-datepicker__year-read-view--down-arrow {
+                      }
+                    }
+                  }
+                  .react-datepicker__day-names {
+                    .react-datepicker__day-name {
+                      color: #99ccf3;
+                    }
+                  }
+                }
+                .react-datepicker__month {
+                  .react-datepicker__week {
+                    .react-datepicker__day {
+                      color: #ffffff;
+                      &.react-datepicker__day--today,
+                      &.react-datepicker__day--keyboard-selected,
+                      &.react-datepicker__day--selected,
+                      &:hover {
+                        background-color: #276cf6;
+                        color: #ffffff;
+                      }
+                      &.react-datepicker__day--disabled {
+                        color: #001e3c;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

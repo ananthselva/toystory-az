@@ -1,0 +1,269 @@
+@import "../../../../common/assets/scss/main.scss";
+
+.modal {
+  &.otp-screen {
+    .modal-dialog {
+      @media only screen and (min-width: 576px) {
+        max-width: 420px;
+      }
+      .modal-content {
+        .modal-body {
+          .content {
+            position: relative;
+            .lottie-ani {
+              .lf-player-container {
+                #lottie {
+                  width: 175px;
+                  height: 175px;
+                }
+              }
+            }
+            h3 {
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 20px;
+              margin-bottom: 10px;
+              color: #333333;
+              text-align: center;
+              &.done,
+              &.retry {
+                margin-top: 30px;
+              }
+            }
+            p {
+              color: #173303;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15px;
+              margin-bottom: 10px;
+              text-align: center;
+              line-height: normal;
+            }
+            span.invalid-msg {
+              color: #d92662;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 13px;
+              margin: 5px 0px;
+              text-align: center;
+              display: block;
+            }
+            
+              .input-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                input {
+                  border: 1px solid #a0a0a066;
+                  outline: none;
+                  box-shadow: none;
+                  border-radius: 5px;
+                  font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                  text-align: center;
+                  font-size: 16px;
+                  width: 50px;
+                  height: 50px;
+                  background-color: #f6f7fb;
+                  &.error {
+                    border: 1px solid #d92662;
+                  }
+                }
+              }
+            
+            button {
+              outline: none;
+              box-shadow: none;
+              border: none;
+              display: block;
+              background-color: transparent;
+              margin-left: auto;
+              margin-right: auto;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              &.resend-btn {
+                color: #173303;
+                font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                font-size: 14px;
+                margin-bottom: 0px;
+                text-align: center;
+                margin-bottom: 20px;
+                text-decoration: underline;
+              }
+              &.verify-btn {
+                background-color: #9fe870;
+                color: #173303;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 15px;
+                padding: 10px 20px;
+                width: 80%;
+                border-radius: 50px;
+                margin-bottom: 15px;
+                &.done,
+                &.retry {
+                  margin-top: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// dark theme update
+.modal {
+  &.otp-screen.dark-theme {
+    .modal-dialog {
+      .modal-content {
+        background-color: #001e3c;
+        .modal-body {
+          .content {
+            h3 {
+              color: #ffffff;
+            }
+            p {
+              color: #ffffff;
+            }
+            button {
+              &.resend-btn {
+                color: #d92662;
+              }
+            }
+            form {
+              .input-box {
+                input {
+                  background-color: #02111f;
+                  border-color: #001e3c;
+                  color: #ffffff;
+                }
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active {
+                  -webkit-background-clip: inherit;
+                  -webkit-text-fill-color: #ffffff;
+                  transition: background-color 5000s ease-in-out 0s;
+                  font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// dark theme update
+
+// responsive design start
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .modal {
+    &.otp-screen {
+      .modal-dialog {
+        .modal-content {
+          .modal-body {
+            .content {
+              .lottie-ani .lf-player-container #lottie {
+                width: 125px;
+                height: 125px;
+              }
+              h3 {
+                font-size: 18px;
+              }
+              p {
+                font-size: 14px;
+              }
+              form .input-box {
+                gap: 15px;
+                input {
+                  height: 40px;
+                  width: 40px;
+                }
+              }
+              button.verify-btn {
+                font-size: 14px;
+                padding: 8px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .modal {
+    &.otp-screen {
+      .modal-dialog {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        .modal-content {
+          .modal-body {
+            .content {
+              .lottie-ani .lf-player-container #lottie {
+                width: 125px;
+                height: 125px;
+              }
+              h3 {
+                font-size: 18.5px;
+              }
+              p {
+                font-size: 14.5px;
+              }
+              form .input-box {
+                gap: 15px;
+                input {
+                  height: 45px;
+                  width: 45px;
+                }
+              }
+              button.verify-btn {
+                font-size: 14.5px;
+                padding: 8px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .modal {
+    &.otp-screen {
+      .modal-dialog {
+        .modal-content {
+          .modal-body {
+            .content {
+              .lottie-ani .lf-player-container #lottie {
+                width: 125px;
+                height: 125px;
+              }
+              h3 {
+                font-size: 18.5px;
+              }
+              p {
+                font-size: 14.5px;
+              }
+              form .input-box {
+                gap: 15px;
+                input {
+                  height: 45px;
+                  width: 45px;
+                }
+              }
+              button.verify-btn {
+                font-size: 14.5px;
+                padding: 8px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// responsive design end

@@ -1,0 +1,47 @@
+@import "../../../../common/assets/scss/main.scss";
+.home-title {
+  color: #173303;
+  font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+  font-size: 32px;
+  margin-bottom: 15px;
+  @include themed() {
+    color: t("whitecolor");
+  }
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .home-title {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .home-title {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .home-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .home-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .home-title {
+    font-size: 31px;
+  }
+}

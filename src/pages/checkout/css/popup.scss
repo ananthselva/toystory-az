@@ -1,0 +1,176 @@
+@import "../../../common/assets/scss/main.scss";
+
+.modal.dark-popup {
+  &.payment-success,
+  &.payment-faild {
+    .modal-dialog {
+      .modal-content {
+        background-color: #001e3c;
+        .modal-body {
+          span.close-btn {
+            svg {
+              fill: #ffffff;
+            }
+          }
+          .content {
+            h3 {
+              color: #ffffff;
+            }
+            p {
+              color: #b2bac2;
+            }
+          }
+          .footer-btn-group {
+            button {
+              &.change-pay-btn {
+                color: #9ee86f;
+              }
+              &.track-btn {
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal {
+  &.payment-success,
+  &.payment-faild {
+    .modal-dialog {
+      @media only screen and (min-width: 576px) {
+        max-width: 375px;
+      }
+      @media only screen and (min-width: 421px) and (max-width: 575px) {
+        max-width: 375px;
+        margin: 0px auto;
+      }
+      .modal-content {
+        border: none;
+        .modal-body {
+          overflow: hidden;
+          position: relative;
+          span.close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            display: flex;
+            svg {
+              font-size: 22px;
+              cursor: pointer;
+              fill: #d92662;
+            }
+          }
+          .content {
+            .lottie-ani {
+              .lf-player-container {
+                #lottie {
+                  width: 150px;
+                  height: 150px;
+                }
+              }
+            }
+            h3 {
+              color: #212121;
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              margin: 0px 0px 10px 0px;
+              font-size: 22px;
+              line-height: normal;
+              text-align: center;
+            }
+            p {
+              color: #212121;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              margin: 0px;
+              line-height: normal;
+              font-size: 15px;
+              text-align: center;
+            }
+          }
+          .pulse {
+            height: 200px;
+            width: 200px;
+            background: linear-gradient(#108060, #108060);
+            position: absolute;
+            margin: auto;
+            left: auto;
+            top: auto;
+            right: -90px;
+            bottom: -90px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 25px;
+            color: #ffffff;
+            opacity: 1;
+            svg {
+              fill: #108060;
+            }
+            &:before,
+            &:after {
+              content: "";
+              position: absolute;
+              height: 80%;
+              width: 80%;
+              background-color: #108060;
+              border-radius: 50%;
+              z-index: 1;
+              opacity: 0.7;
+            }
+            &:before {
+              animation: pulse 2s ease-out infinite;
+            }
+            &:after {
+              animation: pulse 2s 1s ease-out infinite;
+            }
+            &.faild {
+              background: linear-gradient(#d92662, #d92662);
+              svg {
+                fill: #d92662;
+              }
+              &:before,
+              &:after {
+                background-color: #d92662;
+              }
+            }
+            @keyframes pulse {
+              100% {
+                transform: scale(2.5);
+                opacity: 0;
+              }
+            }
+          }
+          .footer-btn-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 50px;
+            z-index: 9;
+            position: relative;
+            button {
+              border: none;
+              box-shadow: none;
+              outline: none;
+              padding: 0px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              margin: 0px;
+              line-height: normal;
+              font-size: 15px;
+              text-align: center;
+              background-color: transparent;
+              &.change-pay-btn {
+                color: #5c5c74;
+                margin-right: auto;
+              }
+              &.track-btn {
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

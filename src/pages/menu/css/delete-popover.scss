@@ -1,0 +1,719 @@
+@import "../../../common/assets/scss/main.scss";
+
+#popover-delete.dark-theme {
+  background-color: #001e3c;
+  border-color: #d92662;
+  &.bs-popover-bottom > .popover-arrow {
+    &::after {
+      top: 1px;
+      border-bottom-color: #d92662;
+    }
+    &::before {
+      border-bottom-color: #d92662;
+    }
+  }
+  &.bs-popover-end > .popover-arrow {
+    &::after {
+      border-right-color: #d92662;
+    }
+    &::before {
+      border-right-color: #d92662;
+    }
+  }
+  &.bs-popover-start > .popover-arrow {
+    &::after {
+      border-left-color: #d92662;
+    }
+    &::before {
+      border-left-color: #d92662;
+    }
+  }
+  .popover-body {
+    .menu-item {
+      p.item-name {
+        color: #fff;
+      }
+      span.item-desc {
+        color: #b2bac2;
+      }
+      .footer-div {
+        .action {
+          span.count {
+            color: #fff;
+          }
+          button {
+            border-color: #d92662;
+            svg {
+              color: #d92662;
+              fill: #d92662;
+            }
+          }
+        }
+        .price {
+          color: #99ccf3;
+        }
+      }
+      .delete-btns button.delete-all {
+        background-color: #d92662;
+      }
+    }
+  }
+}
+#popover-delete {
+  border-radius: 5px 10px 10px 10px;
+  max-width: 305px;
+  border: 1px solid #f96b6c;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+  &.bs-popover-bottom > .popover-arrow {
+    &::after {
+      top: 1px;
+      border-bottom-color: #f96b6c;
+    }
+    &::before {
+      border-bottom-color: #f96b6c;
+    }
+  }
+  &.bs-popover-end > .popover-arrow {
+    &::after {
+      border-right-color: #fff;
+    }
+    &::before {
+      border-right-color: #f96b6c;
+    }
+  }
+  &.bs-popover-start > .popover-arrow {
+    &::after {
+      border-left-color: #fff;
+    }
+    &::before {
+      border-left-color: #d92662;
+    }
+  }
+  .popover-body {
+    .menu-item {
+      p.item-name {
+        margin: 0px 0px 6px 0px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 15px;
+        color: #212121;
+        line-height: normal;
+        display: block;
+      }
+
+      span.item-desc {
+        margin: 0px 0px 0px 0px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 15px;
+        color: #5c5c74;
+        display: inline-block;
+      }
+
+      .footer-div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0px 0px 0px;
+        .action {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 10px;
+          button {
+            outline: none;
+            border: 1px solid #ff6b6b;
+            border-radius: 5px;
+            padding: 2px;
+            box-shadow: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            svg {
+              font-size: 16px;
+              fill: #ff6b6b;
+            }
+          }
+
+          span.count {
+            margin: 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 15px;
+            color: #808695;
+          }
+        }
+
+        .price {
+          margin: 0px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          font-size: 15px;
+          color: #41474e;
+        }
+      }
+      .delete-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0px 0px 0px;
+        button {
+          outline: none;
+          border: none;
+          border-radius: 50px;
+          width: 120px;
+          padding: 8px 10px;
+          box-shadow: none;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 15px;
+          &.delete {
+            color: #fd6b6b;
+            background-color: #fee1e1;
+          }
+          &.delete-all {
+            background-color: #ff6b6b;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// delet popup style start
+.modal.dark-theme {
+  #item-delete-popup.modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .content {
+          h3 {
+            color: #d92662;
+          }
+          p {
+            color: #fff;
+          }
+          .confirm-btns button {
+            &.confirm {
+              background-color: #d92662;
+            }
+            &.cancel {
+              color: #d92662;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  #item-delete-popup.modal-dialog {
+    @media (min-width: 421px) {
+      max-width: 375px;
+      margin: 0px auto;
+    }
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 20px;
+        .content {
+          h3 {
+            margin: 0px 0px 10px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 19px;
+            color: #fd6b6b;
+            line-height: normal;
+            text-align: center;
+          }
+          p {
+            margin: 0px 0px 5px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 15px;
+            color: #212121;
+            line-height: normal;
+            text-align: center;
+            span {
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            }
+          }
+          .confirm-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0px 0px 0px;
+            button {
+              outline: none;
+              border: none;
+              border-radius: 50px;
+              width: 120px;
+              padding: 8px 10px;
+              box-shadow: none;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 15px;
+              &.cancel {
+                color: #fd6b6b;
+                background-color: #fee1e1;
+              }
+              &.confirm {
+                background-color: #ff6b6b;
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  .modal {
+    #item-delete-popup.modal-dialog {
+      .modal-content {
+        .modal-body {
+          .content {
+            .confirm-btns button {
+              padding: 6px 0px;
+              font-size: 14.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// delet popup style end
+.modal.share-popup.dark-theme {
+  .modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .content {
+          h3 {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+.modal.share-popup {
+  .modal-dialog {
+    @media (min-width: 768px) {
+      max-width: 650px;
+    }
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 0px;
+        span.close-btn {
+          position: absolute;
+          top: 3px;
+          right: 3px;
+          display: flex;
+          svg {
+            font-size: 22px;
+            cursor: pointer;
+            fill: #e04646;
+          }
+        }
+        .content {
+          padding: 30px 20px;
+          h3 {
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            font-size: 20px;
+            margin: 0px;
+            text-align: center;
+          }
+          ul {
+            margin: 30px 0px 0px 0px;
+            padding: 0px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: center;
+            li {
+              button {
+                border-radius: 50px;
+                padding: 0px;
+                outline: none;
+                box-shadow: none;
+                border: none;
+                line-height: 1;
+                width: 125px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 5px;
+                align-items: center;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 14px;
+                color: #fff;
+                padding: 8px 10px;
+                svg {
+                  font-size: 18px;
+                  color: #ffffff;
+                }
+                &.fb {
+                  background-color: #3b5998;
+                }
+                &.twitter {
+                  background-color: #55acee;
+                }
+                &.mail {
+                  background-color: #e04646;
+                }
+                &.link {
+                  background-color: #cf4e77;
+                  &.active {
+                    background-color: $theme-green3;
+                  }
+                }
+              }
+            }
+          }
+          span {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 14px;
+            color: #cf4e77;
+            text-align: center;
+            margin: 17px 0px 0px 0px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal.grouplink-popup.dark-theme {
+  .modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .content {
+          .heading {
+            h3 {
+              color: #fff;
+            }
+            p {
+              color: #fff;
+            }
+          }
+          .main {
+            p {
+              color: #99ccf3;
+            }
+            input.form-control {
+              border: 1px solid $theme-green3;
+              color: #abadad;
+              background-color: #02111f;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal.grouplink-popup {
+  .modal-dialog {
+    @media (min-width: 450px) {
+      max-width: 350px;
+      margin: 0px auto;
+    }
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 0px;
+        span.close-btn {
+          position: absolute;
+          top: 3px;
+          right: 3px;
+          display: flex;
+          svg {
+            font-size: 22px;
+            cursor: pointer;
+            fill: #e04646;
+          }
+        }
+        .content {
+          padding: 20px 20px;
+          .heading {
+            margin-bottom: 20px;
+            h3 {
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 21px;
+              margin: 0px 0px 5px 0px;
+              text-align: center;
+              color: #212121;
+            }
+            p {
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15.5px;
+              margin: 0px;
+              text-align: center;
+              color: #5c5c74;
+            }
+          }
+          .main {
+            p {
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15.5px;
+              margin: 0px;
+              text-align: center;
+              color: #5c5c74;
+            }
+            input.form-control {
+              border: 1px solid #abadad;
+              border-radius: 50px;
+              color: #abadad;
+              box-shadow: none;
+              margin: 12px 0px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15.5px;
+            }
+
+            input::-webkit-input-placeholder {
+              /* Chrome/Opera/Safari */
+              color: #abadad;
+            }
+            input::-moz-placeholder {
+              /* Firefox 19+ */
+              color: #abadad;
+            }
+            input:-ms-input-placeholder {
+              /* IE 10+ */
+              color: #abadad;
+            }
+            input:-moz-placeholder {
+              /* Firefox 18- */
+              color: #abadad;
+            }
+            button {
+              border-radius: 50px;
+              outline: none;
+              box-shadow: none;
+              border: none;
+              line-height: 1;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 14px;
+              color: #fff;
+              padding: 9px 30px;
+              background-color: #108060;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 5px;
+              margin: 0px auto;
+              width: 150px;
+              &.active {
+                background-color: #cf4e77;
+              }
+              svg {
+                font-size: 18px;
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal.item-delete-popup.dark-theme {
+  .modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .menu-item {
+          p.item-name {
+            color: #ffffff;
+          }
+          span.item-desc {
+            color: #b2bac2;
+          }
+          .footer-div {
+            .action {
+              span.count {
+                color: #fff;
+              }
+              button {
+                border-color: #d92662;
+                svg {
+                  color: #d92662;
+                  fill: #d92662;
+                }
+              }
+            }
+            .price {
+              color: #99ccf3;
+            }
+          }
+          .delete-btns button {
+            &.delete-all {
+              background-color: #d92662;
+            }
+            &.cancel {
+              color: #d92662;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal.item-delete-popup {
+  .modal-dialog {
+    @media (min-width: 421px) {
+      max-width: 400px;
+      margin: 0px auto;
+    }
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 20px;
+        .menu-item {
+          p.item-name {
+            margin: 0px 0px 6px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 15px;
+            color: #212121;
+            line-height: normal;
+            display: block;
+          }
+
+          span.item-desc {
+            margin: 0px 0px 0px 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 15px;
+            color: #5c5c74;
+            display: inline-block;
+          }
+
+          .footer-div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0px 0px 0px;
+            .action {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              button {
+                outline: none;
+                border: 1px solid #ff6b6b;
+                border-radius: 5px;
+                padding: 2px;
+                box-shadow: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                svg {
+                  font-size: 16px;
+                  fill: #ff6b6b;
+                }
+              }
+
+              span.count {
+                margin: 0px;
+                font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+                font-size: 15px;
+                color: #808695;
+              }
+            }
+
+            .price {
+              margin: 0px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 15px;
+              color: #41474e;
+            }
+          }
+          .delete-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0px 0px 0px;
+            button {
+              outline: none;
+              border: none;
+              border-radius: 50px;
+              width: 120px;
+              padding: 8px 10px;
+              box-shadow: none;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 15px;
+              &.cancel {
+                color: #fd6b6b;
+                background-color: #fee1e1;
+              }
+              &.delete-all {
+                background-color: #ff6b6b;
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  .modal.item-delete-popup {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .menu-item {
+            p.item-name {
+              font-size: 16px;
+            }
+
+            .delete-btns button {
+              padding: 6px 10px;
+              font-size: 14.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .modal.share-popup {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .content {
+            h3 {
+              font-size: 20px;
+            }
+            ul {
+              justify-content: space-evenly;
+              flex-wrap: wrap;
+              li button {
+                width: 110px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../../../../../common/assets/scss/main.scss";
+
+.dark-theme #order-received {
+  .modal-content {
+    background-color: #0a1929;
+    .modal-body .content {
+      p {
+        color: #ffffff;
+      }
+      h5 {
+        color: $themecolor1;
+      }
+    }
+  }
+}
+#order-received {
+  .modal-content {
+    border: none;
+    .modal-body {
+      padding: 20px;
+      span.close-btn {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        display: flex;
+        svg {
+          font-size: 22px;
+          cursor: pointer;
+          fill: #f2434c;
+        }
+      }
+      .lottie-animation {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        #lottie {
+          width: 350px;
+          height: 350px;
+        }
+      }
+      .content {
+        text-align: center;
+        padding-top: 125px;
+        h3 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 23px;
+          color: $themecolor3;
+          margin-bottom: 5px;
+        }
+        h5 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #d92662;
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #41474e;
+          font-size: 16px;
+          margin: 0px;
+        }
+      }
+      button {
+        display: flex;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #order-received .modal-content .modal-body {
+    .lottie-animation #lottie {
+      width: 300px;
+      height: 300px;
+    }
+    .content {
+      h3 {
+        font-size: 22px;
+      }
+      h5 {
+        font-size: 17.5px;
+      }
+    }
+  }
+}

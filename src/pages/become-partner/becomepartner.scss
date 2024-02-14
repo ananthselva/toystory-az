@@ -1,0 +1,1526 @@
+@import "../../common/assets/scss/main.scss";
+.become_partner_full {
+  @include themed() {
+    background-color: t("dark5");
+  }
+  .mobile-back-image {
+    background-image: url("./img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 705px;
+    display: none;
+    .title-title {
+      font-size: 40px;
+      font-family: "SegoeUI-Bold";
+      text-align: center;
+      position: relative;
+      margin-top: 50px;
+      .orange-color-mobile {
+        color: #fd691b;
+        font-family: "SegoeUI-Bold";
+        position: relative;
+        font-size: 40px;
+      }
+      .orange-image-mobile {
+        img {
+          position: absolute;
+          width: 170px;
+          top: 44px;
+          left: 7px;
+        }
+      }
+    }
+  }
+  .become-partner-banner {
+    background-image: url(./img/banner.png);
+    background-size: cover;
+    width: 100%;
+    height: 645px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    .banner-image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      .title {
+        font-size: 40px;
+        font-family: "SegoeUI-Bold";
+        color: #000;
+        position: relative;
+        margin-left: 50px;
+
+        .orange-color {
+          color: #fd691b;
+          font-size: 40px;
+          font-family: "SegoeUI-Bold";
+        }
+        .orange-image {
+          img {
+            position: absolute;
+            width: 150px;
+            top: 50px;
+            left: 90px;
+          }
+        }
+      }
+      .simplifies {
+        p {
+          color: #333;
+          font-family: "SegoeUI-SemiBold";
+          font-size: 20px;
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+  .learn-about {
+    padding: 50px 0px 50px 0px;
+    .learn {
+      margin-bottom: 15px;
+
+      p {
+        font-size: 30px;
+        color: #000;
+        font-family: "SegoeUI-Bold";
+        text-align: center;
+        @include themed() {
+          color: t("whitecolor");
+        }
+      }
+    }
+    .resturants {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .back-yard {
+        position: absolute;
+        bottom: 0px;
+        padding: 0px 50px 10px;
+        .title {
+          font-size: 35px;
+          font-family: "SegoeUI-Bold";
+          color: #fff;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        p {
+          font-size: 17px;
+          font-family: "SegoeUI-SemiBold";
+          color: #fff;
+          @include themed() {
+            color: t("light-text");
+          }
+        }
+        Button {
+          font-size: 16px;
+          font-family: "SegoeUI-SemiBold";
+          background-color: #9fe870;
+          color: #000;
+          border: none;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          gap: 3px;
+          svg {
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+  .how-it-works {
+    padding: 50px 0px 50px 0px;
+
+    .fusion-work {
+      .title {
+        font-size: 35px;
+        font-family: "SegoeUI-Bold";
+        color: #000;
+        text-align: center;
+        @include themed() {
+          color: t("whitecolor");
+        }
+      }
+      p {
+        font-size: 20px;
+        color: #000;
+        font-family: "SegoeUI-SemiBold";
+        text-align: center;
+        @include themed() {
+          color: t("light-text");
+        }
+      }
+    }
+    .fireup-img {
+      margin-top: 25px;
+      img {
+        width: 100%;
+      }
+    }
+    .progreess-icon {
+      border-left: 0.5px dashed #000;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: 350px;
+      @include themed() {
+        border-left: 0.5px dashed t("whitecolor");
+      }
+      .progress-one-last {
+        display: flex;
+        align-items: baseline;
+        gap: 15px;
+        padding: 0px 20px 0px 20px;
+        img {
+          width: 5%;
+          object-fit: contain;
+          position: absolute;
+          left: -11px;
+
+          bottom: 0px;
+          background-color: #fff;
+        }
+        .content-last {
+          list-style: none;
+          padding: 0 0 30px 40px;
+          position: relative;
+          ::marker {
+            position: absolute;
+            left: -21px;
+            border: 8px solid rgba(255, 255, 255, 0.74);
+            border-radius: 100%;
+            background: #000;
+            height: 20px;
+            width: 20px;
+          }
+          .title {
+            font-size: 22px;
+            color: #000;
+            font-family: "SegoeUI-Bold";
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+          .sub-new-design {
+            font-size: 16px;
+            font-family: "SegoeUI-SemiBold";
+            color: #000;
+            padding: 10px 0px 20px 0px;
+            @include themed() {
+              color: t("light-text");
+            }
+          }
+        }
+      }
+      .progress-two {
+        display: flex;
+        align-items: baseline;
+        gap: 15px;
+        padding: 0px 20px 0px 20px;
+        // border-left: 0.5px dashed #000;
+        img {
+          width: 4%;
+          object-fit: contain;
+          position: absolute;
+          left: -11px;
+          top: 165px;
+        }
+        .content {
+          list-style: none;
+          padding: 0 0 30px 40px;
+          position: relative;
+          ::marker {
+            position: absolute;
+            left: -21px;
+            border: 8px solid rgba(255, 255, 255, 0.74);
+            border-radius: 100%;
+            background: #000;
+            height: 20px;
+            width: 20px;
+          }
+          .title {
+            font-size: 22px;
+            color: #000;
+            font-family: "SegoeUI-Bold";
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+          .sub-new-design {
+            font-size: 16px;
+            font-family: "SegoeUI-SemiBold";
+            color: #000;
+            padding: 10px 0px 52px 0px;
+            @include themed() {
+              color: t("light-text");
+            }
+          }
+        }
+      }
+
+      .progress-one {
+        display: flex;
+        align-items: baseline;
+        gap: 15px;
+        padding: 0px 20px 0px 20px;
+
+        img {
+          width: 4%;
+          object-fit: contain;
+          position: absolute;
+          left: -11px;
+        }
+        .content {
+          list-style: none;
+          padding: 0 0 30px 40px;
+          position: relative;
+          ::marker {
+            position: absolute;
+            left: -21px;
+            border: 8px solid rgba(255, 255, 255, 0.74);
+            border-radius: 100%;
+            background: #000;
+            height: 20px;
+            width: 20px;
+          }
+          .title {
+            font-size: 22px;
+            color: #000;
+            font-family: "SegoeUI-Bold";
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+          .sub-new-design {
+            font-size: 16px;
+            font-family: "SegoeUI-SemiBold";
+            color: #000;
+            padding: 10px 0px 20px 0px;
+            @include themed() {
+              color: t("light-text");
+            }
+          }
+        }
+      }
+    }
+  }
+  .ways-to-grow {
+    padding: 50px 0px 50px 0px;
+
+    .title {
+      font-size: 35px;
+      color: #000;
+      font-family: "SegoeUI-Bold";
+      text-align: center;
+      @include themed() {
+        color: t("whitecolor");
+      }
+    }
+    p {
+      font-size: 20px;
+      color: #000;
+      font-family: "SegoeUI-SemiBold";
+      text-align: center;
+      margin-bottom: 25px;
+      @include themed() {
+        color: t("light-text");
+      }
+    }
+    .resturants {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .back-yard {
+        position: absolute;
+        bottom: 0px;
+        padding: 0px 20px 20px 20px;
+        .title {
+          font-size: 30px;
+          font-family: "SegoeUI-Bold";
+          color: #fff;
+          text-align: justify;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        p {
+          font-size: 17px;
+          font-family: "SegoeUI-Light";
+          color: #fff;
+          text-align: justify;
+        }
+        Button {
+          font-size: 16px;
+          font-family: "SegoeUI-SemiBold";
+          background-color: #9fe870;
+          color: #000;
+          border: none;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          gap: 3px;
+          svg {
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+  .last-section {
+    padding: 50px 0px 50px 0px;
+    .mobile-only-only {
+      display: none;
+    }
+    .last {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    .last-cnt {
+      display: flex;
+      align-items: baseline;
+      gap: 15px;
+      margin-bottom: 25px;
+      .green {
+        img {
+          height: 15px;
+          width: 15px;
+          object-fit: contain;
+        }
+      }
+      .title {
+        display: flex;
+        color: #000;
+        gap: 10px;
+        font-family: "SegoeUI-Bold";
+        font-size: 20px;
+        flex-direction: column;
+        @include themed() {
+          color: t("whitecolor");
+        }
+        .cnt {
+          font-family: "SegoeUI-SemiBold";
+          color: #333;
+          font-size: 18px;
+          @include themed() {
+            color: t("light-text");
+          }
+        }
+      }
+    }
+    button {
+      font-size: 16px;
+      font-family: "SegoeUI-SemiBold";
+      background-color: #9fe870;
+      color: #000;
+      border: none;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55%;
+      gap: 3px;
+      :active {
+        background-color: #9fe870;
+        color: #000;
+      }
+
+      svg {
+        font-size: 23px;
+      }
+    }
+  }
+}
+
+///// model //////////
+
+.model_btn_full {
+  padding: 30px 0px;
+
+  .model_heading {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    p {
+      color: #828585;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 5px 0px 15px 0px;
+    }
+  }
+
+  .model_cnt {
+    .radio_btn {
+      margin: 0px 35px 0px 0px;
+      color: #000;
+      font-size: 17px;
+      font-weight: 600;
+      .btn-primary {
+        display: flex;
+        margin: 0px auto;
+        background-color: #9fe870;
+        color: #173303;
+        border: none;
+        font-family: "Segoe-UI-Semibold-700";
+      }
+    }
+    .input_full {
+      .input_types {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+
+        input {
+          height: 50px;
+          border-radius: 10px;
+          color: #204356;
+          font-size: 17px;
+          font-weight: 400;
+          border: 1px solid #d2d8dd;
+          margin-bottom: 35px;
+          padding: 0px 15px 0px 15px;
+          width: 100%;
+        }
+
+        label {
+          color: #828585;
+          margin-left: 15px;
+          background-color: #fff;
+          padding: 0px 5px;
+          font-size: 12px;
+          position: absolute;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+  .flex_option {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: none;
+
+    .btn_last_sing {
+      .btn-primary {
+        background-color: #9fe870 !important;
+        border: none;
+      }
+    }
+  }
+  .Delivery_full {
+    label {
+      color: #828585;
+      margin-left: 35px;
+      background-color: #fff;
+      padding: 0px 5px;
+      font-size: 12px;
+      position: absolute;
+      margin-top: -10px;
+    }
+    input {
+      color: #000;
+      font-size: 17px;
+      font-weight: 400;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 35px;
+      border-radius: 0px 10px 10px 0px;
+      border: 1px solid #d2d8dd;
+    }
+
+    .charge {
+      @include themed() {
+        background-color: t("dark5");
+      }
+      flex-direction: row;
+      align-items: baseline;
+      input {
+        border-left: none;
+      }
+      .symbol {
+        padding: 9px 10px;
+        border: none;
+        background-color: #9fe870;
+        margin-top: -13px;
+        color: #173303;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 12px 0px 0px 9px;
+        height: 50px;
+      }
+      .symbols {
+        padding: 12px 10px;
+        border: 1px solid #d2d8dd;
+        color: #204356;
+        font-size: 17px;
+        font-weight: 400;
+        margin-top: -13px;
+        border-radius: 12px 0px 0px 9px;
+        border-right: none;
+        height: 50px;
+      }
+    }
+  }
+  .input-group-text {
+    display: flex;
+    gap: 15px;
+    background-color: white;
+    width: 80%;
+    height: 50px;
+    padding: 10px 10px;
+    color: #828585;
+    margin-bottom: 15px;
+  }
+  .uplode-btn {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d2d8dd;
+    font-weight: 600;
+    color: #173303;
+    background-color: #9fe870;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .uplodes {
+    color: #828585;
+    margin-left: 15px;
+    background-color: #fff;
+    padding: 0px 5px;
+    font-size: 12px;
+    position: absolute;
+    margin-top: -10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .become_partner_full .mobile_app .phone_image img {
+    width: 65%;
+    height: 475px;
+    object-fit: contain;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .become_partner_full .mobile_app .phone_image img {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .table-striped > tbody > tr:nth-of-type(odd) > * {
+    font-size: 14px;
+  }
+}
+
+.model_btn_full.dark-theme {
+  .modal-dialog {
+    .modal-content,
+    .charge input,
+    input,
+    label,
+    .input_types label,
+    .symbols,
+    .model_heading,
+    p {
+      background-color: #001e3c;
+
+      color: #fff;
+    }
+  }
+}
+.form-check-input:checked {
+  background-color: #9fe870;
+  border-color: #173303;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-two
+    .content
+    .sub-new-design {
+    padding: 10px 0px 30px 0px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard {
+    padding: 0px 20px 10px 20px;
+  }
+  .become_partner_full .become-partner-banner {
+    height: 403px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    width: 100%;
+  }
+  .become_partner_full .ways-to-grow p {
+    margin-bottom: 10px;
+  }
+  .become_partner_full .ways-to-grow .resturants {
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .become_partner_full .become-partner-banner {
+    height: 333px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    font-size: 35px;
+    margin-left: 15px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .become_partner_full .learn-about {
+    padding: 30px 0px 30px 0px;
+  }
+  .become_partner_full .learn-about .learn p {
+    font-size: 28px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard Button {
+    width: 55%;
+  }
+  .become_partner_full .learn-about .resturants .back-yard {
+    padding: 0px 5px 7px 5px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard p {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard .title {
+    font-size: 30px;
+  }
+  .become_partner_full .how-it-works {
+    padding: 30px 0px 30px 0px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one img {
+    left: -8px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two img {
+    left: -8px;
+    top: 138px;
+  }
+  .become_partner_full .how-it-works .progreess-icon {
+    height: 280px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two .content {
+    padding: 0 0 0px 20px;
+  }
+  .become_partner_full .how-it-works .fusion-work .title {
+    font-size: 28px;
+  }
+  .become_partner_full .how-it-works .fusion-work p {
+    font-size: 18px;
+  }
+  .become_partner_full .ways-to-grow .title {
+    font-size: 28px;
+  }
+  .become_partner_full .ways-to-grow p {
+    margin-bottom: 30px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    width: 100%;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard .title {
+    font-size: 25px;
+  }
+  .become_partner_full .last-section .last-cnt .title {
+    font-size: 18px;
+  }
+  .become_partner_full .last-section .last-cnt .title .cnt {
+    font-size: 17px;
+  }
+  .become_partner_full .last-section .last-cnt .green img {
+    height: 10px;
+    width: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .become_partner_full .how-it-works .fireup-img {
+    margin-top: 0px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one-last
+    .content-last
+    .sub-new-design {
+    padding: 0px 0px 0px 0px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one-last
+    .content-last
+    .title {
+    font-size: 17px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one-last
+    .content-last {
+    padding: 0px 0px 0px 0px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-two
+    .content
+    .title {
+    font-size: 17px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-two
+    .content
+    .sub-new-design {
+    padding: 0px 0px 53px 0px;
+    font-size: 15px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two .content {
+    padding: 0px 0px 0px 0px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one .content {
+    padding: 0px 0px 0px 0px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one
+    .content
+    .sub-new-design {
+    font-size: 15px;
+    padding: 0px 0px 35px 0px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one
+    .content
+    .title {
+    font-size: 17px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    font-size: 25px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-color {
+    font-size: 25px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-image
+    img {
+    width: 100px;
+    top: 30px;
+    left: 55px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    font-size: 16px;
+  }
+  .become_partner_full .become-partner-banner {
+    height: 258px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    margin-left: 12px;
+    margin-left: -20px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    font-size: 14.5px;
+    margin-left: -20px;
+  }
+  .become_partner_full .learn-about {
+    padding: 30px 0px 30px 0px;
+  }
+  .become_partner_full .learn-about .learn p {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard {
+    padding: 0px 10px 5px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard Button {
+    width: 100%;
+    height: 30px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard p {
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard .title {
+    font-size: 20px;
+  }
+  .become_partner_full .how-it-works {
+    padding: 30px 0px 30px 0px;
+  }
+  .become_partner_full .how-it-works .fusion-work .title {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .how-it-works .fusion-work p {
+    font-size: 17px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one img {
+    width: 5%;
+    left: -7px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two img {
+    width: 5%;
+    left: -7px;
+    top: 150px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one-last img {
+    width: 7%;
+  }
+  .become_partner_full .how-it-works .progreess-icon {
+    height: 305px;
+  }
+  .fusion-work {
+    margin-bottom: 35px;
+  }
+  .become_partner_full .ways-to-grow .title {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .ways-to-grow p {
+    font-size: 17px;
+    margin-bottom: 25px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard {
+    padding: 0px 5px 5px 5px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    width: 100%;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard p {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard .title {
+    font-size: 18px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    font-size: 15px;
+    height: 35px;
+  }
+  .become_partner_full .last-section .last-cnt .title {
+    font-size: 17px;
+  }
+  .become_partner_full .last-section .last-cnt .title .cnt {
+    font-size: 15px;
+  }
+  .become_partner_full .last-section button {
+    width: 75%;
+  }
+  .ways-to-grow {
+    margin-top: 35px;
+  }
+  .become_partner_full .last-section {
+    padding: 0px 0px 50px 0px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .become_partner_full .become-partner-banner .banner-image .title {
+    font-size: 25px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-color {
+    font-size: 25px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-image
+    img {
+    width: 105px;
+    top: 30px;
+    left: 59px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    display: none;
+  }
+  .become_partner_full .become-partner-banner {
+    height: 194px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    margin-left: 0px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    font-size: 13.5px;
+    margin-left: 8px;
+  }
+  .become_partner_full .learn-about {
+    padding: 30px 0px 30px 0px;
+  }
+  .become_partner_full .learn-about .learn p {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard {
+    padding: 0px 20px 20px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard Button {
+    width: 100%;
+    font-size: 15px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard p {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard .title {
+    font-size: 20px;
+  }
+  .become_partner_full .how-it-works {
+    padding: 0px 0px 30px 0px;
+  }
+  .become_partner_full .how-it-works .fusion-work .title {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .how-it-works .fusion-work p {
+    font-size: 16px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one img {
+    width: 5%;
+    left: -13px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two img {
+    width: 5%;
+    left: -13px;
+    top: 163px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one-last img {
+    width: 7%;
+  }
+  .become_partner_full .how-it-works .progreess-icon {
+    height: 353px;
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+  .fusion-work {
+    margin-bottom: 20px;
+  }
+  .become_partner_full .ways-to-grow .title {
+    font-size: 22px;
+    margin-bottom: 0px;
+  }
+  .become_partner_full .ways-to-grow p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard {
+    padding: 0px 5px 30px 5px;
+    width: 100%;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    width: 100%;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard p {
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard .title {
+    font-size: 25px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    font-size: 16px;
+    height: 30px;
+  }
+  .become_partner_full .last-section .last-cnt .title {
+    font-size: 20px;
+  }
+  .become_partner_full .last-section .last-cnt .title .cnt {
+    font-size: 17px;
+  }
+  .become_partner_full .last-section button {
+    width: 100%;
+  }
+  .ways-to-grow {
+    margin-top: 35px;
+  }
+  .become_partner_full .last-section {
+    padding: 0px 0px 50px 0px;
+  }
+  .become_partner_full .learn-about .resturants {
+    margin-bottom: 15px;
+  }
+  .become_partner_full .how-it-works .fireup-img {
+    margin-top: 0px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one .content {
+    padding: 0 0 30px 20px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two .content {
+    padding: 0 0 30px 20px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one-last
+    .content-last {
+    padding: 0 0 0px 20px;
+  }
+  .become_partner_full .ways-to-grow .resturants img {
+    margin-bottom: 25px;
+  }
+  .become_partner_full .last-section .last-cnt {
+    margin-top: 10px;
+  }
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #fff;
+  font-size: 25px !important;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  color: #fff;
+  font-size: 25px !important;
+}
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .last-section {
+    .mobile-only-only {
+      display: block !important;
+    }
+  }
+  .last-section {
+    .desktop-only-only {
+      display: none !important;
+    }
+  }
+  .become-partner-banner {
+    display: none !important;
+  }
+  .mobile-back-image {
+    display: block !important;
+  }
+  .become_partner_full .become-partner-banner .banner-image {
+    gap: 0px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    font-size: 20px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-color {
+    font-size: 20px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-image
+    img {
+    width: 88px;
+    top: 25px;
+    left: 170px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    font-size: 16px;
+  }
+  .become_partner_full .become-partner-banner {
+    height: 100px;
+    background-size: auto;
+    text-align: center;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    margin-left: 8px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    display: none;
+  }
+  .become_partner_full .learn-about {
+    padding: 0px 0px 30px 0px;
+  }
+  .become_partner_full .learn-about .learn p {
+    font-size: 17px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard {
+    padding: 0px 20px 1px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard Button {
+    width: 51%;
+    font-size: 15px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard p {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard .title {
+    font-size: 20px;
+  }
+  .become_partner_full .how-it-works {
+    padding: 0px 0px 30px 0px;
+  }
+  .become_partner_full .how-it-works .fusion-work .title {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .how-it-works .fusion-work p {
+    font-size: 15px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one img {
+    width: 5%;
+    left: -10px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two img {
+    width: 5%;
+    left: -10px;
+    top: 138px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-two
+    .content
+    .sub-new-design {
+    padding: 10px 0px 0px 0px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one-last img {
+    width: 7%;
+  }
+  .become_partner_full .how-it-works .progreess-icon {
+    height: 291px;
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+  .fusion-work {
+    margin-bottom: 20px;
+  }
+  .become_partner_full .ways-to-grow .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .become_partner_full .ways-to-grow p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard {
+    padding: 0px 5px 40px 5px;
+    width: 100%;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    width: 51%;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard .title {
+    font-size: 25px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    font-size: 16px;
+    height: 50px;
+  }
+  .become_partner_full .last-section .last-cnt .title {
+    font-size: 20px;
+  }
+  .become_partner_full .last-section .last-cnt .title .cnt {
+    font-size: 17px;
+  }
+  .become_partner_full .last-section button {
+    width: 52%;
+  }
+  .ways-to-grow {
+    margin-top: 35px;
+  }
+  .become_partner_full .last-section {
+    padding: 0px 0px 50px 0px;
+  }
+  .become_partner_full .learn-about .resturants {
+    margin-bottom: 15px;
+  }
+  .become_partner_full .how-it-works .fireup-img {
+    margin-top: 0px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one .content {
+    padding: 0px 0 0px 20px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two .content {
+    padding: 0 0 30px 20px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one-last
+    .content-last {
+    padding: 0 0 0px 20px;
+  }
+  .become_partner_full .ways-to-grow .resturants img {
+    margin-bottom: 25px;
+  }
+  .become_partner_full .last-section .last-cnt {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .last-section {
+    .desktop-only-only {
+      display: none !important;
+    }
+  }
+  .last-section {
+    .mobile-only-only {
+      display: block !important;
+    }
+  }
+  .become_partner_full
+    .mobile-back-image
+    .title-title
+    .orange-image-mobile
+    img {
+    width: 152px;
+    top: 39px;
+    left: 3px;
+  }
+  .become_partner_full .mobile-back-image .title-title .orange-color-mobile {
+    font-size: 35px;
+  }
+  .become_partner_full .mobile-back-image .title-title {
+    font-size: 35px;
+  }
+  .become-partner-banner {
+    display: none !important;
+  }
+  .mobile-back-image {
+    display: block !important;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    font-size: 21px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-color {
+    font-size: 21px;
+  }
+  .become_partner_full
+    .become-partner-banner
+    .banner-image
+    .title
+    .orange-image
+    img {
+    width: 91px;
+    top: 26px;
+    left: 45px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    font-size: 16px;
+  }
+  .become_partner_full .become-partner-banner {
+    height: 150px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .title {
+    margin-left: -6px;
+    font-size: 21px;
+  }
+  .become_partner_full .become-partner-banner .banner-image .simplifies p {
+    display: none;
+  }
+  .become_partner_full .learn-about {
+    padding: 10px 0px 10px 0px;
+  }
+  .become_partner_full .learn-about .learn p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard {
+    padding: 0px 30px 1px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard Button {
+    width: 73%;
+    font-size: 14px;
+    height: 30px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard p {
+    margin-bottom: 1px;
+    font-size: 14px;
+  }
+  .become_partner_full .learn-about .resturants .back-yard .title {
+    font-size: 20px;
+  }
+  .become_partner_full .how-it-works {
+    padding: 0px 0px 30px 0px;
+  }
+  .become_partner_full .how-it-works .fusion-work .title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .how-it-works .fusion-work p {
+    font-size: 15px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one img {
+    width: 5%;
+    left: -8px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two img {
+    width: 5%;
+    left: -8px;
+    top: 163px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one-last img {
+    width: 7%;
+  }
+  .become_partner_full .how-it-works .progreess-icon {
+    height: 325px;
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+  .fusion-work {
+    margin-bottom: 20px;
+  }
+  .become_partner_full .ways-to-grow .title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .become_partner_full .ways-to-grow p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard {
+    padding: 0px 5px 30px 5px;
+    width: 100%;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    width: 100%;
+    height: 40px !important;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard .title {
+    font-size: 20px;
+  }
+  .become_partner_full .ways-to-grow .resturants .back-yard Button {
+    font-size: 16px;
+    height: 50px;
+  }
+  .become_partner_full .last-section .last-cnt .title {
+    font-size: 20px;
+  }
+  .become_partner_full .last-section .last-cnt .title .cnt {
+    font-size: 17px;
+  }
+  .become_partner_full .last-section button {
+    width: 71%;
+  }
+  .ways-to-grow {
+    margin-top: 35px;
+  }
+  .become_partner_full .last-section {
+    padding: 0px 0px 50px 0px;
+  }
+  .become_partner_full .learn-about .resturants {
+    margin-bottom: 15px;
+  }
+  .become_partner_full .how-it-works .fireup-img {
+    margin-top: 0px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-one .content {
+    padding: 0 0 0px 20px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two .content {
+    padding: 0 0 30px 20px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one-last
+    .content-last {
+    padding: 0 0 0px 20px;
+  }
+  .become_partner_full .ways-to-grow .resturants img {
+    margin-bottom: 25px;
+  }
+  .become_partner_full .last-section .last-cnt {
+    margin-top: 10px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-two
+    .content
+    .sub-new-design {
+    padding: 10px 0px 11px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .become_partner_full .how-it-works .progreess-icon .progress-one img {
+    left: -10px;
+  }
+  .become_partner_full .how-it-works .progreess-icon .progress-two img {
+    left: -10px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .become_partner_full .how-it-works .progreess-icon .progress-one .content {
+    padding: 0 0 0px 20px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-two
+    .content
+    .sub-new-design {
+    padding: 10px 0px 22px 0px;
+  }
+  .become_partner_full
+    .how-it-works
+    .progreess-icon
+    .progress-one-last
+    .content-last {
+    padding: 0 0 0px 20px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .mobile-back-image {
+    display: none !important;
+  }
+}

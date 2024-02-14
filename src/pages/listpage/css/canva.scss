@@ -1,0 +1,204 @@
+@import "../../../common/assets/scss/main.scss";
+#sidebar-filter-canva {
+  width: 250px;
+  @media only screen and (min-width: 421px) and (max-width: 767px) {
+    width: 275px;
+  }
+  .offcanvas-body {
+    padding: 0px;
+    button.close-canva-btn {
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      border-radius: 50px 0px 0px 50px;
+      background-color: #ffffff;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      padding: 3px 3px 3px 3px;
+      svg {
+        font-size: 25px;
+        fill: #d92662;
+      }
+    }
+    .list-sidebar {
+      .filtering-all {
+        padding: 0px 0px 0px 0px;
+        .accordion {
+          padding: 10px 0px;
+          .accordion-item {
+            border: none;
+            h2.accordion-header {
+              button {
+                color: #1f4073;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 16px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                @include themed() {
+                  color: t("hovercolor");
+                }
+                &.accordion-button {
+                  border-radius: 0px;
+                  background-color: transparent;
+                  box-shadow: none;
+                  border: none;
+                  padding: 10px 10px;
+                  &.collapsed {
+                    &::after {
+                      display: none;
+                    }
+                    svg {
+                      transform: rotate(270deg);
+                      -webkit-transition: all 0.3s ease;
+                      -moz-transition: all 0.3s ease;
+                      -o-transition: all 0.3s ease;
+                      -ms-transition: all 0.3s ease;
+                      transition: all 0.3s ease;
+                    }
+                  }
+                  &::after {
+                    display: none;
+                  }
+                  svg {
+                    transform: rotate(90deg);
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    color: #808695;
+                    @include themed() {
+                      color: t("hovercolor");
+                    }
+                  }
+                }
+              }
+            } //Header Complete
+            .accordion-collapse {
+              // &.show {
+              // }
+              .accordion-body {
+                padding: 10px 20px;
+                // Filter box All Start
+                .filter-box {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  gap: 15px;
+                  .filter-input {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    input {
+                      cursor: pointer;
+                      &[type="radio"],
+                      &[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        border-radius: 50%;
+                        background: #e8e8e8;
+                        border: 4px solid #fff;
+                        height: 17px;
+                        width: 17px;
+                        outline: 1px solid #999;
+
+                        &:checked {
+                          background: #ffffff;
+                          border: 4px solid #29b56c;
+                          outline: 2px solid #29b56c;
+                          outline-offset: -1px;
+                        }
+                      }
+                    }
+                    label {
+                      font-family: map-get(
+                        $map: $segoe-fonts,
+                        $key: ui-semibold
+                      );
+                      font-size: 14.5px;
+                      cursor: pointer;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      span {
+                        &:nth-child(1) {
+                          color: #41474e;
+                          display: flex;
+                          flex-direction: row;
+                          align-items: center;
+                          gap: 5px;
+
+                          svg {
+                            fill: #f8b84e;
+                            font-size: 20px;
+                          }
+                        }
+                        &:nth-child(2) {
+                          color: #b2bac2;
+                          font-family: map-get(
+                            $map: $segoe-fonts,
+                            $key: ui-thin
+                          );
+                        }
+                      }
+                    }
+                  }
+                }
+                // Filter box All End
+              }
+            }
+          }
+        }
+      } //Filtering All
+    }
+  }
+
+  &.theme--dark {
+    background-color: #02111f;
+    .offcanvas-body {
+      padding: 0px;
+      button.close-canva-btn {
+        background-color: #02111f;
+        svg {
+          fill: #ffffff;
+        }
+      }
+      .list-sidebar {
+        .filtering-all {
+          .accordion .accordion-item {
+            background-color: #02111f;
+            h2.accordion-header button.accordion-button {
+              color: #99ccf3;
+              svg {
+                color: #99ccf3;
+              }
+            }
+            .accordion-collapse .accordion-body .filter-box .filter-input {
+              input {
+                &[type="radio"],
+                &[type="checkbox"] {
+                  outline-offset: -2px;
+                  outline: 3px solid #ffffff;
+                  background: #b2bac2;
+                  &:checked {
+                    background: #ffffff;
+                    border: 4px solid #29b56c;
+                    outline: 2px solid #29b56c;
+                    outline-offset: -1px;
+                  }
+                }
+              }
+              label span:nth-child(1) {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

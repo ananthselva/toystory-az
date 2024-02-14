@@ -1,0 +1,13 @@
+@import "../common/assets/scss/main.scss";
+.rough {
+  h1 {
+    color: red;
+    @include themed() {
+      color: t("roughcolor");
+      background-color: t("bg");
+      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+    }
+  }
+}
+
+// @media only screen and (min-width: 1200px) and (max-width: 1399px) {}

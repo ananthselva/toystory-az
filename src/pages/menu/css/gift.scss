@@ -1,0 +1,451 @@
+@import "../../../common/assets/scss/main.scss";
+.rewards {
+  .pop-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #384656;
+    color: #fff;
+    padding: 15px;
+    border-radius: 100px 0px;
+    margin-top: 10px;
+  }
+  .title {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px;
+    .pts {
+      font-size: 17px;
+      font-weight: 600;
+      margin-right: 40px;
+    }
+  }
+  .flex-flex {
+    .box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      .gif {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+      .image-cnt {
+        display: flex;
+        gap: 15px;
+        flex-direction: row;
+        align-items: center;
+        width: 50%;
+        img {
+          width: 30%;
+        }
+        .cnt {
+          .name {
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            width: 70%;
+          }
+          .points {
+            color: #000;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    Button:hover {
+      display: flex;
+      background-color: transparent;
+      border: 1px solid #48d895;
+      border-radius: 10px 10px 10px 10px;
+      padding: 10px;
+      width: 30%;
+      text-wrap: nowrap;
+      height: 0%;
+      flex-direction: row;
+      align-items: center;
+      gap: 5px;
+      width: 30%;
+    }
+    Button {
+      display: flex;
+      background-color: transparent;
+      border: 1px solid #48d895;
+      border-radius: 10px 10px 10px 10px;
+      padding: 10px;
+      width: 30%;
+      text-wrap: nowrap;
+      height: 0%;
+      flex-direction: row;
+      align-items: center;
+      gap: 5px;
+      width: 30%;
+      justify-content: center;
+      img {
+        width: 15px;
+      }
+      .free {
+        color: #384656;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .free-free {
+        color: #e3173c;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .free-applied {
+        color: #4ed799;
+        font-size: 13px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.collect-rewards {
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  .modal-body {
+    padding: 0px;
+  }
+  span.close-btn {
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    display: flex;
+    svg {
+      font-size: 22px;
+      cursor: pointer;
+      fill: #ffffff;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  .rewards .flex-flex .box .image-cnt .cnt .name {
+    font-weight: 600;
+  }
+  .rewards .flex-flex Button .free {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .rewards .flex-flex Button img {
+    width: 10px;
+    height: 10px;
+  }
+  .rewards .flex-flex .box .image-cnt .cnt .name {
+    font-size: 13px;
+  }
+  .rewards .title .pts {
+    font-size: 15px;
+    margin-right: 4px;
+  }
+}
+
+// New Gift Popup Style start
+.modal.newgift-popup {
+  .modal-dialog {
+    @media only screen and (min-width: 576px) {
+      max-width: 400px;
+    }
+    span.close-btn {
+      display: none;
+    }
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 0px 0px 15px 0px;
+        .top-heading {
+          padding: 0px 15px;
+          height: 225px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .head-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 0px 20px 0px;
+            img {
+              width: 100px;
+            }
+            h4 {
+              color: #173303;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 16px;
+              cursor: pointer;
+              line-height: normal;
+              margin: 0px 0px 5px 0px;
+              text-align: center;
+            }
+            p.desc {
+              color: #545471;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 14px;
+              cursor: pointer;
+              line-height: normal;
+              margin: 0px 0px 0px 0px;
+              text-align: center;
+            }
+          }
+
+          .item-header {
+            background-color: #e3e2e2;
+            margin: 0px -15px;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9;
+            h5 {
+              color: #173303;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 16px;
+              margin: 0px;
+            }
+            p {
+              color: #fff;
+              background-color: #3d3d3d;
+              margin: 0px;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 13px;
+              padding: 0px 8px 2px 8px;
+              border-radius: 5px;
+            }
+          }
+        }
+        .gift-item-div {
+          padding: 0px 15px;
+          max-height: calc(90vh - (95px + 15px + 225px));
+          overflow-y: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .input-div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 0px;
+            padding: 10px 0px;
+            border-bottom: 1px solid #e7e7e7;
+            cursor: pointer;
+            &:last-child {
+              border: none;
+            }
+            input {
+              cursor: pointer;
+              &[type="radio"] {
+                appearance: none;
+                -webkit-appearance: none;
+                border-radius: 50%;
+                background: #e8e8e8;
+                border: 3px solid #fff;
+                height: 15px;
+                width: 15px;
+                outline: 1px solid #999;
+                margin-top: 1px;
+                &:checked {
+                  background: #ffffff;
+                  border: 4px solid #28be21;
+                  outline: 2px solid #28be21;
+                  outline-offset: -1px;
+                }
+              }
+            }
+            .gift-name {
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 14.5px;
+              cursor: pointer;
+              color: #173303;
+              line-height: normal;
+              margin: 0px;
+            }
+            .min-order-alert {
+              width: 100%;
+              margin-left: 22px;
+              font-size: 13px;
+              color: red;
+            }
+            span {
+              cursor: pointer;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 15px;
+              color: #a0a0a0;
+              margin-left: auto;
+            }
+            input[type="checkbox"] {
+              display: none;
+              visibility: hidden;
+            }
+          }
+        }
+        .button-div {
+          padding: 15px 15px 0px 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-top: 1px solid #e7e7e7;
+          height: 95px;
+          button {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            border: none;
+            box-shadow: none;
+            outline: none;
+            background-color: #ededed;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 50px;
+            gap: 5px;
+            span {
+              background-color: #28be21;
+              width: 22px;
+              height: 22px;
+              border-radius: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                font-size: 22px;
+                color: #fff;
+              }
+            }
+          }
+          p {
+            color: #a0a0a0;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            margin: 0px;
+            line-height: normal;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+// New Gift Popup Style End
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  .modal.newgift-popup {
+    height: auto;
+    top: auto;
+    bottom: 0;
+    &.fade .modal-dialog {
+      transition: -webkit-transform 0.3s ease-out;
+      transition: transform 0.3s ease-out;
+      transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+      -webkit-transform: translate(0, 100px);
+      transform: translate(0, 100px);
+    }
+    &.show .modal-dialog {
+      -webkit-transform: none;
+      transform: none;
+    }
+    .modal-dialog {
+      margin: 0px 0px 0px 0px;
+      span.close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: auto;
+        background-color: #545471;
+        z-index: 2;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        svg {
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+      .modal-content {
+        border-radius: 30px 30px 0px 0px;
+        .modal-body .gift-item-div {
+          max-height: calc(75vh - 335px);
+        }
+      }
+    }
+  }
+}
+
+.modal.newgift-popup.dark-theme .modal-dialog {
+  .modal-content {
+    background-color: #0a1929;
+    .modal-body {
+      span.close-btn {
+        background-color: #d92662;
+        svg {
+          color: #fde8ea;
+        }
+      }
+      .top-heading {
+        .head-content {
+          h4 {
+            color: #fff;
+          }
+          p.desc {
+            color: #9fe870;
+          }
+        }
+        .item-header {
+          background-color: #001e3c;
+          h5 {
+            color: #fff;
+          }
+          p {
+            background-color: #fde8ea;
+            color: #d92662;
+          }
+        }
+      }
+      .gift-item-div {
+        .input-div {
+          border-color: rgba(6, 77, 147, 0.4117647059);
+          p {
+            color: #fff;
+          }
+          input[type="radio"]:checked {
+            border: 4px solid #28be21;
+            outline: 2px solid #28be21;
+          }
+        }
+      }
+      .button-div {
+        border-color: #064d9369;
+        button {
+          background-color: #9fe870;
+          color: #173303;
+          span {
+            background-color: #173303;
+          }
+        }
+        p {
+          color: #b2bac2;
+        }
+      }
+    }
+  }
+}

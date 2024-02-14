@@ -1,0 +1,624 @@
+@import "../../../../common/assets/scss/main.scss";
+.order-status {
+  padding: 12px 0px;
+  position: relative;
+  height: 100%;
+  .estimate-div-main {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid #bcbbbc;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    max-width: 100%;
+    width: 98%;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    @include themed() {
+      background-color: t("hoverbg");
+      border-color: t("light-text");
+    }
+    .estimate-div {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+
+      .time {
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: $theme-dark1;
+          margin: 0px;
+          font-size: 15px;
+          @include themed() {
+            color: t("hovercolor");
+          }
+        }
+        span {
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          color: $theme-dark1;
+          font-size: 16px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+          br {
+            display: none;
+          }
+        }
+      }
+      .help {
+        button {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          padding: 10px 20px;
+          margin: 0px;
+          border: 1px solid #d92662;
+          border-radius: 5px;
+          color: #d92662;
+          cursor: pointer;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 5px;
+          outline: none;
+          box-shadow: none;
+          background-color: transparent;
+          svg {
+            font-size: 18px;
+          }
+        }
+      }
+      .total {
+        p {
+          color: $theme-dark1;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          margin: 0px;
+          text-align: right;
+          font-size: 18px;
+          margin-bottom: 3px;
+          @include themed() {
+            color: t("themelight");
+          }
+        }
+        span {
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          margin: 0px;
+          text-align: right;
+          font-size: 13px;
+          margin-bottom: 3px;
+          font-weight: 300 !important;
+          color: $themecolor3 !important;
+          @include themed() {
+            color: t("themecolor3" !important);
+          }
+        }
+        a {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 14px;
+          text-decoration: none;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 5px;
+          svg {
+            font-size: 13px;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+.no-order-status {
+  text-align: center;
+  @include themed() {
+    background-color: t("header-bg");
+  }
+  .img-no {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: contain;
+    }
+  }
+  h3 {
+    font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+    @include themed() {
+      color: t("lightwhitegray");
+    }
+  }
+
+  button {
+    text-align: center;
+    font-size: 16px;
+    background: #9fe870;
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-top: 15px;
+    color: #173303;
+  }
+  button:hover {
+    text-align: center;
+    font-size: 16px;
+    background: #9fe870;
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-top: 15px;
+    color: #173303;
+  }
+  .btn-check:checked + .btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check) + .btn:active {
+    text-align: center;
+    font-size: 16px;
+    background: #9fe870;
+    font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-top: 15px;
+    color: #173303;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .order-status {
+    .estimate-div-main {
+      width: 100%;
+      padding: 10px 10px;
+      flex-direction: column;
+      gap: 20px;
+      .estimate-div {
+        .time {
+          p {
+            font-size: 13px;
+          }
+          span {
+            font-size: 12px;
+            br {
+              display: block;
+            }
+          }
+        }
+        .help {
+          display: block;
+          button {
+            padding: 8px 10px;
+            font-size: 13px;
+            svg {
+              font-size: 17px;
+            }
+          }
+        }
+        .total {
+          p {
+            font-size: 15px;
+          }
+          a {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .order-status {
+    .estimate-div-main {
+      width: 100%;
+      padding: 10px 10px;
+      flex-direction: column;
+      gap: 20px;
+      .estimate-div {
+        .time {
+          p {
+            font-size: 14.5px;
+          }
+          span {
+            font-size: 14.5px;
+          }
+        }
+        .help {
+          button {
+            padding: 8px 10px;
+            font-size: 14px;
+            svg {
+              font-size: 17px;
+            }
+          }
+        }
+        .total {
+          p {
+            font-size: 16px;
+          }
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark-theme {
+  &#popover-help {
+    background-color: transparent;
+
+    .popover-arrow {
+      &::after {
+        border-top-color: $themecolor3;
+        border-bottom-color: $themecolor3;
+      }
+    }
+    .popover-body {
+      background-color: #0a1929;
+      border: 1px solid $themecolor3;
+      box-shadow: none;
+      ul li button {
+        color: #99ccf3;
+      }
+    }
+  }
+}
+
+#popover-help {
+  border: none;
+  .popover-arrow {
+    &::before {
+      border-top-color: transparent;
+    }
+  }
+  &.bs-popover-bottom > .popover-arrow::before {
+    border-bottom-color: transparent;
+  }
+  .popover-body {
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+
+    ul {
+      padding: 0px;
+      margin: 0px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        button {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: $theme-dark1;
+          text-decoration: none;
+          font-size: 16px;
+          background-color: transparent;
+          display: flex;
+          border: none;
+          outline: none;
+          justify-content: space-between;
+          width: 100%;
+          padding: 0px;
+          gap: 15px;
+          align-items: center;
+
+          svg {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #popover-help .popover-body ul li button {
+    font-size: 14.5px;
+    svg {
+      font-size: 12px;
+    }
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #popover-help .popover-body ul li button {
+    font-size: 15px;
+    svg {
+      font-size: 13px;
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  #popover-help .popover-body ul li button {
+    font-size: 14.5px;
+    svg {
+      font-size: 13px;
+    }
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  #popover-help .popover-body ul li button {
+    font-size: 15px;
+    svg {
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .order-status {
+    @include themed() {
+      background-color: t("dark4");
+    }
+    .order-details-mob {
+      padding: 50px 10px 10px 10px;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+      @include themed() {
+        background-color: t("dark3");
+      }
+      h4 {
+        color: #4d4d4d;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 16.5px;
+        margin-bottom: 10px;
+        @include themed() {
+          color: t("hovercolor");
+        }
+      }
+      .order-from {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5px;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+        }
+        span {
+          margin: 0px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: $themecolor3;
+          font-size: 15px;
+        }
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #363636;
+          font-size: 13.3px;
+          margin: 0px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+      }
+      .collection-details {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #d4d4d4;
+        margin-bottom: 20px;
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 14.5px;
+          // display: flex;
+          // flex-direction: row;
+          align-items: center;
+          color: #363636;
+          margin: 0px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+
+          svg {
+            color: #b8b8b8;
+            margin-right: 5px;
+          }
+          a {
+            color: #363636;
+            text-decoration: none;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+        }
+      }
+      .order-list {
+        .table-responsive {
+          .orders-table-mob {
+            tbody {
+              tr {
+                td {
+                  border: none;
+                  padding: 5px;
+                  p {
+                    font-family: map-get($map: $segoe-fonts, $key: ui-semi);
+                    margin: 0px;
+                    color: #363636;
+                    font-size: 14.5px;
+                    @include themed() {
+                      color: t("whitecolor");
+                    }
+                  }
+                  span {
+                    font-family: map-get($map: $segoe-fonts, $key: ui-semi);
+                    margin: 0px;
+                    color: #6d6d6d;
+                    font-size: 14px;
+                    @include themed() {
+                      color: t("whitecolor");
+                    }
+                  }
+                  &:nth-child(3) {
+                    p {
+                      text-align: right;
+                    }
+                  }
+                  &:nth-child(1) {
+                    width: 10%;
+                  }
+                  &:nth-child(2) {
+                    width: 65%;
+                  }
+                  &:nth-child(3) {
+                    width: 25%;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .total {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 10px;
+          span {
+            color: #4d4d4d;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16.5px;
+            padding: 0px 5px;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+        }
+        .sub-total {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 8px;
+          span {
+            color: #4d4d4d;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 14.5px;
+            padding: 0px 5px;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .order-status {
+    .order-details-mob {
+      h4 {
+        font-size: 17px;
+      }
+      .order-from {
+        img {
+          height: 70px;
+          width: 70px;
+        }
+        span {
+          font-size: 16px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      .collection-details p {
+        font-size: 15px;
+      }
+      .order-list {
+        .table-responsive .orders-table-mob tbody tr td p {
+          font-size: 15px;
+        }
+        .total span {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+// No Order Status
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .no-order-status {
+    .img-no {
+      img {
+        margin-top: 0px;
+      }
+    }
+    h3 {
+      font-size: 16px;
+    }
+    Button {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .no-order-status {
+    h3 {
+      font-size: 18px;
+    }
+    Button {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .no-order-status {
+    padding: 25px;
+    h3 {
+      font-size: 19px;
+    }
+    Button {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .no-order-status {
+    padding: 50px;
+    h3 {
+      font-size: 20px;
+    }
+    Button {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .no-order-status {
+    padding: 100px;
+    h3 {
+      font-size: 21px;
+    }
+    Button {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .no-order-status {
+    padding: 100px;
+  }
+}

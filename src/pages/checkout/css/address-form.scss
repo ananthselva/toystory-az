@@ -1,0 +1,1057 @@
+@import "../../../common/assets/scss/main.scss";
+
+.modal.dark-popup {
+  #checkout-address.modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .header-div {
+          h3 {
+            color: #fff;
+          }
+          span.close-btn svg {
+            color: #d92662;
+          }
+        }
+        form {
+          .input-div {
+            input {
+              background-color: #02111f;
+              border-color: #064d9369;
+              color: #ffffff;
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+              // -webkit-background-clip: text;
+              -webkit-text-fill-color: #ffffff;
+              transition: background-color 5000s ease-in-out 0s;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            }
+          }
+
+          .radio-btn-group {
+            background-color: #02111f;
+            label {
+              span {
+                color: #fff;
+              }
+              input[type="radio"] {
+                outline: 0px solid #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #checkoutcustomModal.modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      color: #fff;
+      .modal-body {
+        color: #fff;
+
+        .header-div {
+          h3 {
+            color: #fff;
+          }
+          span.close-btn svg {
+            color: #d92662;
+          }
+        }
+        form {
+          .input-div {
+            input {
+              background-color: #02111f;
+              border-color: #064d9369;
+              color: #ffffff;
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+              // -webkit-background-clip: text;
+              -webkit-text-fill-color: #ffffff;
+              transition: background-color 5000s ease-in-out 0s;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            }
+          }
+          .radio-btn-group {
+            background-color: #02111f;
+            label {
+              span {
+                color: #fff;
+              }
+              input[type="radio"] {
+                outline: 0px solid #fff;
+              }
+            }
+          }
+        }
+        .creditcard {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .creditcardui {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+        .checkoutpayUI {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .checkoutpayUIchild {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+            h5 {
+              margin: 0;
+              color: #ffffff;
+              text-align: center;
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+
+            img {
+              height: 30px;
+            }
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .list-group-item {
+        border: none;
+        background-color: #001e3c;
+        color: #fff;
+      }
+      .list-group-item:nth-child(2) .creditcardui {
+        /* Add your styles here */
+        background-color: #f0f0f0 !important;
+        padding: 10px;
+        /* Add any other styles you want for the second child of the second list item */
+      }
+    }
+  }
+  #checkoutcustomModalchild.modal-dialog {
+    .order-div {
+      span {
+        color: #b5b5b5ee;
+        @include themed() {
+          color: t('light-text');
+        }
+        font-size: 16px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+      }
+      hr {
+        margin: 15px 0px;
+        @include themed() {
+          border-color: t('hovercolor');
+        }
+      }
+      button {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 18px;
+        gap: 10px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        margin-bottom: 0px;
+        background: none;
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        margin: 0px auto;
+        justify-content: center;
+      }
+    }
+    .modal-content {
+      background-color: #001e3c;
+      color: #fff;
+      .modal-body {
+        .header-div {
+          h3 {
+            color: #fff;
+          }
+          span.close-btn svg {
+            color: #d92662;
+          }
+        }
+      }
+      .modal-footer {
+        margin: 0px;
+        width: 100%;
+        left: 0px;
+        border: 1px solid rgba(6, 77, 147, 0.4117647059);
+        box-shadow:
+          0 2px 3px rgba(12, 12, 12, 0.1),
+          0 -1px 1px rgba(0, 0, 0, 0.1);
+        background-color: #ccc;
+        border-radius: 25px 25px 0px 0px;
+        height: 80px;
+        text-align: center;
+        justify-content: center;
+        background-color: #001e3c;
+        color: #ffffff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .list-group-item {
+        border: none;
+        background-color: #001e3c;
+        color: #fff;
+      }
+      .form-label input {
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 15px;
+        background-color: #02111f;
+        border: solid 1px rgba(6, 77, 147, 0.4117647059);
+      }
+    }
+  }
+  #cancelpopup.modal-dialog {
+    width: 96%;
+    margin: 0px auto;
+    align-items: flex-end;
+    min-height: calc(100% - var(--bs-modal-margin) * 0);
+    .modal-content {
+      background-color: #001e3c;
+      border-radius: 10px;
+      height: 20%;
+      top: 20%;
+      position: absolute;
+    }
+    .modal-header {
+      border-bottom: none;
+
+      .close {
+        color: #fff !important;
+      }
+    }
+    .modal-body {
+      p {
+        color: #fff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+    .modal-footer {
+      margin: 0px;
+      width: 100%;
+      left: 0px;
+      // border: 1px solid rgba(6, 77, 147, 0.4117647059);
+      border: none;
+      border-bottom: none;
+      background-color: #ccc;
+      text-align: center;
+      background-color: #001e3c;
+      color: #ffffff;
+      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      border-bottom: none;
+
+      button {
+        background: none;
+        border: none;
+        color: #faae2c;
+      }
+    }
+  }
+  #busypopup.modal-dialog {
+    width: 96%;
+    margin: 0px auto;
+    align-items: flex-end;
+    min-height: calc(100% - var(--bs-modal-margin) * 0);
+    .modal-content {
+      background-color: #001e3c;
+      border-radius: 10px;
+      // height: 30%;
+      top: 20%;
+      position: absolute;
+    }
+    .modal-header {
+      border-bottom: none;
+      justify-content: flex-end;
+    }
+    .modal-body {
+      p {
+        color: #fff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        // margin: 0;
+      }
+      h3 {
+        color: #ffffff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      svg {
+        border: solid 1px #ffffff;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #ffffff;
+      }
+      
+      .btnparent{
+        margin: 0px;
+        width: 100%;
+        left: 0px;
+        // border: 1px solid rgba(6, 77, 147, 0.4117647059);
+        border: none;
+        border-bottom: none;
+        background-color: #ccc;
+        text-align: center;
+        background-color: #001e3c;
+        color: #ffffff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom: none;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+
+        button {
+          background: #9fe870;
+          border: none;
+          color: #000000;
+          border-radius: 40px;
+          font-size: 15px;
+        }
+        button:nth-child(2) {
+          background-color: #ccc;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  // .modal-backdrop {
+  //   opacity: 0.8 !important;
+  // }
+  .modal {
+    #checkout-address.modal-dialog {
+      width: 100%;
+      margin: 0px auto;
+      align-items: flex-end;
+      min-height: calc(100% - var(--bs-modal-margin) * 0);
+      .modal-content {
+        border-radius: 30px 30px 0px 0px;
+      }
+    }
+  
+    #checkoutcustomModal.modal-dialog {
+      width: 100%;
+      margin: 0px auto;
+      align-items: flex-end;
+      min-height: calc(100% - var(--bs-modal-margin) * 0);
+      display: flex !important;
+      align-items: flex-end !important;
+      justify-content: flex-end !important;
+      margin: 0 !important;
+      .modal-content {
+        border-radius: 30px 30px 0px 0px;
+        // top: 56%;
+        height: auto;
+        .closeicon {
+          position: absolute;
+          right: 2%;
+
+
+          bottom: 101%;
+          border: solid 1px #fff;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 20px;
+        }
+        .modal-header {
+          .modal-title {
+            font-size: 20px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          }
+        }
+        .modal-footer {
+          margin: 0px;
+          width: 100%;
+          left: 0px;
+          border: 1px solid #ddd;
+          box-shadow:
+            0 2px 3px rgba(12, 12, 12, 0.1),
+            0 -1px 1px rgba(0, 0, 0, 0.1);
+          background-color: #ccc;
+          border-radius: 25px 25px 0px 0px;
+          height: 80px;
+          text-align: center;
+          justify-content: center;
+          color: #173303;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        .list-group-item {
+          border: none;
+        }
+        .form-label-styling {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        }
+        .form-label input {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 15px;
+        }
+        .creditcardparent {
+          border-bottom: solid 1px #ccc;
+        }
+        .creditcard {
+          display: flex;
+          justify-content: space-between;
+          padding: 12px;
+          background: #f7f7f7;
+          border-radius: 10px;
+          border: solid 1px #ccc;
+          align-items: center;
+          margin-bottom: 10px;
+
+          .creditcardui {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              height: 30px;
+            }
+            p {
+              margin: 0px;
+              color: #173303;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+
+            }
+            p:nth-child(2) {
+              color: #28be21;
+              font-weight: 500;
+            }
+          }
+          input {
+            cursor: pointer;
+            &[type="radio"],
+            &[type="checkbox"] {
+              appearance: none;
+              -webkit-appearance: none;
+              border-radius: 50%;
+              background: #e8e8e8;
+              border: 4px solid #fff;
+              height: 17px;
+              width: 17px;
+              outline: 1px solid #999;
+
+              @include themed() {
+                outline-offset: t("minus2px");
+                outline: t("inputoutline");
+                background: t("light-text");
+              }
+              &:checked {
+                background: #ffffff;
+                border: 4px solid #29b56c;
+                outline: 2px solid #29b56c;
+                outline-offset: -1px;
+              }
+            }
+          }
+        }
+        .checkoutpayUI {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .checkoutpayUIchild {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+            h5 {
+              margin: 0;
+              color: #333;
+              text-align: center;
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+          .mobile-wallet-disabled{
+          margin: 0;
+          color: #333;
+          text-align: center;
+          font-family: "SegoeUI-Bold";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          color: #cfd7df;
+          }
+
+            img {
+              height: 30px;
+            }
+          }
+          .mobile-wallet-icon-disabled{
+            color: #cfd7df;
+          }
+          span {
+            font-size: 20px;
+          }
+         
+        }
+        .mobile-wallet-msg-disabled {
+          background: #fff6f5;
+          border: 1px solid#e6b7b7;
+          text-align: center;
+          border-radius: 10px;
+          color: #c9475a;
+          /* margin-top: 10PX; */
+          padding-top: 11PX;
+          .mobile-wallet-msg-disabled-text{
+            font-family: "SegoeUI-Bold";
+          }
+        }
+      }
+    }
+    #checkoutcustomModalchild.modal-dialog {
+      .order-div {
+        span {
+          color: #b5b5b5ee;
+          @include themed() {
+            color: t('light-text');
+          }
+          font-size: 16px;
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        }
+        hr {
+          margin: 15px 0px;
+          @include themed() {
+            border-color: t('hovercolor');
+          }
+        }
+        button {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 17px;
+          border: none;
+          box-shadow: none;
+          background: none;
+          color: #173303;
+          text-align: center;
+          width: 100%;
+        }
+      }
+      width: 100%;
+      margin: 0px auto;
+      align-items: flex-end;
+      min-height: calc(100% - var(--bs-modal-margin) * 0);
+      .modal-content {
+        border-radius: 30px 30px 0px 0px;
+        height: 50%;
+        top: 50%;
+        .closeicon {
+          position: absolute;
+          right: 2%;
+          bottom: 101%;
+          border: solid 1px #fff;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 20px;
+        }
+        .modal-header {
+          .modal-title {
+            font-size: 18px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          }
+        }
+        .modal-footer {
+          margin: 0px;
+          width: 100%;
+          left: 0px;
+          border: 1px solid #ddd;
+          box-shadow:
+            0 2px 3px rgba(12, 12, 12, 0.1),
+            0 -1px 1px rgba(0, 0, 0, 0.1);
+          background-color: #ccc;
+          border-radius: 25px 25px 0px 0px;
+          height: 80px;
+          text-align: center;
+          justify-content: center;
+          color: #173303;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        .list-group-item {
+          border: none;
+        }
+        .form-label-styling {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        }
+        .form-label input {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 15px;
+        }
+
+        .checkoutpayUI {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .checkoutpayUIchild {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+            h5 {
+              margin: 0;
+              color: #333;
+              text-align: center;
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+
+            img {
+              height: 30px;
+            }
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    #cancelpopup.modal-dialog {
+      width: 96%;
+      margin: 0px auto;
+      align-items: flex-end;
+      min-height: calc(100% - var(--bs-modal-margin) * 0);
+      .modal-content {
+        border-radius: 10px;
+        top: 20%;
+        position: absolute;
+        // background-color: #001e3c;
+      }
+      .modal-header {
+        border-bottom: none;
+      }
+      .modal-body {
+        p {
+          color: #000000;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+      .modal-footer {
+        margin: 0px;
+        width: 100%;
+        left: 0px;
+        // border: 1px solid rgba(6, 77, 147, 0.4117647059);
+        border: none;
+        border-bottom: none;
+        background-color: #ffffff;
+        text-align: center;
+        // background-color: #001e3c;
+        color: #ffffff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom: none;
+
+        button {
+          background: none;
+          border: none;
+          color: #faae2c;
+        }
+      }
+    }
+    #busypopup.modal-dialog {
+      width: 90%;
+      margin: 0px auto;
+      align-items: flex-end;
+      min-height: calc(100% - var(--bs-modal-margin) * 0);
+      .modal-content {
+        background-color: #ffffff;
+        border-radius: 10px;
+        // height: 30%;
+        top: 20%;
+        position: absolute;
+      }
+      .modal-header {
+        border-bottom: none;
+        justify-content: flex-end;
+       
+      }
+      .modal-body {
+        p {
+          color: #000000;
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          // margin: 0;
+
+        }
+        h3 {
+          color: #000000;
+          font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        svg {
+          border: solid 1px #000;
+          border-radius: 50%;
+          font-size: 20px;
+          color: #000;
+        }
+      }
+      .btnparent {
+        margin: 0px;
+        width: 100%;
+        left: 0px;
+        // border: 1px solid rgba(6, 77, 147, 0.4117647059);
+        border: none;
+        border-bottom: none;
+        background-color: #ccc;
+        text-align: center;
+        background-color: #ffffff;
+        color: #ffffff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom: none;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+        button {
+          background: #9fe870;
+          border: none;
+          color: #000000;
+          border-radius: 40px;
+          font-size: 13px;
+        }
+        button:nth-child(2) {
+          background-color: #ccc;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}
+.modal {
+  #checkout-address.modal-dialog {
+    .modal-content {
+      border: none;
+      .modal-body {
+        padding: 0px;
+        .header-div {
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            margin: 0px;
+            font-size: 22px;
+            line-height: normal;
+          }
+          span.close-btn {
+            cursor: pointer;
+            svg {
+              font-size: 20px;
+            }
+          }
+        }
+        form {
+          padding: 15px 15px 15px 15px;
+          .input-div {
+            margin-top: 20px;
+            &.first-input,
+            &.second-input {
+              margin-top: 0px;
+            }
+            input {
+              border: 1px solid #bebebe;
+              outline: none;
+              box-shadow: none;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15px;
+              line-height: normal;
+              height: 45px;
+              &.is-invalid {
+                border: 1px solid #dc3545;
+              }
+            }
+            .invalid-feedback {
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 13px;
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+              // -webkit-background-clip: text;
+              -webkit-text-fill-color: #000000;
+              transition: background-color 5000s ease-in-out 0s;
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15px;
+            }
+          }
+          .radio-btn-group {
+            background-color: #eeeeee;
+            padding: 5px 5px;
+            margin: 20px -15px 0px -15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            label {
+              cursor: pointer;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 5px;
+              input {
+                cursor: pointer;
+                &[type="radio"],
+                &[type="checkbox"] {
+                  appearance: none;
+                  -webkit-appearance: none;
+                  border-radius: 50%;
+                  background: #e8e8e8;
+                  border: 4px solid #fff;
+                  height: 17px;
+                  width: 17px;
+                  outline: 1px solid #999;
+
+                  @include themed() {
+                    outline-offset: t("minus2px");
+                    outline: t("inputoutline");
+                    background: t("light-text");
+                  }
+                  &:checked {
+                    background: #ffffff;
+                    border: 4px solid #29b56c;
+                    outline: 2px solid #29b56c;
+                    outline-offset: -1px;
+                  }
+                }
+              }
+              span {
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 15px;
+              }
+            }
+          }
+          button.submit-btn {
+            display: flex;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            margin: 20px auto 0px auto;
+            font-size: 15px;
+            background-color: #9fe870;
+            padding: 10px 35px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            border-radius: 50px;
+            color: #173303;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Dark Mode start
+.address-success-popup.modal.dark-theme {
+  .modal-dialog {
+    .modal-content {
+      background-color: #001e3c;
+      .modal-body {
+        .content {
+          p {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+// Dark Mode end
+
+.address-success-popup.modal {
+  .modal-dialog {
+    @media only screen and (min-width: 768px) {
+      max-width: 400px;
+    }
+    .modal-content {
+      border: none;
+      border-radius: 5px 10px 10px 5px;
+      .modal-body {
+        padding: 0px;
+        .content {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          justify-content: space-between;
+          p {
+            color: #5c5c74;
+            margin: 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 16px;
+            text-align: center;
+            align-self: center;
+            padding: 5px 10px;
+            span {
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            }
+          }
+          button {
+            border-radius: 0px 5px 5px 0px;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            line-height: 1;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 15px;
+            padding: 12px;
+            background-color: #ed626b;
+            color: #fff;
+            svg {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .modal #checkout-address.modal-dialog .modal-content .modal-body {
+    .header-div {
+      padding-bottom: 10px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+    form {
+      .input-div {
+        margin-top: 15px;
+        input {
+          height: 40px;
+          font-size: 15px;
+        }
+      }
+      .radio-btn-group {
+        label {
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+      button.submit-btn {
+        font-size: 15px;
+        padding: 8px 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .modal #checkout-address.modal-dialog .modal-content .modal-body {
+    .header-div {
+      padding-bottom: 10px;
+      h3 {
+        font-size: 19px;
+      }
+    }
+    form {
+      .input-div {
+        margin-top: 15px;
+        input {
+          height: 50px;
+          font-size: 15.5px;
+        }
+      }
+      .radio-btn-group {
+        label {
+          span {
+            font-size: 15.5px;
+          }
+        }
+      }
+      button.submit-btn {
+        font-size: 15.5px;
+        padding: 8px 35px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .modal #checkout-address.modal-dialog {
+    margin: 0px;
+  }
+  #checkout-address.modal-dialog-centered {
+    min-height: calc(100% - var(--bs-modal-margin) * 0);
+    display: flex;
+    align-items: flex-end;
+  }
+  .modal #checkout-address.modal-dialog .modal-content {
+    border-radius: 30px 30px 0px 0px;
+  }
+}

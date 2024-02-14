@@ -1,0 +1,29 @@
+@import "../../../common/assets/scss/main.scss";
+.listpage {
+  padding: 50px 0px;
+  @include themed() {
+    background-color: t("dark4");
+  }
+}
+
+// Responsive Design Start
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .listpage {
+    padding: 20px 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .listpage {
+    padding: 15px 0px 20px 0px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .listpage {
+    padding: 15px 0px 20px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .listpage {
+    padding: 30px 0px 20px 0px;
+  }
+}

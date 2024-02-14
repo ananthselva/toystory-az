@@ -1,0 +1,655 @@
+@import "../../common/assets/scss/main.scss";
+
+.sign_full {
+  text-align: center;
+  font-family: "SegoeUI-SemiBold";
+  .modal-content {
+    width: 80%;
+  }
+  .lines-lines {
+    position: relative;
+    border-top: 0.5px solid #b7b7b8;
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+    .or {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+      background-color: #fff;
+      font-size: 15px;
+      color: #b7b7b8;
+      font-family: "SegoeUI-SemiBold";
+    }
+  }
+
+  .error-code {
+    margin: 5px 0px 5px 0px !important;
+    color: #f4313b;
+    text-align: center;
+  }
+
+  .sign_heading {
+    font-size: 17px;
+    font-weight: 600;
+    color: #17284d;
+    font-family: "SegoeUI-SemiBold";
+  }
+  .email_btns {
+    .email_input {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    input {
+      width: 80%;
+      padding: 5px;
+      color: #1f4073;
+      font-size: 17px;
+      text-align: center;
+      border: none;
+      background-color: #f7f7f9;
+      outline: none;
+      height: 40px;
+      border-radius: 5px;
+      font-family: "SegoeUI-SemiBold";
+    }
+  }
+  .green_btn {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    button {
+      width: 80%;
+      padding: 5px;
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
+      border: none;
+      background-color: #28be21;
+      outline: none;
+      border-radius: 5px;
+      height: 40px;
+      font-family: "SegoeUI-SemiBold";
+    }
+    & button:disabled{
+      width: 80%;
+      padding: 5px;
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
+      border: none;
+      background-color:#c8c8c8;
+      outline: none;
+      border-radius: 5px;
+      height: 40px;
+      font-family: "SegoeUI-SemiBold";
+    }
+  }
+
+  .google_btn {
+    font-size: 13px !important;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px !important;
+    button {
+      width: 80%;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin: 0px auto;
+      border: none;
+      font-family: "SegoeUI-SemiBold";
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 17px;
+      font-family: "SegoeUI-SemiBold";
+    }
+  }
+  .apple_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    button {
+      width: 80%;
+      padding: 5px;
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
+      border: none;
+      background-color: #000000;
+      outline: none;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: 40px;
+      font-family: "SegoeUI-SemiBold";
+      text-transform: capitalize;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .facebook_btn {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    button {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      margin: 0px auto;
+      border-radius: 5px;
+      width: 80%;
+      font-size: 17px;
+      text-transform: capitalize;
+      justify-content: center;
+      font-family: "SegoeUI-SemiBold";
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+  }
+  .guest_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    button {
+      width: 80%;
+      padding: 5px;
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
+      border: none;
+      background-color: #108080;
+      outline: none;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: 40px;
+      font-family: "SegoeUI-SemiBold";
+    }
+  }
+  .blue_green {
+    .blue {
+      font-size: 17px;
+      color: #17284d;
+      margin-top: 10px;
+      .green {
+        color: #29b56c;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+  .tc {
+    .grey {
+      font-size: 13px;
+      color: #808695;
+      margin-top: 10px;
+      .red {
+        color: #f2434c;
+      }
+    }
+  }
+  .btn-close {
+    display: none;
+  }
+  .modal-header {
+    border-bottom: none;
+    padding: 0;
+  }
+  .modal-footer {
+    border-top: none;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 415px) {
+  .sign_full {
+    .modal-content {
+      width: 100% !important;
+    }
+    .sign_heading {
+      font-size: 14px;
+    }
+
+    .email_input {
+      input {
+        font-size: 14px;
+      }
+    }
+    .green_btn button {
+      font-size: 14px;
+    }
+    .google_btn button {
+      font-size: 14px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .apple_btn button {
+      font-size: 14px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .facebook_btn button {
+      font-size: 14px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .guest_btn button {
+      font-size: 14px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .blue_green .blue {
+      font-size: 14px;
+    }
+    .tc .grey {
+      font-size: 11px;
+    }
+  }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 500px) {
+  .sign_full {
+    .modal-content {
+      width: 100% !important;
+    }
+    .sign_heading {
+      font-size: 15px;
+    }
+
+    .email_input {
+      input {
+        font-size: 15px;
+      }
+    }
+    .green_btn button {
+      font-size: 15px;
+    }
+    .google_btn button {
+      font-size: 15px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .apple_btn button {
+      font-size: 15px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .facebook_btn button {
+      font-size: 15px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .guest_btn button {
+      font-size: 15px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .blue_green .blue {
+      font-size: 15px;
+    }
+    .tc .grey {
+      font-size: 11px;
+    }
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 615px) {
+  .sign_full {
+    .modal-content {
+      width: 100% !important;
+    }
+    .sign_heading {
+      font-size: 16px;
+    }
+
+    .email_input {
+      input {
+        font-size: 16px;
+      }
+    }
+    .green_btn button {
+      font-size: 16px;
+    }
+    .google_btn button {
+      font-size: 16px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .apple_btn button {
+      font-size: 16px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .facebook_btn button {
+      font-size: 16px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .guest_btn button {
+      font-size: 16px;
+      img {
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .blue_green .blue {
+      font-size: 16px;
+    }
+    .tc .grey {
+      font-size: 11px;
+    }
+  }
+}
+@media only screen and (min-width: 616px) and (max-width: 767px) {
+  .sign_full {
+    .modal-content {
+      width: 80% !important;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .sign_full {
+    .modal-content {
+      width: 80% !important;
+    }
+  }
+}
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+  .sign_full {
+    .modal-content {
+      width: 80% !important;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .sign_full {
+    .modal-content {
+      width: 80% !important;
+    }
+  }
+}
+
+///////// otp sign in //////////
+///
+.sign_otp_full {
+  .otp_heading {
+    font-size: 17px;
+    color: #17284d;
+    font-weight: 700;
+  }
+  .lotti_file {
+    .lf-player-container {
+      #lottie {
+        svg {
+          margin-top: -70px;
+          margin-bottom: -70px;
+          transform: translate3d(-10px, 0px, 0px);
+        }
+      }
+    }
+  }
+
+  .subject_otp {
+    font-size: 14px;
+    color: #17284d;
+  }
+  .otp_input_fields {
+    .input-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      input {
+        border: 1px solid rgba(160, 160, 160, 0.4);
+        outline: none;
+        box-shadow: none;
+        border-radius: 5px;
+        font-family: "SegoeUI-SemiBold";
+        text-align: center;
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        background-color: #f6f7fb;
+        &.error {
+          border: 1px solid #d92662;
+        }
+      }
+    }
+  }
+  .sign_grey {
+    text-align: center;
+    button {
+      width: 80%;
+      padding: 5px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+      border: none;
+      background-color: #28be21;
+      outline: none;
+      border-radius: 5px;
+    }
+  }
+  .time_otp {
+    color: #17284d;
+    font-size: 14px;
+    .red {
+      color: #e04646;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+
+  .arrow_back_key,
+  .login {
+    svg {
+      font-size: 25px;
+      color: #17284d;
+      float: left;
+      cursor: pointer;
+    }
+  }
+  button.clicked {
+    background-color: #29b56c;
+    color: #ffffff;
+  }
+
+  input.clicked {
+    outline-color: red;
+  }
+  .other_login {
+    color: #276cf6;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.email_login {
+  .arrow_back_key {
+    display: flex;
+    gap: 15px;
+    svg {
+      font-size: 25px;
+      color: #17284d;
+      float: left;
+      cursor: pointer;
+    }
+  }
+  .email_login_name {
+    font-size: 17px;
+    color: #17284d;
+    font-weight: 700;
+  }
+  .login_cont_no {
+    font-size: 14px;
+    color: #17284d;
+    font-weight: 800;
+  }
+}
+.multi_log {
+  .arrow_back_key {
+    svg {
+      font-size: 25px;
+      color: #17284d;
+      float: left;
+      cursor: pointer;
+    }
+  }
+}
+
+.full_content {
+  .close-btn {
+    svg {
+      position: absolute;
+      right: 15px;
+      left: auto;
+      top: 8px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+}
+.full_content .close-btn svg {
+  fill: #474343;
+}
+
+.dark-theme.sign_full {
+  .lines-lines {
+    position: relative;
+    border-top: 0.5px solid #fff;
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+    .or {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+      background-color: #0a1929;
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+  .full_content .close-btn svg {
+    fill: #fff;
+  }
+  .modal-body {
+    background-color: #0a1929;
+  }
+  .sign_heading,
+  .otp_heading,
+  .subject_otp,
+  .time_otp {
+    color: #ffffff;
+  }
+  .sign_otp_full .arrow_back_key svg,
+  .sign_otp_full .login svg,
+  .multi_log .arrow_back_key svg,
+  .arrow_back_key svg {
+    color: #ffffff;
+  }
+}
+.arrow_back_key {
+  display: flex;
+  gap: 15px;
+  svg {
+    font-size: 25px;
+    color: #17284d;
+    float: left;
+    cursor: pointer;
+  }
+}
+
+.signin_btn_popup {
+  display: flex;
+  align-items: center;
+  button {
+    background-color: transparent;
+    border: none;
+    font-family: "SegoeUI-SemiBold";
+    font-size: 15px;
+    color: #204356;
+  }
+}
+
+.signin_btn_popup {
+  button {
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+}
+
+.lowercase-button {
+  text-transform: lowercase; /* Transform the text to lowercase */
+}
+
+.single-line-button {
+  display: inline-block;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+@media only screen and (max-width: 575px) {
+  #loginpopups.modal-dialog {
+    margin: 0px;
+  }
+  #loginpopups.modal-dialog-centered {
+    min-height: calc(100% - var(--bs-modal-margin) * 0);
+    align-items: flex-end;
+  }
+  .sign_full .modal-content {
+    border-radius: 30px 30px 0px 0px;
+  }
+}

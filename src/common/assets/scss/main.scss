@@ -1,0 +1,178 @@
+// theme color
+$theme-green1: #064c3f;
+$theme-green2: #108060;
+$theme-green3: #186c60;
+$theme-dark1: #204356;
+$light-green: #00c070;
+$gray-bg: #f6f6f6;
+$white: #fff;
+$black: #000;
+// Updated Color start
+$themecolor1: #9fe870;
+$themecolor2: #173303;
+$themecolor3: #28be21;
+$themecolor4: #edffe2;
+$themeyellow: #faae2c;
+$themenewgray: #eaeaea;
+// Updated Color End
+
+// Fonts
+@font-face {
+  font-family: "Segoe-UI-Light-300";
+  src: url("../fonts/segoe/Segoe UI Light 300.ttf");
+}
+@font-face {
+  font-family: "Segoe-UI-Semilight-350";
+  src: url("../fonts/segoe/Segoe UI Semilight 350.ttf");
+}
+@font-face {
+  font-family: "Segoe-UI-400";
+  src: url("../fonts/segoe/Segoe UI 400.ttf");
+}
+@font-face {
+  font-family: "Segoe-UI-Semibold-600";
+  src: url("../fonts/segoe/Segoe UI Semibold 600.ttf");
+}
+@font-face {
+  font-family: "Segoe-UI-Semibold-700";
+  src: url("../fonts/segoe/Segoe UI Gras 700.woff") format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe-UI-Black-900";
+  src: url("../fonts/segoe/Segoe UI Black 900.ttf");
+}
+// old
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/segoe/SegoeUI.ttf");
+}
+@font-face {
+  font-family: "SegoeUI-Light";
+  src: url("../fonts/segoe/SegoeUI-Light.ttf");
+}
+@font-face {
+  font-family: "SegoeUI-SemiBold";
+  src: url("../fonts/segoe/SegoeUI-SemiBold.ttf");
+}
+@font-face {
+  font-family: "SegoeUI-Bold";
+  src: url("../fonts/segoe/SegoeUI-Bold.ttf");
+}
+
+$segoe-fonts: (
+  light: "Segoe-UI-Light-300",
+  semilight: "Segoe-UI-Semilight-350",
+  semilight-400: "Segoe-UI-400",
+  semibold-600: "Segoe-UI-Semibold-600",
+  semibold-700: "Segoe-UI-Semibold-700",
+  semibold-900: "Segoe-UI-Black-900",
+  ui-thin: "SegoeUI",
+  ui-light: "SegoeUI-Light",
+  ui-semibold: "SegoeUI-SemiBold",
+  ui-bold: "SegoeUI-Bold",
+);
+
+$themes: (
+  light: (
+    bg: white,
+    text: black,
+  ),
+  dark: (
+    whitecolor: #fff,
+    black: $black,
+    light-green: #00c070,
+    green2: #108060,
+    green3: #186c60,
+    dark1: #070f1c,
+    dark2: #131927,
+    dark3: rgb(8 21 34),
+    dark4: #0a1929,
+    dark5: #02111f,
+    pinkcolor: #d92662,
+    none: none,
+    light-text: #b2bac2,
+    transparentbg: transparent,
+    hoverbg: #001e3c,
+    tblue: #276cf6,
+    tblue2: #607ee9,
+    tblue3:#25488f,
+    hovercolor: #99ccf3,
+    boredr1: 1px solid,
+    menu-shadow: (
+      #001e3c 0px 1px 3px 0px,
+      #001e3c 0px 0px 0px 1px,
+    ),
+    div-shadow: (
+      #064d9369 0px 1px 0px 0px,
+      #064d9369 0px 0px 0px 1px,
+    ),
+    b-color: #064d9369,
+    // header
+    header-shadow: inset 0px -1px 1px #132f4c,
+    header-bg: rgb(8 21 34),
+    header-blur: blur(8px),
+    minus2px: -2px,
+    inputoutline: 3px solid #ffffff,
+    top54px: 54px,
+    top60px: 60px,
+    themelight: #9fe870,
+    themedark: #173303,
+    themecolor4: #edffe2,
+    themecolor3: #28be21,
+    // p5px:5px,
+    // header,,,,,,,,,,,,,,,,,
+    // Updated color
+    new-green: #28be21,
+    new-gray: rgb(107 107 130 / 91%),
+    pale-green: #9fe870,
+    dark-green: #173303,
+    newLightGreen: #edffe2,
+    newDarkGreen: #28be21,
+    themeyellow: #faae2c,
+    lightgraycolor: #8b8a8a,
+    lightwhitegray: #dfdfdf,
+    // p5px:5px,
+    // header,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
+
+// animation
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// span {
+//   -moz-transition: all 0.3s ease-in-out;
+//   -o-transition: all 0.3s ease-in-out;
+//   -webkit-transition: all 0.3s ease-in-out;
+//   -ms-transition: all 0.3s ease-in-out;
+//   transition: all 0.3s ease-in-out;
+// }

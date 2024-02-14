@@ -1,0 +1,55 @@
+/* checkout2.scss or your style file */
+@import "../../../common/assets/scss/main.scss";
+#checkoutskeleton{
+     @include themed() {
+      background-color: t("dark4");
+    }
+}
+#first {
+  scrollbar-width: thin; /* For non-WebKit browsers */
+  scrollbar-color: transparent transparent; /* For non-WebKit browsers, adjust as needed */
+}
+
+#first::-webkit-scrollbar {
+  width: 0 !important; /* For WebKit browsers */
+}
+
+#first::-webkit-scrollbar-thumb {
+  background-color: transparent; /* For WebKit browsers, make the thumb transparent */
+}
+
+#first::-webkit-scrollbar-track {
+  background-color: transparent; /* For WebKit browsers, make the track transparent */
+}
+.checkplace{
+    color:#a7a4a4;
+
+      @include themed() {
+        color: t("tblue3");
+      }
+}
+.cardbg{
+     @include themed() {
+      background-color: t("dark4");
+      border: none;
+    }
+   
+}
+.hole {
+    //   border-bottom: 1px solid #ccc;
+
+  display: flex;
+  overflow: hidden;
+
+  @include themed() {
+      @include themed() {
+        border-bottom:solid 1px t("hoverbg");
+      }
+  }
+}
+.cardclass{
+    //    border: 1px solid #ccc;
+      @include themed() {
+        border-color: t("hoverbg");
+      }
+}

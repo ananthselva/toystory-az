@@ -1,0 +1,254 @@
+@import "../../common/assets/scss/main.scss";
+
+.privacy_policy_full {
+  font-family: "SegoeUI-SemiBold";
+  background-color: $gray-bg;
+  padding: 30px 0px;
+
+  @include themed() {
+    background-color: t("dark5");
+  }
+
+  .heading_total {
+    position: sticky;
+    top: 120px;
+    .privacy_heading {
+      .active {
+        .number {
+          background-color: #8b8a8a;
+          font-family: "Segoe-UI-Semibold-600";
+        }
+
+        .privacy_name {
+          color: #8b8a8a;
+          font-family: "Segoe-UI-Semibold-600";
+        }
+      }
+      .privacy_name {
+        margin-bottom: 20px;
+        display: flex;
+        color: #8b8a8a;
+        font-family: "Segoe-UI-Semibold-600";
+      }
+      a:hover {
+        cursor: pointer;
+        .number {
+          background-color: #173303;
+          @include themed() {
+            background-color: t("dark-green");
+            color: t("pale-green");
+          }
+        }
+
+        .privacy_name {
+          color: #173303;
+          font-family: "Segoe-UI-Semibold-600";
+          @include themed() {
+            color: t("pale-green");
+          }
+        }
+      }
+      .number {
+        margin-right: 15px;
+        color: white;
+        background-color: #8b8a8a;
+        padding: 10px;
+        height: 25px;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+  }
+  .content_total {
+    .content_heading {
+      font-size: 2rem;
+      color: #28be21;
+      font-weight: 500;
+
+      @include themed() {
+        color: t("themelight");
+      }
+    }
+    .sub {
+      font-size: 18px;
+      color: #a4a3a8;
+      margin-bottom: 20px;
+    }
+    .line {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sample_line {
+      width: 50%;
+      text-align: center;
+      line-height: 0.1em;
+      border-top: 1px solid #e4e5e7;
+    }
+  }
+
+  .cnt_name {
+    color: #173303;
+    font-family: "Segoe-UI-Semibold-600";
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    @include themed() {
+      color: t("lightwhitegray");
+    }
+  }
+  p {
+    font-size: 1rem;
+    color: #8b8a8a;
+    font-family: "Segoe-UI-Semibold-600";
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .green {
+    color: #28be21;
+    @include themed() {
+      color: t("pale-green");
+    }
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .privacy_policy_full {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile_view {
+    display: none !important;
+  }
+}
+
+.mobile_view {
+  @include themed() {
+    background-color: t("dark5");
+  }
+  .content_heading {
+    color: #204356;
+    font-size: 1.4rem;
+
+    @include themed() {
+      color: t("whitecolor");
+    }
+  }
+  .sub {
+    font-size: 15px;
+    color: #a4a3a8;
+    margin-bottom: 20px;
+  }
+  .number {
+    margin-right: 15px;
+    color: white;
+    background-color: #ade7d0;
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .label {
+    color: #ade7d0;
+    font-weight: 600;
+  }
+  .green {
+    color: #00c070;
+  }
+
+  p {
+    font-size: 15px;
+    color: #797373;
+    margin-bottom: 20px;
+    font-family: "Segoe-UI-Semibold-600";
+
+    @include themed() {
+      color: t("light-text");
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .accordion-button {
+    color: #ade7d0;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+    background-color: transparent;
+
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    .label {
+      color: #00c070 !important;
+    }
+    .number {
+      background-color: #00c070;
+    }
+  }
+
+  .accordion-button {
+    color: #ade7d0;
+    font-weight: 600;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+    background-color: transparent;
+
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion-button {
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion-body {
+    @include themed() {
+      background-color: t("dark5");
+    }
+  }
+
+  .accordion {
+    --bs-accordion-bg: none !important;
+    --bs-accordion-border-color: none !important ;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sample_line {
+    width: 50%;
+    text-align: center;
+    line-height: 0.1em;
+    border-top: 1px solid #e4e5e7;
+  }
+}

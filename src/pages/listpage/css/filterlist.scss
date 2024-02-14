@@ -1,0 +1,1687 @@
+@import "../../../common/assets/scss/main.scss";
+.filter-list {
+  .sidebar-text-search {
+    &.is-sticky {
+      position: sticky;
+      top: 60px;
+      z-index: 999;
+      animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+      background-color: #ffffff;
+      // padding-bottom: 5px;
+      @include themed() {
+        background-color: t("dark4");
+      }
+    }
+  }
+  .text-search {
+    padding: 10px 0px;
+    form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      background-color: #f6f6f6;
+      padding: 15px;
+      border-radius: 10px;
+      height: 55px;
+      @include themed() {
+        background-color: t("dark5");
+      }
+      svg {
+        font-size: 18px;
+        fill: #5b5b5b;
+        @include themed() {
+          fill: t("themecolor3");
+        }
+      }
+      input {
+        border: none;
+        background-color: #f6f6f6;
+        color: #1f4073;
+        box-shadow: none;
+        outline: none;
+        font-size: 16.5px;
+        padding: 0px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        @include themed() {
+          background-color: t("dark5");
+          color: t("whitecolor");
+        }
+      }
+    }
+  }
+  .filter-key {
+    padding: 10px 0px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 15px;
+      padding: 0px;
+      margin: 0px;
+      list-style-type: none;
+      li {
+        margin: 0px;
+        background-color: #f0f4fd;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 14.5px;
+        position: relative;
+        span {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          display: inline-flex;
+          background: #ffffff;
+          border-radius: 50px;
+          svg {
+            font-size: 15px;
+            color: #f2434c;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  } //Filter Key
+  .not-found-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .lottie-anim {
+      .lf-player-container {
+        #lottie {
+          width: 350px;
+          height: 350px;
+        }
+      }
+    }
+    .not-f-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -35px;
+      p {
+        text-align: center;
+        color: #3e464d;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 18px;
+        margin: 0px 0px 10px 0px;
+        @include themed() {
+          color: t("whitecolor");
+        }
+      }
+      span {
+        text-align: center;
+        color: #3e464d;
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 16px;
+        @include themed() {
+          color: t("light-text");
+        }
+      }
+      button {
+        background-color: #9fe870;
+        color: #173303;
+        padding: 10px 25px;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        border: none;
+        outline: none;
+        box-shadow: none;
+        display: block;
+        margin: 20px 0px;
+        font-size: 16px;
+      }
+    }
+  } //not-found-filter
+
+  // Cuisine Filter
+  .cuisine-swiper {
+    padding: 20px 12px;
+    margin: 10px 0px;
+    border: 1px solid #f3f5f7;
+    border-left: none;
+    border-right: none;
+    @include themed() {
+      border-color: t("hoverbg");
+    }
+    .swiper-wrapper {
+      .swiper-slide {
+        .cuisine-box {
+          input {
+            display: none;
+          }
+          label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 6px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            border: 1px solid #f1f1f1;
+            position: relative;
+            gap: 6px;
+            justify-content: flex-end;
+            @include themed() {
+              background-color: t("dark5");
+              border-color: t("hoverbg");
+            }
+            svg {
+              position: absolute;
+              top: -10px;
+              right: -13px;
+              font-size: 16px;
+              fill: #204356;
+              @include themed() {
+                fill: t("pinkcolor");
+              }
+            }
+            img {
+              width: 68px;
+              height: 68px;
+              object-fit: contain;
+              transform: scale(1);
+              -webkit-transition: all 0.2s ease;
+              -moz-transition: all 0.2s ease;
+              -o-transition: all 0.2s ease;
+              -ms-transition: all 0.2s ease;
+              transition: all 0.2s ease;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+            span {
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              color: #41474e;
+              font-size: 13px;
+              @include themed() {
+                color: t("whitecolor");
+              }
+            }
+            &.selected {
+              background-color: #fff2d3;
+              border: 1px solid #ffcc47;
+              box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+              cursor: auto;
+              span {
+                @include themed() {
+                  color: t("dark5");
+                }
+              }
+
+              img {
+                transform: scale(1.1);
+              }
+            }
+            &:nth-child(2) {
+              position: absolute;
+              z-index: 1;
+              background: transparent;
+              border: none;
+              right: 0;
+              padding: 0px;
+            }
+          }
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #204356;
+      background-color: #ffffff;
+      width: 26px;
+      height: 26px;
+      top: 57%;
+      border-radius: 50px;
+      box-shadow: rgb(100 100 111 / 37%) 0px 7px 29px 0px;
+      border: none;
+      // @include themed() {
+      //   background-color: t("hovercolor");
+      //   color: t("dark5");
+      // }
+      &::after {
+        font-size: 11px;
+        font-weight: 600;
+      }
+      &.swiper-button-disabled {
+        display: none;
+      }
+    }
+    .swiper-button-next {
+      &::after {
+        margin-left: 2px;
+      }
+    }
+    .swiper-button-prev {
+      &::after {
+        margin-right: 2px;
+      }
+    }
+  }
+
+  // Offer Banner
+
+  .offer-banner-swiper {
+    padding: 20px 0px 20px 0px;
+    margin: 0px;
+    // .swiper-wrapper {
+    //   .swiper-slide {
+    //   }
+    // }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #204356;
+      background-color: #ffffff;
+      width: 26px;
+      height: 26px;
+      top: 55%;
+      border-radius: 50px;
+      box-shadow: rgb(100 100 111 / 37%) 0px 7px 29px 0px;
+      &::after {
+        font-size: 11px;
+        font-weight: 600;
+      }
+      &.swiper-button-disabled {
+        display: none;
+      }
+    }
+    .swiper-button-next {
+      &::after {
+        margin-left: 2px;
+      }
+    }
+    .swiper-button-prev {
+      &::after {
+        margin-right: 2px;
+      }
+    }
+  } // Offer Banner End
+
+  .restaurant-listing {
+    padding: 20px 0px;
+    .main-title {
+      font-family: map-get($map: $segoe-fonts, $key: semibold-700);
+      color: #3e464d;
+      font-size: 24px;
+      margin-bottom: 20px;
+      @include themed() {
+        color: t("whitecolor");
+      }
+    }
+    .restaurant-box {
+      margin-bottom: 25px;
+      .img-box {
+        position: relative;
+        border-radius: 15px 15px 0px 0px;
+        overflow: hidden;
+        a {
+          &.resta-path {
+            text-decoration: none !important;
+          }
+        }
+        .image-container{
+          height: 175px;
+          width: 100% !important;
+        span.lazy-load-image-background.blur.lazy-load-image-loaded{
+          width: 100% !important;
+        img {
+          width: 100%;
+          position: relative;
+          height: 200px;
+          max-width: 100% !important;
+          object-fit: cover;
+        }
+        }
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: rgb(0 0 0 / 45%) 0px 0px 0px 2000px inset;
+        }
+        span {
+          &.offer-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: $themecolor1;
+            border-radius: 50px;
+            padding: 4px 15px 5px 15px;
+            font-family: map-get($map: $segoe-fonts, $key: semibold-700);
+            font-size: 13px;
+            line-height: normal;
+            color: $themecolor2;
+            text-transform: uppercase;
+          }
+          &.pre-order-time {
+            position: absolute;
+            bottom: 0px;
+            left: 15px;
+            background-color: $themecolor1;
+            border-radius: 15px 15px 0px 0px;
+            padding: 4px 18px 5px 18px;
+            font-family: map-get($map: $segoe-fonts, $key: semibold-600);
+            font-size: 13px;
+            line-height: normal;
+            color: $themecolor2;
+            text-transform: capitalize;
+          }
+          &.fav-icon {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 25px;
+            line-height: normal;
+            fill: #ffffff;
+            color: #ffffff;
+            cursor: pointer;
+          }
+          &.close-takeaway {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: #fff0f0;
+            border-radius: 0px 0px 13px 13px;
+            padding: 4px 18px 5px 18px;
+            font-family: map-get($map: $segoe-fonts, $key: semibold-700);
+            font-size: 14px;
+            line-height: normal;
+            color: #e04646;
+            text-transform: capitalize;
+          }
+        }
+      }
+      a {
+        &.resta-path {
+          text-decoration: none !important;
+        }
+      }
+      .content {
+        &.no-link {
+          cursor: not-allowed;
+        }
+        padding: 10px;
+        border: 1px solid #e2e6e8;
+        border-radius: 0px 0px 15px 15px;
+        overflow: hidden;
+        text-decoration: none;
+        @include themed() {
+          background-color: t("dark5");
+          border: t("none");
+          box-shadow: t("header-shadow");
+        }
+        h4 {
+          color: $themecolor2;
+          font-family: map-get($map: $segoe-fonts, $key: semibold-700);
+          font-size: 18px;
+          margin-bottom: 5px;
+          text-decoration: none;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        p {
+          color: #3e464d;
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 16px;
+          margin-bottom: 10px;
+          text-decoration: none;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        .miles-rating {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 0px;
+          span {
+            color: #808695;
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 14.5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2px;
+            line-height: normal;
+            text-decoration: none;
+            @include themed() {
+              color: t("light-text");
+            }
+            img {
+              width: 14px;
+              height: 14px;
+              object-fit: contain;
+              margin-top: 1px;
+            }
+            &:first-child {
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .suggest-takeaway-form {
+    padding: 20px 0px;
+    .lottie-ani {
+      .lf-player-container {
+        #lottie {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      p {
+        text-align: center;
+        font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+        color: #3e464d;
+        font-size: 20px;
+        margin: 0px;
+        @include themed() {
+          color: t("whitecolor");
+        }
+        span {
+          color: #29b56c;
+          @include themed() {
+            color: t("themelight");
+          }
+        }
+      }
+    }
+    .sign-up-form {
+      h5 {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        color: #3e464d;
+        font-size: 18px;
+        margin: 0px 0px 20px 0px;
+        line-height: 1.5;
+        @include themed() {
+          color: t("whitecolor");
+        }
+      }
+      p {
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        color: #3e464d;
+        font-size: 15px;
+        margin: 0px;
+        @include themed() {
+          color: t("light-text");
+        }
+      }
+      form {
+        margin-top: 25px;
+        h3 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: #1f4073;
+          font-size: 16px;
+          margin-bottom: 15px;
+          @include themed() {
+            color: t("hovercolor");
+          }
+        }
+        input {
+          margin-bottom: 25px;
+          background-color: #f7f7f9;
+          color: #204356;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 15px;
+          border: none;
+          outline: none;
+          box-shadow: none;
+          height: 45px;
+          @include themed() {
+            background-color: t("dark5");
+            color: t("whitecolor");
+          }
+          &:valid:focus {
+            box-shadow: none;
+          }
+          &:invalid:focus {
+            box-shadow: none;
+            border: none;
+          }
+        }
+        button {
+          background-color: #9fe870;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: #173303;
+          font-size: 16px;
+          margin-bottom: 15px;
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 8px 5px 8px 5px;
+        }
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #3e464d;
+          font-size: 15px;
+          margin: 0px;
+          @include themed() {
+            color: t("light-text");
+          }
+          span {
+            color: #29b56c;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            @include themed() {
+              color: t("themelight");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .filter-list {
+    .mobile-filter {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      .text-search {
+        width: 100%;
+      }
+      .mobile-filter {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+          padding: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          background-color: #28be21;
+          outline: none;
+          border: none;
+          box-shadow: none;
+          height: 55px;
+          width: 55px;
+          svg {
+            fill: #ffffff;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .filter-list {
+    .text-search {
+      padding: 7px 0px 7px 0px;
+      form {
+        height: 45px;
+        svg {
+          font-size: 17px;
+        }
+        input {
+          font-size: 15px;
+        }
+      }
+    }
+    .mobile-filter .mobile-filter button {
+      width: 35px;
+      height: 40px;
+      padding: 0px;
+      svg {
+        font-size: 22px;
+      }
+    }
+    .cuisine-swiper {
+      padding: 15px 10px;
+      .swiper-wrapper .swiper-slide .cuisine-box label img {
+        width: 50px;
+        height: 50px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 60%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+    }
+    .offer-banner-swiper {
+      padding: 10px 0px 10px 0px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 57%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+      .swiper-wrapper{
+        .swiper-slide{
+         display: flex;
+           span {
+            z-index: 1;
+            svg {
+            font-size: 15px;
+            color: #f2434c;
+            cursor: pointer;
+            }
+          }
+           .img-fluid.active{
+           border: 1px solid #9fe870;
+           /* padding: 10px; */
+           border-radius: 23px;
+           position: absolute;
+           }
+    }
+      }
+    }
+    .restaurant-listing {
+      .main-title {
+        font-size: 21px;
+      }
+      .restaurant-box {
+        .img-box {
+          span.offer-tag {
+            font-size: 12px;
+          }
+          .image-container{
+            height: 175px;
+            width: 100% !important;
+          span.lazy-load-image-background.blur.lazy-load-image-loaded{
+            width: 100% !important;
+          img {
+            height: 220px;
+            max-width: 100%;
+          }
+          }
+        }
+        }
+        .content {
+          h4 {
+            font-size: 16px;
+          }
+          p {
+            font-size: 15px;
+          }
+          .miles-rating span {
+            font-size: 14px;
+            gap: 5px;
+            img {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+    }
+    .filter-key ul li {
+      padding: 5px 15px;
+      font-size: 13px;
+    }
+    .not-found-filter .not-f-content {
+      p {
+        font-size: 16px;
+      }
+      button {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+    }
+    // suggest takeaway
+    .suggest-takeaway-form {
+      .lottie-ani {
+        margin-bottom: 50px;
+        .lf-player-container #lottie {
+          width: 250px;
+          height: 250px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      .sign-up-form {
+        h5 {
+          font-size: 17px;
+          br {
+            display: none;
+          }
+        }
+        p {
+          font-size: 15px;
+        }
+        form {
+          h3 {
+            font-size: 14px;
+          }
+          input {
+            height: 40px;
+            font-size: 14px;
+          }
+          button {
+            font-size: 14px;
+          }
+          p {
+            font-size: 14.5px;
+          }
+        }
+      }
+    } // Suggest Takeaway end
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .filter-list {
+    .text-search {
+      padding: 7px 0px 7px 0px;
+      form {
+        height: 50px;
+        svg {
+          font-size: 18px;
+        }
+        input {
+          font-size: 16px;
+        }
+      }
+    }
+    .mobile-filter .mobile-filter button {
+      width: 40px;
+      height: 45px;
+      padding: 0px;
+      svg {
+        font-size: 23px;
+      }
+    }
+    .cuisine-swiper {
+      padding: 15px 0px;
+      .swiper-wrapper .swiper-slide .cuisine-box label img {
+        width: 55px;
+        height: 55px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 60%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+    }
+    .offer-banner-swiper {
+      padding: 10px 0px 10px 0px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 57%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+      .swiper-wrapper{
+        .swiper-slide{
+         display: flex;
+           span {
+            z-index: 1;
+            svg {
+            font-size: 15px;
+            color: #f2434c;
+            cursor: pointer;
+            }
+          }
+           .img-fluid.active{
+           border: 1px solid #9fe870;
+           /* padding: 10px; */
+           border-radius: 23px;
+           position: absolute;
+           }
+         }
+        }
+    }
+    .restaurant-listing {
+      .main-title {
+        font-size: 22px;
+      }
+      .restaurant-box {
+        .img-box {
+          span.offer-tag {
+            font-size: 13px;
+          }
+        }
+        .content {
+          h4 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 16px;
+          }
+          .miles-rating span {
+            font-size: 15px;
+            gap: 5px;
+            img {
+              margin-top: 0px;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .filter-key ul li {
+      padding: 5px 15px;
+      font-size: 13px;
+    }
+    .not-found-filter .not-f-content {
+      p {
+        font-size: 16px;
+      }
+      button {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+    }
+    // suggest takeaway
+    .suggest-takeaway-form {
+      .lottie-ani {
+        margin-bottom: 50px;
+        .lf-player-container #lottie {
+          width: 250px;
+          height: 250px;
+        }
+        p {
+          font-size: 19px;
+        }
+      }
+      .sign-up-form {
+        h5 {
+          font-size: 17px;
+          br {
+            display: none;
+          }
+        }
+        p {
+          font-size: 15px;
+        }
+        form {
+          h3 {
+            font-size: 14px;
+          }
+          input {
+            height: 40px;
+            font-size: 14px;
+          }
+          button {
+            font-size: 14px;
+          }
+          p {
+            font-size: 14.5px;
+          }
+        }
+      }
+    } // Suggest Takeaway end
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .filter-list {
+    .text-search {
+      padding: 7px 0px 7px 0px;
+      form {
+        height: 50px;
+        svg {
+          font-size: 18px;
+        }
+        input {
+          font-size: 16px;
+        }
+      }
+    }
+    .mobile-filter .mobile-filter button {
+      width: 40px;
+      height: 45px;
+      padding: 0px;
+      svg {
+        font-size: 23px;
+      }
+    }
+    .cuisine-swiper {
+      padding: 15px 0px;
+      .swiper-wrapper .swiper-slide .cuisine-box label img {
+        width: 45px;
+        height: 45px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 60%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+    }
+    .offer-banner-swiper {
+      padding: 10px 0px 10px 0px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 57%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+      .swiper-wrapper{
+        .swiper-slide{
+         display: flex;
+           span {
+            z-index: 1;
+            svg {
+            font-size: 15px;
+            color: #f2434c;
+            cursor: pointer;
+            }
+          }
+           .img-fluid.active{
+           border: 1px solid #9fe870;
+           /* padding: 10px; */
+           border-radius: 23px;
+           position: absolute;
+           }
+         }
+        }
+    }
+    .restaurant-listing {
+      .main-title {
+        font-size: 22px;
+      }
+      .restaurant-box {
+        .img-box {
+          span.offer-tag {
+            font-size: 11.5px;
+          }
+          span.pre-order-time {
+            font-size: 12px;
+          }
+          span.fav-icon {
+            font-size: 22px;
+          }
+          span.close-takeaway {
+            padding: 4px 12px 5px 12px;
+            font-size: 12px;
+          }
+          .image-container{
+            height: 175px !important;
+            width: 100% !important;
+          span.lazy-load-image-background.blur.lazy-load-image-loaded{
+            width: 100% !important;
+           img {
+            height: 175px !important;
+            max-width: 100%;
+           }
+          }
+          }
+        }
+        .content {
+          h4 {
+            font-size: 16px;
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 14.5px;
+
+            display: inline-block;
+            max-width: -webkit-fill-available;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .miles-rating span {
+            font-size: 13px;
+            gap: 3px;
+            img {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+    }
+    .filter-key ul li {
+      padding: 5px 15px;
+      font-size: 13.5px;
+    }
+    .not-found-filter .not-f-content {
+      p {
+        font-size: 17px;
+      }
+      button {
+        font-size: 15px;
+        padding: 8px 15px;
+      }
+    }
+    // suggest takeaway
+    .suggest-takeaway-form {
+      .lottie-ani {
+        margin-bottom: 50px;
+        .lf-player-container #lottie {
+          width: 250px;
+          height: 250px;
+        }
+        p {
+          font-size: 19px;
+        }
+      }
+      .sign-up-form {
+        h5 {
+          font-size: 18px;
+          br {
+            display: none;
+          }
+        }
+        p {
+          font-size: 15px;
+        }
+        form {
+          h3 {
+            font-size: 15px;
+          }
+          input {
+            height: 42px;
+            font-size: 14px;
+          }
+          button {
+            font-size: 15px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    } // Suggest Takeaway end
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .filter-list {
+    .text-search {
+      padding: 7px 0px 7px 0px;
+      form {
+        height: 50px;
+        svg {
+          font-size: 18px;
+        }
+        input {
+          font-size: 16px;
+        }
+      }
+    }
+    .mobile-filter .mobile-filter button {
+      width: 40px;
+      height: 45px;
+      padding: 0px;
+      svg {
+        font-size: 23px;
+      }
+    }
+    .cuisine-swiper {
+      padding: 15px 0px;
+      .swiper-wrapper .swiper-slide .cuisine-box label {
+        img {
+          width: 42px;
+          height: 42px;
+        }
+        span {
+          font-size: 11px;
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 60%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+    }
+    .offer-banner-swiper {
+      padding: 10px 0px 10px 0px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 57%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+      .swiper-wrapper{
+        .swiper-slide{
+         display: flex;
+           span {
+            z-index: 1;
+            svg {
+            font-size: 15px;
+            color: #f2434c;
+            cursor: pointer;
+            }
+          }
+           .img-fluid.active{
+           border: 1px solid #9fe870;
+           /* padding: 10px; */
+           border-radius: 23px;
+           position: absolute;
+           }
+         }
+        }
+    }
+    .restaurant-listing {
+      .row {
+        gap: 20px 0px;
+      }
+      .main-title {
+        font-size: 20px;
+        margin-bottom: 0px;
+      }
+      .restaurant-box {
+        margin-bottom: 0px;
+        .img-box {
+          span.offer-tag {
+            font-size: 11px;
+          }
+          span.pre-order-time {
+            font-size: 12px;
+            padding: 4px 12px 5px 12px;
+          }
+          span.fav-icon {
+            font-size: 22px;
+          }
+          span.close-takeaway {
+            padding: 4px 12px 5px 12px;
+            font-size: 11.5px;
+            width: 55%;
+            text-align: center;
+          }
+          .image-container{
+            height: 175px;
+            width: 100% !important;
+          span.lazy-load-image-background.blur.lazy-load-image-loaded{
+            width: 100% !important;
+          img {
+            height: 135px;
+            max-width: 100%;
+          }
+          }
+         }
+        }
+        .content {
+          h4 {
+            font-size: 15px;
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 14px;
+            margin-bottom: 0px;
+            display: inline-block;
+            max-width: -webkit-fill-available;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .miles-rating span {
+            font-size: 11.5px;
+            gap: 2px;
+            :first-child img {
+              width: 15px;
+              height: 15px;
+            }
+            img {
+              margin-top: 0px;
+              width: 13px;
+              height: 13px;
+            }
+          }
+        }
+      }
+    }
+    .filter-key ul li {
+      padding: 5px 15px;
+      font-size: 13.5px;
+    }
+    .not-found-filter .not-f-content {
+      p {
+        font-size: 17px;
+      }
+      button {
+        font-size: 15px;
+        padding: 8px 15px;
+      }
+    }
+    // suggest takeaway
+    .suggest-takeaway-form {
+      .lottie-ani {
+        margin-bottom: 50px;
+        .lf-player-container #lottie {
+          width: 250px;
+          height: 250px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+      .sign-up-form {
+        h5 {
+          font-size: 18px;
+          br {
+            display: none;
+          }
+        }
+        p {
+          font-size: 15px;
+        }
+        form {
+          h3 {
+            font-size: 15px;
+          }
+          input {
+            height: 42px;
+            font-size: 14px;
+          }
+          button {
+            font-size: 15px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    } // Suggest Takeaway end
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .filter-list {
+    .sidebar-text-search {
+      &.is-sticky {
+        top: 60px;
+        // padding-bottom: 5px;
+        @include themed() {
+          top: t("top60px");
+        }
+      }
+    }
+    .text-search {
+      padding: 10px 0px 7px 0px;
+      form {
+        height: 50px;
+        svg {
+          font-size: 18px;
+        }
+        input {
+          font-size: 16px;
+        }
+      }
+    }
+    .mobile-filter .mobile-filter button {
+      width: 40px;
+      height: 45px;
+      padding: 0px;
+      svg {
+        font-size: 23px;
+      }
+    }
+    .cuisine-swiper {
+      padding: 15px 0px;
+      .swiper-wrapper .swiper-slide .cuisine-box label {
+        img {
+          width: 42px;
+          height: 42px;
+        }
+        span {
+          font-size: 12.5px;
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 60%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+    }
+    .offer-banner-swiper {
+      padding: 10px 0px 10px 0px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 57%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+      .swiper-wrapper{
+        .swiper-slide{
+         display: flex;
+           span {
+            z-index: 1;
+            svg {
+            font-size: 15px;
+            color: #f2434c;
+            cursor: pointer;
+            }
+          }
+           .img-fluid.active{
+           border: 1px solid #9fe870;
+           /* padding: 10px; */
+           border-radius: 23px;
+           position: absolute;
+           }
+         }
+        }
+    }
+    .restaurant-listing {
+      .row {
+        gap: 20px 0px;
+      }
+      .main-title {
+        font-size: 22px;
+        margin-bottom: 0px;
+      }
+      .restaurant-box {
+        margin-bottom: 0px;
+        .img-box {
+          span.offer-tag {
+            font-size: 12px;
+          }
+          span.pre-order-time {
+            font-size: 13px;
+            padding: 4px 12px 5px 12px;
+          }
+          span.fav-icon {
+            font-size: 22px;
+          }
+          span.close-takeaway {
+            padding: 4px 12px 5px 12px;
+            font-size: 13px;
+            width: 55%;
+            text-align: center;
+          }
+          .image-container{
+            height: 175px;
+            width: 100% !important;
+          span.lazy-load-image-background.blur.lazy-load-image-loaded{
+            width: 100% !important;
+          img {
+            height: 195px;
+            max-width: 100%;
+          }
+          }
+        }
+        }
+        .content {
+          h4 {
+            font-size: 17px;
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 14.5px;
+            margin-bottom: 0px;
+            display: inline-block;
+            max-width: -webkit-fill-available;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .miles-rating span {
+            font-size: 14px;
+            gap: 2px;
+            :first-child img {
+              width: 15px;
+              height: 15px;
+            }
+            img {
+              margin-top: 0px;
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+      }
+    }
+    .filter-key ul li {
+      padding: 7px 15px;
+      font-size: 13.5px;
+    }
+    .not-found-filter .not-f-content {
+      p {
+        font-size: 17px;
+      }
+      button {
+        font-size: 15px;
+        padding: 8px 15px;
+      }
+    }
+    // suggest takeaway
+    .suggest-takeaway-form {
+      .lottie-ani {
+        margin-bottom: 50px;
+        .lf-player-container #lottie {
+          width: 250px;
+          height: 250px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+      .sign-up-form {
+        h5 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 15px;
+        }
+        form {
+          h3 {
+            font-size: 15px;
+          }
+          input {
+            height: 42px;
+            font-size: 14px;
+          }
+          button {
+            font-size: 15px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    } // Suggest Takeaway end
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .filter-list {
+    .sidebar-text-search {
+      &.is-sticky {
+        top: 65px;
+        // padding-bottom: 5px;
+      }
+    }
+    .text-search {
+      padding: 10px 0px 7px 0px;
+      form {
+        height: 50px;
+        svg {
+          font-size: 18px;
+        }
+        input {
+          font-size: 16px;
+        }
+      }
+    }
+    .mobile-filter .mobile-filter button {
+      width: 40px;
+      height: 45px;
+      padding: 0px;
+      svg {
+        font-size: 23px;
+      }
+    }
+    .cuisine-swiper {
+      padding: 15px 0px;
+      .swiper-wrapper .swiper-slide .cuisine-box label {
+        img {
+          width: 62px;
+          height: 62px;
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 60%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+    }
+    .offer-banner-swiper {
+      padding: 10px 0px 10px 0px;
+      .swiper-wrapper{
+      .swiper-slide{
+        display: flex;
+        span {
+           z-index: 1;
+             svg {
+             font-size: 15px;
+             color: #f2434c;
+             cursor: pointer;
+           }
+        }
+       .img-fluid.active{
+       border: 1px solid #9fe870;
+       border-radius: 23px;
+       position: absolute;
+       } 
+      }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        top: 57%;
+        &::after {
+          font-size: 10px;
+        }
+      }
+    }
+    .restaurant-listing {
+      .row {
+        gap: 20px 0px;
+      }
+      .main-title {
+        margin-bottom: 0px;
+      }
+      .restaurant-box {
+        margin-bottom: 0px;
+        .img-box {
+          span.offer-tag {
+            font-size: 12.5px;
+          }
+
+          span.fav-icon {
+            font-size: 23px;
+          }
+          span.close-takeaway {
+            padding: 4px 12px 5px 12px;
+            font-size: 13.5px;
+            width: 55%;
+            text-align: center;
+          }
+          .image-container{
+           height: 175px;
+           width: 100% !important;
+          span.lazy-load-image-background.blur.lazy-load-image-loaded{
+            width: 100% !important;
+            height: 100% !important;
+          img {
+            height: 175px;
+            max-width: 100%;
+          }
+          }
+        }
+        }
+        .content {
+          h4 {
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 15px;
+            margin-bottom: 0px;
+            display: inline-block;
+            max-width: -webkit-fill-available;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .miles-rating span {
+            gap: 2px;
+
+            img {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+    }
+    .filter-key ul li {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+    .not-found-filter .not-f-content {
+      p {
+        font-size: 18px;
+      }
+      span {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+        padding: 9px 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .filter-list {
+    .sidebar-text-search {
+      &.is-sticky {
+        top: 65px;
+      }
+    }
+  }
+}

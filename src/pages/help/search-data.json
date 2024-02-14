@@ -1,0 +1,452 @@
+[
+  {
+    "OfferInformation": [
+      {
+        "title": "How do I apply a Fusion Kitchen Coupon?",
+        "content": [
+          " The Fusion Kitchen Coupon should be applied to the Cart before the order is placed. The Coupon Code field will show up on the cart under the Sub Total. Please enter thecode or click APPLY on the given code."
+        ]
+      },
+      {
+        "title": " Error message while applying a Fusion Kitchen coupon code ",
+        "content": [
+          " If you can't proceed or apply a coupon code, please check for an error message on the cart. We have listed the causes for the error messages below: ",
+          " Invalid Code  - This error message implies that the coupon has been wrongly entered or the coupon doesn't exist.",
+          " Can be just applied once  - This error message would imply that it is a one-time use coupon code and has already been applied.",
+          " Coupon has Expired  - This error message would imply that the coupon has crossed its validity period or it is a one-time use coupon code and has already been applied.",
+          " Coupon code not valid for delivery orders  - This error message would imply when the listed coupon code is valid only for collection orders.",
+          " Coupon code not valid for collection orders  - This error message would imply when the listed coupon code is valid only for delivery orders."
+        ],
+        "type": 1
+      }
+    ]
+  },
+
+  {
+    "AccountPaymentOptions": [
+      {
+        "title": " I placed an order but the Takeaway is closed. How do I get a refund? ",
+        "content": [
+          "In this case, the takeaway may be closed after you place an order due to unexpected circumstances.",
+          "You can better contact directly to the takeaway and ask for a refund in this scenario."
+        ]
+      },
+      {
+        "title": " How do I cancel an order?",
+        "content": [
+          " On the off chance that you’re supposed to cancel your order, you might want to drop your request. You can contact us through our live chat or email and we will give the best solution to sort out your request."
+        ]
+      },
+      {
+        "title": "Why was my order cancelled?",
+        "content": [
+          "It is a rare scenario where your order may get cancelled. This may occur when:"
+        ],
+        "list": [
+          "Shortage of Drivers",
+          "Distance of delivery address",
+          "Takeaway / restaurant closes due to unexpected circumstances.",
+          "Items out of stock",
+          "Kitchen busy / traffic with bulk orders."
+        ]
+      },
+      {
+        "title": "What is Fusion Wallet?",
+        "content": [
+          "The main use of the wallet is to make the refund process speedy and simple for all.",
+          " A refund for canceled orders can be added to your Fusion Wallet. <br />  You can use the credit in your wallet to place an order from any takeaway of your choice.",
+          "At the point when a request is dropped by the action item, you will have the choice to pick assuming you need the refund credited to your wallet or your card.",
+          "In the event that you select a wallet, you will get instant credit for the requested amount."
+        ]
+      },
+      {
+        "title": "Not able to checkout / unable to place an order",
+
+        "list": {
+          "listtitle": "Assuming you can't checkout or place an order if it's not too much trouble, check if ",
+          "listitem": [
+            "the takeaway is open",
+            "the takeaway delivers to your postcode",
+            "he card information is right",
+            "you have reached the minimum order value",
+            "you are applying a coupon code then, at that point, assuming it has been applied correctly"
+          ]
+        },
+        "sublist": {
+          "sublisttitle": "Assuming this doesn't do fix the issue:",
+          "sublistitem": [
+            "the takeaway is open",
+            "the takeaway delivers to your postcode"
+          ]
+        }
+      },
+      {
+        "title": "Payment processed but order not confirmed",
+        "content": [
+          "There is a procedure set up that will automatically credit your refund for when the order is stuck in the middle of the process. This can occur because of network issues or server issues. We suggest checking with the takeaway first and then place your order again. The refund will be automatically credited back to your account within 3-5 business days."
+        ]
+      },
+      {
+        "title": "Payment methods",
+        "content": ["Modes of Payment:"],
+
+        "list": {
+          "listitem": [
+            "Card payment",
+            "Google Pay",
+            "Apple Pay",
+            "Fusion Wallet"
+          ]
+        }
+      },
+      {
+        "title": "Are there any additional charges for online orders/payments?",
+        "content": [
+          " Additional charges to place an order is totally dependent on the takeaway / restaurant. It varies with every takeaway / restaurant."
+        ]
+      },
+      {
+        "title": " Payment deducted Twice / I can see Duplicate Transaction",
+
+        "list": {
+          "listitem": [
+            "At the point when you place an order, rarely you may be charged twice for the same order. If you check with the Takeaway they may also confirm accepting your order once. This situation happens when the payment is stuck between the systems. This can occur because of network  or server issues. At the point when you check your bank  statement, it will show as withheld.",
+            "The duplicate payment will be automatically reverted back to your account within 3-5 working days.",
+            "Please login to your account and actually look at the Order History in the event that two orders are placed on your account. On the off chance that it shows one order, the duplicate payment will be automatically credited back. Assuming there are two orders, if it's not too much trouble, contact Takeaway promptly to drop the duplicate order and receive your refund. ",
+            "In case you still have issues with the duplicate payment refund, please contact the payment gateway directly as mentioned on the contact us page of the website."
+          ]
+        }
+      },
+      {
+        "title": "Is my payment info secure?",
+        "content": [
+          "Indeed, we never share any of this delicate data with anybody and we encrypt everything the second you hit the order button to ensure nobody including us can see those particulars."
+        ]
+      },
+      {
+        "title": "Can I save more than one card information for making the payment?",
+        "content": [
+          "Yes, we just have an option to save more than one card information for making the payment."
+        ]
+      },
+      {
+        "title": "How do I change my credit/debit card information?",
+        "content": [
+          "Sorry, you cannot change or edit your saved card details instead you can remove the saved card and add new again."
+        ]
+      },
+      {
+        "title": "Can I save my payment information?",
+        "content": [
+          "Yes, your card information is captured and encrypted immediately you hit the order button. You also have an option to save more than one card by going to your profile page."
+        ]
+      },
+      {
+        "title": "How do I get Refund to my Fusion Wallet?",
+        "content": [
+          " A refund for cancelled orders can be credited to your Fusion Wallet."
+        ],
+        "list": [
+          "At the point when an order is cancelled, you will get an email notification. If it's not too much trouble, click on WALLET if you need a refund in your wallet. The refund will be credited to your Fusion wallet at the same instance. Assuming that you choose CARD, the refund will be credited in 3-5 working days to your saved account."
+        ]
+      },
+      {
+        "title": " How do I pay with Fusion Wallet?",
+        "content": [
+          "After adding your items to the cart, you’ll have the checkout where payment options for Card, GooglePay, Apple pay and FUSION WALLET would be put in place. If your WALLET is filled with enough amount on your current order, you can choose FUSION WALLET and proceed with payment."
+        ]
+      },
+      {
+        "title": "How to Check my Fusion Wallet Balance and History?",
+        "content": [
+          "Click the Fusion Wallet option by tapping on the drop-down close to your name on the upper right corner of the site. You can find the balance and transaction history on the Wallet Page."
+        ]
+      },
+      {
+        "title": "Where can I see the refunded amount in my Fusion Wallet?",
+        "content": [
+          "Click the Fusion Wallet option by tapping on the drop-down close to your name on the upper right corner of the site. You can find the balance and transaction history on the Wallet Page."
+        ]
+      },
+      {
+        "title": "My Payment page is stuck in the 'loading' stage - Has my order gone through?",
+        "content": [
+          "Please stay on the payment page to finish the process of the transaction.",
+          " Assuming an order got placed, you will get an email confirmation with the order details as well as you can track down the same order in your order history If your order has not been received by the takeaway or the payment has not been transacted, kindly place the order once again."
+        ]
+      },
+      {
+        "title": "My Transaction/Payment failed",
+        "content": [
+          "If your transaction fails while placing the order however the amount is debited from your account and the restaurant has not received this order, it will show up under Pending Transaction and will automatically revert to your account in 3-5 working days."
+        ],
+        "type": 2
+      }
+    ]
+  },
+
+  {
+    "GuideFusionKitchen": [
+      {
+        "title": "How do I login?",
+        "content": [
+          "Click LOGIN on the Top right corner of the Home Page.",
+          "Login using either Email address, Google / Facebook Account."
+        ]
+      },
+      {
+        "title": "Why can’t I login?",
+        "content": [
+          " Login issues occur when an incorrect email address / Password is entered. Try again to login with appropriate details.",
+          "In some instances, your login can affect when you use invalid email or unregistered email address."
+        ]
+      },
+      {
+        "title": "It Says my Email is already in use when am trying to register",
+        "content": [
+          "If it shows that your entered email address is already in use while registering with Signup, you can try to get solved by clicking “FORGOT PASSWORD”",
+          "Login with a reset link which is received in your mail inbox."
+        ]
+      },
+      {
+        "title": "How can I reset my password?",
+        "content": [" With Fusion Kitchen Website"],
+        "list": {
+          "listitem": [
+            "When you try to login and it shows an incorrect password / you are in need to reset your password,Click LOGIN in the home page",
+            "Click FORGOT PASSWORD to reset your password when you’re stuck in any situation with a reset link which is received in your mail inbox."
+          ]
+        },
+        "sublist": {
+          "sublistitem": [
+            " With Fusion Kitchen Website",
+            "Tap LOGIN and click FORGOT PASSWORD at the bottom, you will be asked to enter your registered email address where reset link would be received to reset your desired password."
+          ]
+        }
+      },
+      {
+        "title": "Opening and closing time of the takeaway?",
+        "content": [
+          "Opening and closing hours will differ depending on Takeaway.",
+          "It’s been customized by Takeaway owners with their availability. ",
+          "The Opening and closing hours have been shown in the about section of the Takeaway’s website."
+        ]
+      },
+      {
+        "title": "How can I choose the takeaway according to their ratings?",
+        "content": [
+          "You can filter the Takeaways based on rating by choosing the filter RATING available on the left side of the listing page in the Fusion Kitchen website."
+        ]
+      },
+      {
+        "title": "Fusion Kitchen App Issues?",
+        "content": [
+          "If the App does not respond properly, kindly uninstall and reinstall or reach us directly."
+        ]
+      },
+      {
+        "title": " Where can I see the Food Hygiene Rating?",
+        "list": {
+          "listitem": [
+            "Choose your desired Restaurant / Takeaway",
+            "Select ABOUT US page",
+            "You can find the Food Hygiene Rating below the ABOUT US"
+          ]
+        }
+      },
+      {
+        "title": "What if I have an allergy?",
+        "content": ["What if I have an allergy?"],
+        "list": {
+          "listitem": [
+            "If you have an allergy that could harm your health please contact the restaurant directly before you place your order. We strongly advise that you also contact the restaurant directly to confirm your requests. Read the  FAQs below for more information about Fusionkitchen allergy policies."
+          ]
+        }
+      },
+      {
+        "title": "Can I save multiple addresses?",
+        "list": {
+          "listitem": [
+            "Yes, you can save more than one address for your order delivery. ",
+            "Go to your PROFILE and add your addresses and save it for future use."
+          ]
+        }
+      },
+      {
+        "title": "How do I change my phone number?",
+        "list": {
+          "listitem": [
+            "Yes, you can change your phone number anytime.",
+            "Go to your PROFILE and change your phone number, and save it for future use."
+          ]
+        }
+      },
+      {
+        "title": "How to Add/Edit/Delete a new delivery address on my Fusion Kitchen Account?",
+        "list": {
+          "listitem": [
+            "Yes, you can add, edit and delete your delivery address anytime on your FUSION KITCHEN account. ",
+            "Go to your PROFILE and update your address and save it for future use."
+          ],
+          "type": 3
+        }
+      }
+    ]
+  },
+  {
+    "HelpOrder": [
+      {
+        "title": "Order was not delivered?",
+        "list": {
+          "listitem": [
+            "In case your order is not delivered, it may be due to the takeaway being closed due to some emergency situation. In that scenario, you’ll be refunded for not delivering your order.",
+            "Also, if your order isn’t received by the Takeaway or Restaurant or sometimes fails to accept the order on time, we advise you to call the Takeaway directly if you do not receive an order confirmation.",
+            "Contact - FK Help & Support",
+            "You can contact us through our live chat or email and we will give you the best solution to sort out your request."
+          ]
+        }
+      },
+      {
+        "title": "How can I find out which takeaway accepts Pre-order?",
+        "list": {
+          "listitem": [
+            "You can find a takeaway who accepts pre-order only when the takeaway enabled the pre-order option.",
+            "Even if the takeaway is closed, you can find the lists of takeaways which handle pre-order."
+          ]
+        }
+      },
+      {
+        "title": "Can I pre-order before the takeaway opens?",
+        "content": [
+          "Yes, even if the takeaway is open, you can pre-order and schedule your order on your desired time."
+        ]
+      },
+      {
+        "title": "How can I add an instruction/comment for my order?",
+        "list": {
+          "listitem": [
+            "If you need to include any instructions / comments for your order you're gonna place, put your instructions in the Notes section on the cart.",
+            "You can do that in the checkout page before you proceed with payment."
+          ]
+        }
+      },
+      {
+        "title": "How do I know that the takeaway has accepted my order?",
+        "list": {
+          "listitem": [
+            "After your checkout has been completed, you’ll get a notification on your order confirmation from the Takeaway.",
+            "Also you’ll receive an email for confirmation of your order, and you can track your order in the order tracking page."
+          ]
+        }
+      },
+      {
+        "title": "How do I place an order on Fusion Kitchen?",
+        "list": {
+          "listitem": [
+            "Enter your area postcode to order.",
+            "Choose from the list of Takeaways available on the postcode",
+            "Select the items you would like to order.",
+            "While selecting, you can choose the collection / delivery option.",
+            "Then, you can check your cart for the items you chose and if applicable apply coupon code.",
+            "Checkout and proceed with payment.",
+            "Your order will be confirmed by the Takeaway and you can now track your order."
+          ]
+        }
+      },
+      {
+        "title": "Can I order from multiple takeaways/restaurants, in the same order?",
+        "list": {
+          "listitem": [
+            "No, you cannot have the same order from multiple takeaways / restaurants.",
+            "Instead, you can order multiple items from the same restaurant / takeaway."
+          ]
+        }
+      },
+      {
+        "title": "I have placed an order for a collection but I would like it to be delivered.",
+        "content": [
+          "When an order is placed for collection, you cannot change the order for delivery. You can change before placing the order."
+        ]
+      },
+      {
+        "title": "What is re-order?",
+        "content": ["In order to re-order / repeat your past orders:"],
+        "list": {
+          "listitem": [
+            "Click on your Profile",
+            "Tap Order history where you can see the past orders you placed.",
+            "Select any of your past orders and re-order the same for delivery."
+          ]
+        }
+      },
+      {
+        "title": "How to Choose delivery or collection options while ordering?",
+        "list": {
+          "listitem": [
+            "Enter your area postcode to order. Choose from the list of Takeaways available on the postcode",
+            "Select the items you would like to order.",
+            "While selecting, you can choose the collection / delivery option."
+          ]
+        }
+      },
+      {
+        "title": "Where can I see my past orders?",
+        "list": {
+          "listitem": [
+            "Click on your Profile",
+            "Tap on your order history You can see the list of past orders you placed previously."
+          ]
+        }
+      },
+      {
+        "title": "How can I order for a later time?",
+        "content": [
+          "If the takeaway / restaurant is open and only if they choose to enable the Pre-order option, you can place your order for later time with a schedule."
+        ]
+      },
+      {
+        "title": "Why does my delivery ESTIMATED TIME OF ARRIVAL changed?",
+        "list": {
+          "listitem": [
+            "This may happen and change when there is a delay from the estimated delivery time on their system manually.",
+            "The chances are busy kitchens, bad weather, and automatically changes reflect in your tracking as well."
+          ]
+        }
+      },
+      {
+        "title": "Is there a delivery Charge or minimum order required to place an order?",
+        "content": [
+          "Delivery charge or minimum order required to place an order is totally dependent on the takeaway / restaurant. It varies with every takeaway / restaurant."
+        ]
+      },
+      {
+        "title": "I want my order to be delivered to an alternate address",
+        "list": {
+          "listitem": [
+            "When your order is placed and confirmed by the takeaway, you cannot change the delivery address.",
+            "But either you can contact the Takeaway directly and request for your delivery to the alternate address."
+          ]
+        }
+      },
+      {
+        "title": "Wrong items delivered",
+        "content": [
+          "This ought to have occurred because of the bustling time with the Takeaway or Restaurants. Assuming you go over such cases, kindly contact the Takeaway quickly so they can guarantee you get the missing/wrong thing conveyed in no time or at times the Takeaway may attempt to get this arranged on the following request. However, prior to reaching the Takeaway, if it's not too much trouble, ensure you check your request subtleties at times you may plan to arrange a thing and you may have missed or set various things while requesting. Thus, if it's not too much trouble, make a point to check the request subtleties on your Order History page."
+        ]
+      },
+      {
+        "title": "Where is my order?",
+        "content": [
+          "The greater part of our clients are confronting an issue with the Order status. Assuming you are searching for the request status, there are a couple of ways of tracking down the status"
+        ],
+        "list": {
+          "listitem": [
+            "Call the Takeaway and give the necessary details to get the status.",
+            "You can track down the request status on the site or on the application. When the request is put in you will get the request tracker, it will show the advancement of your request."
+          ],
+          "type": 4
+        }
+      }
+    ]
+  }
+]

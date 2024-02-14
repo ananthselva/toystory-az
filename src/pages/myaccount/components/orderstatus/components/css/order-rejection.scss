@@ -1,0 +1,86 @@
+@import "../../../../../../common/assets/scss/main.scss";
+
+.dark-theme #order-rejected {
+  .modal-content {
+    background-color: #0a1929;
+    .modal-body .content p {
+      color: #ffffff;
+    }
+  }
+}
+#order-rejected {
+  .modal-content {
+    border: none;
+    span.close-btn {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      display: flex;
+      svg {
+        font-size: 22px;
+        cursor: pointer;
+        fill: #f2434c;
+      }
+    }
+    .modal-body {
+      padding: 20px;
+      .lottie-animation {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        #lottie {
+          width: 350px;
+          height: 350px;
+        }
+      }
+      .content {
+        text-align: center;
+        padding-top: 125px;
+        h3 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 23px;
+          color: #00c070;
+          margin-bottom: 5px;
+        }
+        h5 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #e02a12;
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #41474e;
+          font-size: 16px;
+          margin: 0px;
+        }
+        .resPhoneColor {
+          color: #28be21;
+          font-weight: 700;
+        }
+      }
+      button {
+        display: flex;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #order-rejected .modal-content .modal-body {
+    .lottie-animation #lottie {
+      width: 300px;
+      height: 300px;
+    }
+    .content {
+      h3 {
+        font-size: 22px;
+      }
+      h5 {
+        font-size: 17.5px;
+      }
+    }
+  }
+}

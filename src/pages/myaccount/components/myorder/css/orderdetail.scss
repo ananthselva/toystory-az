@@ -1,0 +1,444 @@
+@import "../../../../../common/assets/scss/main.scss";
+.order-detail {
+  padding: 12px 0px;
+  &#no-sidebar {
+    @include themed() {
+      background-color: t("dark4");
+    }
+  }
+  .orders {
+    .table-title {
+      font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+      font-size: 19px;
+      color: $themecolor3;
+      border: none;
+      padding: 0px 0px 20px 0px;
+      margin: 0px;
+      @include themed() {
+        color: t("themelight");
+      }
+    }
+    .table-responsive {
+      max-height: 270px;
+      overflow-y: scroll;
+      border-bottom: 1px solid #dedddf;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+      }
+      // &::-webkit-scrollbar-track {
+      //   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      //   background-color: #f5f5f5;
+      //   border-radius: 10px;
+      // }
+
+      // &::-webkit-scrollbar {
+      //   width: 3px;
+      //   background-color: #f5f5f5;
+      // }
+
+      // &::-webkit-scrollbar-thumb {
+      //   border-radius: 10px;
+      //   background-color: #fff;
+      //   background-image: -webkit-gradient(
+      //     linear,
+      //     40% 0%,
+      //     75% 84%,
+
+      //     from(rgb(103, 103, 103)),
+      //     to(rgb(103, 103, 103)),
+      //     color-stop(0.6, rgb(103, 103, 103))
+      //   );
+      // }
+
+      table.orders-table {
+        thead {
+          tr {
+            th {
+              font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+              font-size: 19px;
+              color: #00c070;
+              border: none;
+              padding: 5px 0px 20px 0px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              border: none;
+              padding: 5px 0px;
+              &:nth-child(1) {
+                width: 8%;
+              }
+              &:nth-child(2) {
+                width: 75%;
+              }
+              &:nth-child(3) {
+                width: 15%;
+                text-align: right;
+              }
+              p {
+                margin: 0px;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 15px;
+                color: $theme-dark1;
+                padding: 0px 10px;
+                @include themed() {
+                  color: t("whitecolor");
+                }
+              }
+              span {
+                color: #797d81;
+                font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                font-size: 15px;
+                padding: 0px 10px;
+                @include themed() {
+                  color: t("light-text");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .details {
+    padding: 20px 0px;
+    .table-responsive {
+      table.details-table {
+        tbody {
+          tr {
+            td {
+              border: none;
+              padding: 5px 0px;
+              &:nth-child(1) {
+                width: 50%;
+                text-align: left;
+              }
+              &:nth-child(2) {
+                width: 50%;
+                text-align: right;
+              }
+
+              p {
+                color: #4c4c4c;
+                font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+                font-size: 15px;
+                padding: 0px 10px;
+                margin: 0px;
+                @include themed() {
+                  color: t("whitecolor");
+                }
+              }
+              span {
+                color: #d92662;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 15px;
+                padding: 0px 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .reorder-btn {
+      button {
+        width: 100%;
+        border-radius: 5px;
+        background-color: $themecolor3;
+        padding: 10px;
+        color: #ffffff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 15px;
+        text-align: center;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        @include themed() {
+          background-color: t("themelight");
+          color: t("themedark");
+        }
+      }
+    }
+
+    .tracking-btn {
+      button {
+        width: 100%;
+        border-radius: 5px;
+        background-color: #28be21;
+        padding: 10px;
+        color: #ffffff;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 15px;
+        text-align: center;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        @include themed() {
+          background-color: t("themelight");
+          color: t("themedark");
+        }
+      }
+    }
+    .delivery-to {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0px;
+      img {
+        width: 25px;
+      }
+      p {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        margin: 0px;
+        font-size: 15px;
+        color: #4c4c4c;
+        @include themed() {
+          color: t("hovercolor");
+        }
+      }
+      span {
+        color: #d92662;
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        margin: 0px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .order-detail {
+    @include themed() {
+      background-color: t("dark4");
+    }
+    .orders {
+      .table-title {
+        font-size: 17px;
+      }
+      .table-responsive table.orders-table tbody tr td {
+        p {
+          padding: 0px;
+          font-size: 14px;
+        }
+        span {
+          padding: 0px;
+          font-size: 14px;
+        }
+        &:nth-child(1) {
+          width: 10%;
+        }
+        &:nth-child(2) {
+          width: 60%;
+        }
+        &:nth-child(3) {
+          width: 20%;
+          p {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+    .details {
+      .table-responsive table.details-table tbody tr td {
+        p {
+          padding: 0px;
+          font-size: 14px;
+        }
+        span {
+          padding: 0px;
+          font-size: 14px;
+        }
+      }
+      .reorder-btn button {
+        font-size: 14px;
+      }
+      .delivery-to {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        p,
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .order-detail {
+    @include themed() {
+      background-color: t("dark4");
+    }
+
+    .orders {
+      .table-title {
+        font-size: 18px;
+      }
+      .table-responsive table.orders-table tbody tr td {
+        p {
+          padding: 0px;
+          font-size: 14.5px;
+        }
+        span {
+          padding: 0px;
+          font-size: 14px;
+        }
+        &:nth-child(1) {
+          width: 10%;
+        }
+        &:nth-child(2) {
+          width: 60%;
+        }
+        &:nth-child(3) {
+          width: 20%;
+          p {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+    .details {
+      .table-responsive table.details-table tbody tr td {
+        p {
+          padding: 0px;
+          font-size: 14.5px;
+        }
+        span {
+          padding: 0px;
+          font-size: 14.5px;
+        }
+      }
+      .reorder-btn button {
+        font-size: 15px;
+      }
+      .delivery-to {
+        p,
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .order-detail {
+    .orders {
+      .table-title {
+        font-size: 18px;
+      }
+      .table-responsive {
+        max-height: 260px;
+        table.orders-table tbody tr td {
+          p {
+            padding: 0px;
+            font-size: 14px;
+          }
+          span {
+            padding: 0px;
+            font-size: 14px;
+          }
+          &:nth-child(1) {
+            width: 10%;
+          }
+          &:nth-child(2) {
+            width: 60%;
+          }
+          &:nth-child(3) {
+            width: 20%;
+            p {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+    .details {
+      .table-responsive table.details-table tbody tr td {
+        p {
+          padding: 0px;
+          font-size: 14.5px;
+        }
+        span {
+          padding: 0px;
+          font-size: 14.5px;
+        }
+      }
+      .reorder-btn button {
+        font-size: 15px;
+      }
+      .delivery-to {
+        p,
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .order-detail {
+    .orders {
+      .table-title {
+        font-size: 18px;
+      }
+      .table-responsive {
+        max-height: 250px;
+        table.orders-table tbody tr td {
+          p {
+            padding: 0px;
+            font-size: 14.5px;
+          }
+          span {
+            padding: 0px;
+            font-size: 14.5px;
+          }
+
+          &:nth-child(3) {
+            p {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+    .details {
+      .table-responsive table.details-table tbody tr td {
+        p {
+          padding: 0px;
+          font-size: 15px;
+        }
+        span {
+          padding: 0px;
+          font-size: 15px;
+        }
+      }
+      .reorder-btn button {
+        font-size: 15px;
+      }
+      .delivery-to {
+        p,
+        span {
+          font-size: 14.5px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .order-detail {
+    .orders {
+      .table-responsive {
+        max-height: 260px;
+      }
+    }
+  }
+}

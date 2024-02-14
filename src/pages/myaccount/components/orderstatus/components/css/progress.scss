@@ -1,0 +1,978 @@
+@import "../../../../../../common/assets/scss/main.scss";
+$statuscolor: #28be21;
+// $statuscolor: #32c071;
+.order-status {
+  .step-btn {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    z-index: 9;
+    position: relative;
+    flex-wrap: wrap;
+    button {
+      box-shadow: none;
+      outline: none;
+      border: none;
+      max-width: 100px;
+      width: 100%;
+      font-size: 14px;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      &.float-left {
+        float: left;
+      }
+      &.float-right {
+        float: right;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .order-status .step-btn {
+    gap: 5px;
+    justify-content: flex-start;
+    button {
+      max-width: 70px;
+      font-size: 11px;
+    }
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 575px) {
+  .order-status .step-btn {
+    gap: 10px;
+    justify-content: flex-start;
+    button {
+      max-width: 85px;
+      font-size: 13px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .order-status {
+    .step-btn {
+      margin: 0px 0px 30px 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 20px;
+      z-index: 9;
+      position: relative;
+      button {
+        box-shadow: none;
+        outline: none;
+        border: none;
+        max-width: 85px;
+        width: 100%;
+        &.float-left {
+          float: left;
+        }
+        &.float-right {
+          float: right;
+        }
+      }
+    }
+    .statusbar {
+      width: 85%;
+      margin: 0px auto;
+      .RSPBprogressBar {
+        background-color: #dedddf;
+        .RSPBstep {
+          .indexedStep {
+            color: $statuscolor;
+            width: 24px;
+            height: 24px;
+            font-size: 20px;
+            box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 16%);
+            background-color: #ffffff;
+            position: relative;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span {
+              position: absolute;
+              bottom: -25px;
+              color: #939393;
+              font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+              font-size: 16px;
+              text-align: center;
+              white-space: nowrap;
+              @include themed() {
+                color: t("newLightGreen");
+              }
+            }
+            &.accomplished {
+              background-color: #ffffff;
+              span {
+                color: $statuscolor;
+              }
+              &.animation {
+                &::after,
+                &::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 24px;
+                  height: 24px;
+                  background: $statuscolor;
+                  border-radius: 50%;
+                  z-index: -1;
+                  animation: grow 1s ease-in-out infinite;
+                }
+                &::after {
+                  background: $statuscolor;
+                  &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100px;
+                    height: 100px;
+                    background: $statuscolor;
+                    border-radius: 50%;
+                    z-index: -1;
+                    animation: grow 1s ease-in-out infinite;
+                  }
+                }
+                &::before {
+                  background: $statuscolor;
+                  animation-delay: -0.5s;
+                }
+                @keyframes grow {
+                  0% {
+                    transform: scale(0.8, 0.8);
+                    opacity: 1;
+                  }
+                  100% {
+                    transform: scale(1.8, 1.8);
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .RSPBprogression {
+          background: $statuscolor;
+        }
+      }
+    }
+    .status-details {
+      margin-top: 50px;
+      text-align: center;
+      padding: 0px 0px 20px 0px;
+      p {
+        margin-bottom: 4rem;
+      }
+      .lottie-ani {
+        .lf-player-container {
+          #lottie {
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+      .status-content {
+        h4 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: $themecolor3;
+          font-size: 22.5px;
+          margin-bottom: 5px;
+          margin-top: 20px;
+        }
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          color: #41474e;
+          font-size: 17.5px;
+          margin: 0px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        .track-btn {
+          display: flex;
+          margin: 20px 0px;
+          justify-content: center;
+          align-items: center;
+          a {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16px;
+            background-color: $statuscolor;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .order-status {
+    .statusbar {
+      width: 80%;
+      .RSPBprogressBar {
+        height: 8px;
+        .RSPBstep .indexedStep {
+          width: 20px;
+          height: 20px;
+          font-size: 18px;
+          &.accomplished.animation {
+            &::before,
+            &::after {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .status-details {
+      .lottie-ani .lf-player-container #lottie {
+        width: 250px;
+        height: 250px;
+      }
+      .status-content {
+        h4 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .track-btn a {
+          font-size: 15px;
+          padding: 7px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .order-status {
+    .statusbar {
+      width: 80%;
+      .RSPBprogressBar {
+        height: 9px;
+        .RSPBstep .indexedStep {
+          width: 22px;
+          height: 22px;
+          font-size: 18px;
+          &.accomplished.animation {
+            &::before,
+            &::after {
+              width: 22px;
+              height: 22px;
+            }
+          }
+          span {
+            font-size: 14.5px;
+          }
+        }
+      }
+    }
+    .status-details {
+      .lottie-ani .lf-player-container #lottie {
+        width: 250px;
+        height: 250px;
+      }
+      .status-content {
+        h4 {
+          font-size: 21px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .track-btn a {
+          font-size: 15px;
+          padding: 7px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1199px) and (max-width: 1399px) {
+  .order-status {
+    .status-details {
+      .lottie-ani .lf-player-container #lottie {
+        width: 275px;
+        height: 275px;
+      }
+    }
+  }
+}
+
+// Mobile Designs
+
+.order-status .status-details {
+  margin-top: 50px;
+  .waiting-div-mob {
+    .waiting-content {
+      background-color: #ffffff;
+      padding: 10px;
+      margin: 0px 10px -25px 10px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 20px;
+      position: relative;
+      @include themed() {
+        background-color: t("dark5");
+        box-shadow: t("none");
+      }
+      .lottie-ani {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .lf-player-container {
+          #lottie {
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+      .lottie-ani-reject {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .lf-player-container {
+          #lottie {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      .status-content {
+        padding-top: 130px;
+        text-align: center;
+        h4 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 18px;
+          color: #363636;
+          margin: 0px 0px 5px 0px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 14.5px;
+          color: #363636;
+          @include themed() {
+            color: t("light-text");
+          }
+        }
+        &.reject {
+          padding-top: 100px;
+        }
+      }
+      .estimate-time {
+        text-align: center;
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 14px;
+          color: #363636;
+          margin: 0px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        span {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: $themecolor3;
+          font-size: 14px;
+          @include themed() {
+            color: t("themecolor3");
+          }
+        }
+        a {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: #108060;
+          font-size: 16px;
+          text-decoration: none;
+          margin-bottom: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+  // Waiting Content End
+  .prepared-div-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    @include themed() {
+      background-color: t("dark5");
+      box-shadow: t("none");
+    }
+    .lottie-ani {
+      .lf-player-container {
+        #lottie {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+    .status-content {
+      text-align: left;
+      h4 {
+        font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+        font-size: 16px;
+        color: #363636;
+        margin: 0px 0px 5px 0px;
+        @include themed() {
+          color: t("whitecolor");
+        }
+      }
+      p {
+        font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+        font-size: 14px;
+        color: #363636;
+        margin-bottom: 10px;
+        @include themed() {
+          color: t("light-text");
+        }
+        br {
+          display: none;
+        }
+      }
+      .estimate-time {
+        text-align: left;
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 14px;
+          color: #363636;
+          margin: 0px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        span {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          color: $statuscolor;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  // prepare div mob end
+  .collection-mob {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #f4f5f5;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #707070;
+    @include themed() {
+      background-color: t("dark3");
+      box-shadow: t("none");
+      border-color: t("b-color");
+    }
+    .collection-inside {
+      background-color: #ffffff;
+      margin: 0px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @include themed() {
+        background-color: t("dark5");
+        box-shadow: t("none");
+      }
+      .lottie-ani {
+        .lf-player-container {
+          #lottie {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+      .collection-content {
+        text-align: left;
+        margin-top: 0px;
+        h4 {
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 18px;
+          color: #363636;
+          margin: 0px 0px 5px 0px;
+          @include themed() {
+            color: t("whitecolor");
+          }
+        }
+        p {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 14.5px;
+          color: #363636;
+          margin-bottom: 10px;
+          @include themed() {
+            color: t("light-text");
+          }
+        }
+        span {
+          font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+          font-size: 14.5px;
+          color: #28be21;
+          @include themed() {
+            color: t("themelight");
+          }
+        }
+      }
+    }
+    .review-rating {
+      form {
+        margin-top: 30px;
+        .rating-group {
+          margin: 10px 0px;
+          p.rating-title {
+            margin: 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            font-size: 16.5px;
+            color: #363636;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+          .stars {
+            display: flex;
+            justify-content: flex-start;
+            gap: 5px;
+            margin: 5px 0px 15px 0px;
+            .star {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              position: relative;
+              cursor: pointer;
+              svg {
+                font-size: 35px;
+                color: #c7c7c7;
+                fill: #c7c7c7;
+                // filter: drop-shadow(0 0px 1px #b8b8b8);
+              }
+              p {
+                color: #c5c7c9;
+                margin: 5px 0px;
+                font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+                font-size: 16px;
+              }
+              &.active-label {
+                p {
+                  color: #d92662;
+                }
+              }
+              .stars_radio-input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 1px;
+                clip: rect(1px, 1px, 1px, 1px);
+              }
+            }
+          }
+        }
+
+        //   end star
+        textarea {
+          $txtareaplacecolor: #4d4d4d;
+          border: none;
+          background-color: #ffffff;
+          color: $theme-dark1;
+          outline: none;
+          box-shadow: none;
+          font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+          font-size: 14px;
+          @include themed() {
+            background-color: t("dark4");
+            color: t("whitecolor");
+          }
+          &::-webkit-input-placeholder {
+            color: $txtareaplacecolor;
+            opacity: 0.8;
+          }
+          &::-moz-placeholder {
+            color: $txtareaplacecolor;
+            opacity: 0.8;
+          }
+          &:-ms-input-placeholder {
+            color: $txtareaplacecolor;
+            opacity: 0.8;
+          }
+          &:-moz-placeholder {
+            color: $txtareaplacecolor;
+            opacity: 0.8;
+          }
+        }
+        .submit-btn {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin: 20px 0px 0px 0px;
+          button {
+            outline: none;
+            border: none;
+            box-shadow: none;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            padding: 10px 0px;
+            background-color: #9fe870;
+            color: #173303;
+            @include themed() {
+              background-color: t("themelight");
+              color: t("themedark");
+            }
+          }
+        }
+      }
+    }
+  }
+  .track-btn {
+    display: flex;
+    margin: 20px 0px;
+    justify-content: center;
+    align-items: center;
+    a {
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      font-size: 16px;
+      background-color: $statuscolor;
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .order-status .status-details {
+    .waiting-div-mob {
+      .waiting-content {
+        .lottie-ani .lf-player-container #lottie {
+          width: 350px;
+          height: 350px;
+        }
+        .status-content {
+          h4 {
+            font-size: 19px;
+          }
+          p {
+            font-size: 15px;
+            br {
+              display: block;
+            }
+          }
+        }
+        .estimate-time {
+          p {
+            font-size: 15px;
+          }
+          span {
+            font-size: 15px;
+          }
+          a {
+            font-size: 17px;
+          }
+        }
+      } // .waiting-content
+    } //waiting mobile complete
+    .prepared-div-mobile {
+      flex-direction: row;
+      gap: 15px;
+      .lottie-ani .lf-player-container #lottie {
+        height: 165px;
+        width: 165px;
+      }
+      .status-content {
+        text-align: left;
+        h4 {
+          font-size: 19px;
+        }
+        p {
+          font-size: 15px;
+          br {
+            display: block;
+          }
+        }
+        .estimate-time {
+          text-align: left;
+          p {
+            font-size: 15px;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    } // prepared end
+    .collection-mob {
+      .collection-inside {
+        .lottie-ani {
+          .lf-player-container #lottie {
+            width: 150px;
+            height: 150px;
+          }
+        }
+        .collection-content {
+          margin-top: 0px;
+          h4 {
+            font-size: 19px;
+          }
+          p {
+            font-size: 15px;
+            br {
+              display: block;
+            }
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+      .review-rating form {
+        .rating-group {
+          p.rating-title {
+            font-size: 17px;
+          }
+          .stars {
+            margin: 10px 0px 15px 0px;
+            .star svg {
+              font-size: 40px;
+            }
+          }
+        }
+        textarea {
+          font-size: 14.5px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 575px) {
+  .order-status .status-details .prepared-div-mobile {
+    justify-content: center;
+    width: 85%;
+    margin: 0px auto;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .order-status .status-details {
+    .prepared-div-mobile {
+      flex-direction: row;
+      gap: 15px;
+      width: 85%;
+      margin: 0px auto;
+      justify-content: center;
+      .status-content {
+        text-align: left;
+
+        .estimate-time {
+          text-align: left;
+        }
+      }
+    } // prepared end
+  }
+}
+
+// stuart Prepare
+.order-status .status-details {
+  .stuart-prepare {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+
+    img.bg-map {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .prepared-div-mobile {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      .lottie-ani {
+        .lf-player-container {
+          #lottie {
+            height: 135px;
+            width: 135px;
+          }
+          @media only screen and (min-width: 320px) and (max-width: 420px) {
+            #lottie {
+              height: 85px;
+              width: 85px;
+            }
+          }
+        }
+      }
+      .status-content {
+        p {
+          margin-bottom: 0px;
+        }
+        .estimate-time {
+          margin-top: 5px;
+        }
+      }
+    }
+    .driver-details {
+      margin: 0px auto;
+      position: absolute;
+      bottom: 5px;
+      background-color: #ffffff;
+      padding: 10px;
+      display: flex;
+      width: 97%;
+      justify-content: space-between;
+      left: 0px;
+      right: 0px;
+      align-items: center;
+      flex-direction: row;
+      border-radius: 10px;
+      @include themed() {
+        background-color: t("dark5");
+      }
+      .profile {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-direction: row;
+        img {
+          width: 35px;
+          height: 35px;
+        }
+        .name {
+          p {
+            margin: 0px;
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            color: #4d4d4d;
+            font-size: 14px;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+          span {
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            font-size: 13.5px;
+            color: #989898;
+            @include themed() {
+              color: t("light-text");
+            }
+          }
+        }
+      }
+      a {
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+
+// back btnas
+.order-status {
+  .status-back {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+    a {
+      text-decoration: none;
+      font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+      color: $theme-dark1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      @include themed() {
+        color: t("whitecolor");
+      }
+      svg {
+        font-size: 17px;
+      }
+    }
+    button {
+      font-family: "SegoeUI-SemiBold";
+      padding: 7px 17px;
+      margin: 0px;
+      border: 1px solid #d92662;
+      border-radius: 5px;
+      color: #d92662;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 5px;
+      outline: none;
+      box-shadow: none;
+      background-color: transparent;
+      &:not(.btn-check) + .btn:active,
+      &:hover {
+        color: #d92662;
+        background-color: transparent;
+        border-color: #d92662;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .order-status {
+    .status-back {
+      a {
+        font-size: 14px;
+        svg {
+          font-size: 16px;
+        }
+      }
+      button {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .order-status {
+    .status-back {
+      a {
+        font-size: 14.5px;
+        svg {
+          font-size: 17px;
+        }
+      }
+      button {
+        padding: 7px 14px;
+        font-size: 14px;
+      }
+    }
+  }
+}

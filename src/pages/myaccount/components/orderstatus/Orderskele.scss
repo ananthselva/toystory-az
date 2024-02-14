@@ -1,0 +1,25 @@
+@import "../../../../common/assets/scss/main.scss";
+
+
+@media only screen and (min-width: 408px) and (max-width: 526px) {
+  /* Your styles for mobile devices go here */
+  .two {
+    width: 4em;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 408px) {
+  /* Your styles for mobile devices go here */
+  .two {
+    width: 2em;
+  }
+}
+
+.order-skle{
+     @include themed() {
+      background-color: t("dark4");
+    }
+}
+
+
+

@@ -1,0 +1,333 @@
+@import "../../../common/assets/scss/main.scss";
+
+.menu-page {
+  .main-page {
+    .outlet-section {
+      .rating-all {
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        z-index: 999;
+        @include themed() {
+          border-color: t("hoverbg");
+          box-shadow: t("none");
+        }
+        .rating-star {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          background-color: #e8a328;
+          padding: 14px 12px;
+          border-radius: 10px 0px 0px 10px;
+          height: 55px;
+
+          span {
+            svg {
+              font-size: 25px;
+            }
+            &.fill {
+              svg {
+                fill: #ffffff;
+              }
+            }
+            &.half-fill {
+              svg {
+                fill: #ffffff;
+              }
+            }
+            &.not-fill {
+              svg {
+                fill: #f6c243;
+              }
+            }
+          }
+        }
+        .rating-text {
+          padding: 14px 12px;
+          border-radius: 0px 10px 10px 0px;
+          background-color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 55px;
+          justify-content: center;
+          gap: 2px;
+          @include themed() {
+            background-color: t("hoverbg");
+          }
+          p {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            margin: 0px;
+            font-size: 20px;
+            line-height: 1;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+          span {
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            margin: 0px;
+            font-size: 13px;
+            text-align: center;
+            white-space: nowrap;
+            @include themed() {
+              color: t("hovercolor");
+            }
+          }
+        }
+      }
+      .review-section {
+        padding: 30px 0px;
+        .row {
+          gap: 35px 0px;
+        }
+        .review-box {
+          padding: 15px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          max-height: 225px;
+          height: 100%;
+          border: 1px solid #fff;
+          @include themed() {
+            background-color: t("dark5");
+            border-color: t("hoverbg");
+            box-shadow: t("none");
+          }
+          .star-date {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            span {
+              font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+              font-size: 15px;
+              color: #212121;
+              @include themed() {
+                color: t("hovercolor");
+              }
+              &.star-group {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+              }
+              .not-fill {
+                svg {
+                  fill: #b8b8b8;
+                }
+              }
+              .fill {
+                svg {
+                  fill: #e8a328;
+                }
+              }
+              svg {
+                font-size: 18px;
+              }
+            }
+          }
+          h4 {
+            font-family: map-get($map: $segoe-fonts, $key: ui-semibold);
+            margin-bottom: 12px;
+            font-size: 18px;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+          p {
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            margin: 0px;
+            font-size: 16px;
+            @include themed() {
+              color: t("light-text");
+            }
+          }
+        }
+        .no-review {
+          padding: 50px 0px;
+          h4 {
+            font-family: map-get($map: $segoe-fonts, $key: ui-bold);
+            margin-bottom: 20px;
+            font-size: 25px;
+            text-align: center;
+            @include themed() {
+              color: t("pinkcolor");
+            }
+          }
+          p {
+            font-family: map-get($map: $segoe-fonts, $key: ui-thin);
+            margin: 0px;
+            font-size: 17px;
+            text-align: center;
+            color: #5c5c74;
+            @include themed() {
+              color: t("whitecolor");
+            }
+          }
+        }
+      }
+    } //Outlet Section
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .menu-page .main-page .outlet-section {
+    .rating-all {
+      position: relative;
+      transform: none;
+      top: auto;
+      left: auto;
+      box-shadow: none;
+      .rating-star {
+        height: 50px;
+        padding: 10px 12px;
+        span {
+          svg {
+            font-size: 22px;
+          }
+        }
+      }
+      .rating-text {
+        height: 50px;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    .review-section {
+      .row {
+        gap: 25px 0px;
+      }
+      .review-box {
+        h4 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      .no-review {
+        padding: 50px 0px;
+        h4 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+  .menu-page .main-page .outlet-section {
+    .rating-all {
+      position: relative;
+      transform: none;
+      top: auto;
+      left: auto;
+      z-index: 1;
+      box-shadow: none;
+      .rating-star {
+        height: 50px;
+        padding: 10px 12px;
+        span {
+          svg {
+            font-size: 22px;
+          }
+        }
+      }
+      .rating-text {
+        height: 50px;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    .review-section {
+      .row {
+        gap: 25px 0px;
+      }
+      .review-box {
+        h4 {
+          font-size: 17.5px;
+        }
+      }
+      .no-review {
+        padding: 50px 0px;
+        h4 {
+          font-size: 23px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-page .main-page .outlet-section {
+    .rating-all {
+      left: 70%;
+      .rating-star {
+        height: 50px;
+        padding: 10px 12px;
+        span {
+          svg {
+            font-size: 22px;
+          }
+        }
+      }
+      .rating-text {
+        height: 50px;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    .review-section {
+      .row {
+        gap: 25px 0px;
+      }
+      .review-box {
+        h4 {
+          font-size: 17.5px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .menu-page .main-page .outlet-section {
+    .rating-all {
+      .rating-star {
+        height: 50px;
+        padding: 10px 12px;
+        span {
+          svg {
+            font-size: 22px;
+          }
+        }
+      }
+      .rating-text {
+        height: 50px;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
