@@ -27,4 +27,9 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'TOYstory'
     projectName: 'TOYstory'
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '120'
+
+
   
