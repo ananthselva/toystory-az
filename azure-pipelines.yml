@@ -24,7 +24,7 @@ steps:
   inputs:
     SonarCloud: 'Sonarcloud'
     organization: 'toystory'
-    scannerMode: 'MSBuild'
+    scannerMode: 'Other'
     projectKey: 'TOYstory'
     projectName: 'TOYstory'
 - task: SonarCloudPublish@1
